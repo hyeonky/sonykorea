@@ -47,6 +47,7 @@
 
 // header
 #header {
+  display: none;
   position: relative;
   z-index: 1000;
   &.active {
@@ -277,7 +278,16 @@
   padding: 10vw 0;
   &__tit {
     padding-bottom: 2.34375vw;
-    font-size: 3rem;
+    font-size: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -3px;
+  }
+  &__desc {
+    font-size: 1.5rem;
+    padding: 20px 0;
+    color: $gray-70;
+    text-align: center;
   }
   &__more {
     display: flex;
