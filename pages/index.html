@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>KRDS themplate</title>
+    <meta
+      property="og:type"
+      content="website"
+    />
+    <meta
+      property="og:title"
+      content="페이지 제목"
+    />
+    <meta
+      property="og:description"
+      content="페이지 설명"
+    />
+    <meta
+      property="og:image"
+      content="http://www.mysite.com/article/article1_featured_image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="http://www.mysite.com/article/article1.html"
+    />
+    <meta
+      name="twitter:card"
+      content="summary"
+    />
+    <meta
+      name="twitter:title"
+      content="페이지 제목"
+    />
+    <meta
+      name="twitter:description"
+      content="페이지 설명"
+    />
+    <meta
+      name="twitter:image"
+      content="http://www.mysite.com/article/article1.html"
+    />
+    <meta
+      name="twitter:domain"
+      content="사이트 명"
+    />
+    <link
+      rel="shortcut icon"
+      href="http://www.mysite.com/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../resources/css/pattern_css.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script
+      defer
+      src="../resources/js/include.js"
+    ></script>
+    <script
+      defer
+      src="../resources/js/ui-pattern.js"
+    ></script>
+    <script
+      defer
+      src="../resources/js/ui-swiper.js"
+    ></script>
+  </head>
+  <body>
+    <div id="skip-nav">
+      <a href="#gnb">메뉴 바로가기</a>
+      <a href="#container">본문 바로가기</a>
+    </div>
+    <div id="wrap">
+      <header id="header">
+        <div class="inner">
+          <h1 id="logo">
+            <a href="#">
+              <span>SONYKOREA</span>
+            </a>
+          </h1>
+          <div class="util">
+            <button class="search" aria-label="검색">
+              <span class="blind">검색</span>
+            </button>
+            <button class="all-menu" aria-label="전체메뉴 열기">
+              <span class="blind">전체메뉴</span>
+            </button>
+          </div>
+
+          <nav id="nav-all">
+            <ul class="nav-all__depth1">
+              <li>
+                <a href="#">
+                  <span>소니와 환경</span>
+                </a>
+                <ul class="nav-all__depth2">
+                  <li><a href="#">SONY GROUP SITE</a></li>
+                  <li><a href="#">소니 디자인</a></li>
+                  <li><a href="#">PLAY STATION</a></li>
+                  <li><a href="#">지속 가능성</a></li>
+                  <li><a href="#">환경</a></li>
+                  <li><a href="#">접근성</a></li>
+                  <li><a href="#">소니 픽쳐스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>스토어</span></a>
+              </li>
+              <li>
+                <a href="#"><span>제품 메뉴</span></a>
+                <ul class="nav-all__depth2">
+                  <li><a href="#">카메라</a></li>
+                  <li><a href="#">오디오, 카오디오</a></li>
+                  <li><a href="#">게임용 기어</a></li>
+                  <li><a href="#">이미징 플랫폼</a></li>
+                  <li><a href="#">미디어, 스토리지, 케이블</a></li>
+                  <li><a href="#">전문가 제품 및 솔루션</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#"><span>PLAY STATION</span></a>
+              </li>
+              <li>
+                <a href="#"><span>지원</span></a>
+              </li>
+            </ul>
+            <button class="close" aria-label="전체메뉴 닫기">
+              <span class="">전체메뉴 닫기</span>
+              <!-- <span class="blind">전체메뉴 닫기</span> -->
+            </button>
+          </nav>
+        </div>
+        <!-- /.inner -->
+      </header>
+      <!-- /.header -->
+
+      <div class="intro">
+        <div class="inner">
+          <div class="intro-text">
+            <span class="pd-name">name</span>
+            <h2 class="intro-text__tit">Transform the future with Sony Experience innovation in your everyday life</h2>
+          </div>
+          <div class="img-wrap">
+            <img src="../resources/images/pattern/common/intro1.png" alt="헤드셋" />
+          </div>
+          <div class="btn_view">
+            <a href="#">
+              <span>view</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <main id="container">
+        <section class="cont-latest">
+          <div class="inner">
+            <div class="latest-text">
+              <div class="new">
+                <h2 class="tit">the latest</h2>
+                <!-- icon -->
+                <img src="../resources/images/pattern/common/new.png" alt="new">             
+              </div>
+              <p>
+                "혁신과 감성을 담다.
+                <br class="m-br">
+                소니의 신제품으로 새로운 경험을 만나보세요"
+              </p>
+            </div>
+            <!-- 카드리스트 -->
+            <div class="slide">
+              <div class="swiper latest-lst">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="../resources/images/pattern/common/cat.png" alt="고양이" />
+                      <div class="text-area">
+                        <span>text_tit</span>
+                        <em>text_detail</em>
+                        <strong>text_pd</strong>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="../resources/images/pattern/common/cat.png" alt="고양이" />
+                      <div class="text-area">
+                        <span>text_tit</span>
+                        <em>text_detail</em>
+                        <strong>text_pd</strong>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="../resources/images/pattern/common/cat.png" alt="고양이" />
+                      <div class="text-area">
+                        <span>text_tit</span>
+                        <em>text_detail</em>
+                        <strong>text_pd</strong>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="../resources/images/pattern/common/cat.png" alt="고양이" />
+                      <div class="text-area">
+                        <span>text_tit</span>
+                        <em>text_detail</em>
+                        <strong>text_pd</strong>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="../resources/images/pattern/common/cat.png" alt="고양이" />
+                      <div class="text-area">
+                        <span>text_tit</span>
+                        <em>text_detail</em>
+                        <strong>text_pd</strong>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="../resources/images/pattern/common/cat.png" alt="고양이" />
+                      <div class="text-area">
+                        <span>text_tit</span>
+                        <em>text_detail</em>
+                        <strong>text_pd</strong>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- <div class="swiper-button-next"></div> -->
+                <!-- <div class="swiper-button-prev"></div> -->
+                <!-- <div class="swiper-pagination"></div> -->
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- parallax -->
+        <section class="cont-parallax">
+          <div class="cont-parallax__wrapper">
+              <div class="img">
+                <img src="../resources/images/pattern/common/cat.png" alt="parallax image 1" />
+              </div>
+              <div class="img">
+                <img src="../resources/images/pattern/common/cat2.jpg" alt="parallax image 2" />
+              </div>
+              <div class="img">
+                <img src="../resources/images/pattern/common/cat3.jpg" alt="parallax image 3" />
+              </div>
+              <div class="img">
+                <img src="../resources/images/pattern/common/cat4.jpg" alt="parallax image 4" />
+              </div>
+              <div class="img">
+                <img src="../resources/images/pattern/common/cat5.jpg" alt="parallax image 5" />
+              </div>
+          </div>
+        </section>
+
+        <section class="cont-headline">
+          <div class="inner">
+            <div class="headline-text">
+              <!-- /.left -->
+              <div class="headline-text__tit">
+                <h2 class="tit">
+                  상상을 현실로 바꾸고, 
+                  <br class="t-br">
+                  세상을 연결하는 혁신적인 기술!
+                </h2>
+              </div>
+              <div class="headline-text__detail">
+                <p>“혁신적인 기술로 세상을 변화시키는 ‘소니’,
+                  <br>
+                  당신의 일상에 새로움을 더해보세요.
+                  <br>
+                  ‘상상과 현실’ 경계를 넘는 기술로
+                  새로운 미래를 이끌어갑니다."
+                </p>
+              </div>
+              <div class="btn-all">
+                <a href="#">
+                  <span>전체보기</span>
+                </a>
+              </div>
+            </div>
+              <!-- 변경 예정 -->
+              <video class="headline-video" autoplay loop>
+                <source src="https://image.sony.co.kr/newStore/video/WH-1000XM5Pink_Global_Ad_15sec_16x9.mp4" type="video/mp4">
+              </video>
+              <!-- <img src="../resources/images/pattern/common/cat.png" alt="고양이"> -->
+            <!-- /.right -->
+          </div>
+        </section>
+
+        <section class="cont-hot">
+          <div class="inner">
+            <div class="hot-text">
+              <div class="special">
+                <h2 class="tit">WHAT'S HOT</h2>
+                <!-- icon -->
+                <img src="../resources/images/pattern/common/special.png" alt="new">
+              </div>
+              <p>
+                당신의 일상을 더욱 특별하게 해 줄 
+                <br class="m-br">
+                소니의 신제품을 만나보세요!
+              </p>
+            </div>
+            <div class="slide">
+              <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper hot-lst">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="../resources/images/pattern/common/Artboard 1.png" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+                  </div>
+                </div>
+                <!-- <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div> -->
+              </div>
+              <div thumbsSlider="" class="swiper hot-lst__text">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="text-area">
+                      <a href="#">
+                        <em>이쁜</em>
+                        <h3>고양이</h3>
+                        <!-- <button class="color-chart">
+                          box
+                        </button> -->
+                        <p>라구요</p>
+                        <span>놀숲</span>
+                      </a>   
+                    </div> 
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="text-area">
+                      <a href="#">
+                        <em>이쁜</em>
+                        <h3>고양이</h3>
+                        <!-- <button class="color-chart">
+                          box
+                        </button> -->
+                        <p>라구요</p>
+                        <span>놀숲</span>
+                      </a>   
+                    </div> 
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="text-area">
+                      <a href="#">
+                        <em>멋진</em>
+                        <h3>고양이</h3>
+                        <!-- <button class="color-chart">
+                          box
+                        </button> -->
+                        <p>라구요</p>
+                        <span>놀숲</span>
+                      </a>   
+                    </div> 
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="text-area">
+                      <a href="#">
+                        <em>귀여운</em>
+                        <h3>고양이</h3>
+                        <!-- <button class="color-chart">
+                          box
+                        </button> -->
+                        <p>라구요</p>
+                        <span>놀숲</span>
+                      </a>   
+                    </div> 
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="text-area">
+                      <a href="#">
+                        <em>이쁜</em>
+                        <h3>고양이</h3>
+                        <!-- <button class="color-chart">
+                          box
+                        </button> -->
+                        <p>라구요</p>
+                        <span>놀숲</span>
+                      </a>   
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="info">
+          <div class="inner">
+            <div class="info-text">
+              <h2 class="tit">information</h2>
+              <span>view-all</span>
+            </div>
+            <ul class="info-card">
+              <li class="info-card__lst">
+                <a href="#">
+                  <div class="container">
+                    <img src="../resources/images/pattern/common/camera.png" alt="카메라">
+                  </div>
+                  <div class="text-area">
+                      <span>SONY KOREA 뉴스룸</span>
+                      <h3>소니코리아 보도자료</h3>
+                      <p>소니코리아의 최신소식을 만나보세요</p>
+                  </div>
+                </a>
+              </li>
+              <li class="info-card__lst">
+                <a href="#">
+                  <div class="container">
+                    <img src="../resources/images/pattern/common/sony.png" alt="회사">
+                  </div>
+                  <div class="text-area">
+                      <span>SONY KOREA 뉴스룸</span>
+                      <h3>소니코리아 보도자료</h3>
+                      <p>소니코리아의 최신소식을 만나보세요</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+
+      <footer id="site-footer" include-html="./layout/footer.html"></footer>
+    </div>
+
+    <script>
+      var swiper = new Swiper(".latest-lst", {
+        slidesPerView: "auto",
+        spaceBetween: 30,
+        loop: false,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
