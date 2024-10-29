@@ -2,7 +2,6 @@
 :root {
   --swiper-theme-color: $black;
 }
-// 내꺼
 .intro {
   overflow: hidden;
   display: flex;
@@ -24,7 +23,7 @@
   .intro-text {
     position: relative;
     padding-bottom: 40px;
-    width: 100%;
+    width: 90%;
     white-space: nowrap;
     display: flex;
     justify-content: flex-start;
@@ -74,7 +73,7 @@
     top: 50%;
     left: 50%;
     width: 600px;
-    transform: scale(0.6) translate(-50%, -50%);
+    transform: scale(0.6) translate(-45%, -65%);
     transform-origin: 0 0;
     @include mobileMore {
       top: 20%;
@@ -114,11 +113,36 @@
     flex-direction: column;
     background: $gray-10;
     .text-area {
-      padding: 20px 0;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      width: 100%;
     }
   }
 }
 
-.sec-news {
+.cont-parallax {
+  padding: 10vw 0;
+  width: 100%;
+  height: 100%;
+  &__wrapper {
+    // position: relative;
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    height: 100%;
+    white-space: nowrap;
+  }
+  img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+  }
+}
 
+.sec-news {
+  display: flex;
 }
