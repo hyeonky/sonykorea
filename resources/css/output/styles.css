@@ -673,7 +673,7 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-g__icon {
-    transform: translate(-357%, 394%) rotate(-10deg) skewX(-20deg) scale(1.5);
+    transform: translate(-336%, 424%) rotate(-10deg) skewX(-20deg) scale(1.5);
   }
 }
 .sec-g__desc {
@@ -772,10 +772,10 @@ legend {
 }
 @media (min-width: 600px) {
   .intro .intro-text {
-    padding: 350px 0;
+    padding: 260px 0;
   }
   .intro .intro-text .pd-name {
-    padding: 425px 0;
+    padding: 335px 0;
   }
   .intro .intro-text__tit {
     font-size: 12rem;
@@ -795,7 +795,7 @@ legend {
 }
 @media (min-width: 600px) {
   .intro .img-wrap {
-    transform: scale(0.75) translate(-55%, -50%);
+    transform: scale(0.75) translate(-55%, -35%);
   }
 }
 .intro .btn_view {
@@ -825,7 +825,7 @@ legend {
   .intro .btn_view {
     top: 50%;
     right: 0;
-    transform: translate(-65%, 30%);
+    transform: translate(-65%, 120%);
   }
 }
 
@@ -874,7 +874,7 @@ legend {
   color: #c6c6c6;
 }
 .sec-latest .swiper-slide .text-area p {
-  font-size: 14px;
+  font-size: 1.4rem;
   color: #8e8e8e;
 }
 .sec-latest .swiper-slide .text-area strong {
@@ -883,14 +883,14 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-latest .swiper-slide .text-area em {
-    font-size: 21px;
+    font-size: 2.1rem;
   }
   .sec-latest .swiper-slide .text-area p {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   .sec-latest .swiper-slide .text-area strong {
     padding-top: 20px;
-    font-size: 24px;
+    font-size: 2.4rem;
   }
 }
 
@@ -1004,9 +1004,8 @@ legend {
 @media (min-width: 600px) {
   .cont-headline .btn-all {
     position: absolute;
-    top: 500px;
-    left: 0;
-    transform: none;
+    top: 520px;
+    left: 90px;
   }
 }
 .cont-headline .head-video {
@@ -1080,8 +1079,23 @@ legend {
   color: #555555;
   line-height: 3;
 }
+@media (min-width: 600px) {
+  .sec-hot .hot-lst__text .text-area {
+    padding-top: 20px;
+  }
+  .sec-hot .hot-lst__text .text-area p {
+    font-size: 2.1rem;
+  }
+  .sec-hot .hot-lst__text .text-area h3 {
+    font-size: 2.8rem;
+  }
+  .sec-hot .hot-lst__text .text-area em {
+    font-size: 2.4rem;
+  }
+}
 
 .sec-info {
+  padding: 10vw 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1096,6 +1110,9 @@ legend {
   height: 2px;
   background-color: #000;
 }
+.sec-info .cont img {
+  display: flex;
+}
 .sec-info .cont .text-area {
   display: flex;
   flex-direction: column;
@@ -1106,15 +1123,37 @@ legend {
 }
 .sec-info .cont .text-area em {
   font-weight: normal;
-  color: #0033CC;
+  color: #002699;
   font-size: 1.4rem;
 }
 .sec-info .cont .text-area h3 {
-  margin-top: 5px;
   color: #000000;
 }
 .sec-info .cont .text-area p {
-  padding-top: 2px;
-  color: #555555;
+  padding-top: 15px;
+  color: #717171;
   font-size: 1.4rem;
+}
+@media (min-width: 600px) {
+  .sec-info .cont {
+    padding-top: 15px;
+  }
+  .sec-info .cont img {
+    flex: 1;
+    padding: 15px;
+    background-color: #d8d8d8;
+  }
+  .sec-info .cont a {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sec-info .cont a .text-area {
+    flex: 1;
+    width: 100%;
+    margin: 30px;
+    padding: 35px 0;
+  }
+  .sec-info .cont a .text-area em {
+    font-weight: bold;
+  }
 }/*# sourceMappingURL=styles.css.map */

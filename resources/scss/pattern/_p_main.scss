@@ -54,9 +54,9 @@
     }
     // tablet ver
     @include mobileMore {
-      padding: 350px 0 ;
+      padding: 260px 0 ;
         .pd-name {
-          padding: 425px 0 ;
+          padding: 335px 0 ;
         }
         &__tit {
           font-size: 12rem;
@@ -75,7 +75,7 @@
     transform-origin: 0 0;
     text-align: center;
     @include mobileMore {
-      transform: scale(0.75) translate(-55%, -50%);
+      transform: scale(0.75) translate(-55%, -35%);
 
     }
   }
@@ -104,7 +104,7 @@
     @include mobileMore {
       top: 50%;
       right: 0;
-      transform: translate(-65%, 30%);
+      transform: translate(-65%, 120%);
     }
   }
 }
@@ -147,7 +147,7 @@
         // color: $white;
       }
       p {
-        font-size: 14px;
+        font-size: 1.4rem;
         color: $gray-50;
         // color: $white;
       }
@@ -158,14 +158,14 @@
       }
       @include mobileMore {
         em {
-          font-size: 21px;
+          font-size: 2.1rem;
         }
         p {
-          font-size: 16px;
+          font-size: 1.6rem;
         }
         strong {
           padding-top: 20px;
-          font-size: 24px;
+          font-size: 2.4rem;
         }
       }
     }
@@ -274,9 +274,8 @@
     }
     @include mobileMore {
       position: absolute;
-      top: 500px;
-      left: 0;
-      transform: none;
+      top: 520px;
+      left: 90px;
     }
   }
   .head-video {
@@ -346,11 +345,24 @@
         color: $gray-70;
         line-height: 3;
       }
+      @include mobileMore {
+        padding-top: 20px;
+        p {
+          font-size: 2.1rem;
+        }
+        h3 {
+          font-size: 2.8rem;
+        }
+        em {
+          font-size: 2.4rem;
+        }
+      }
     }
   }
 }
 
 .sec-info {
+  padding: 10vw 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,6 +377,9 @@
         background-color: $black;
       }
     }
+    img {
+      display: flex;
+    }
     .text-area {
       display: flex;
       flex-direction: column;
@@ -374,17 +389,37 @@
       margin-bottom: 40px;
       em {
         font-weight: normal;
-        color: $primary;
+        color: #002699;
         font-size: 1.4rem;
       }
       h3 {
-        margin-top: 5px;
         color: $gray-100;
       }
       p {
-        padding-top: 2px;
-        color: $gray-70;
+        padding-top: 15px;
+        color: $gray-60;
         font-size: 1.4rem;
+      }
+    }
+    @include mobileMore { 
+      padding-top: 15px;
+      img {
+        flex: 1;
+        padding: 15px;
+        background-color: $gray-30;
+      }
+      a {
+        display: flex;
+        justify-content: space-between;
+        .text-area {
+          flex: 1;
+          width: 100%;
+          margin: 30px;
+          padding: 35px 0;
+          em {
+            font-weight: bold;
+          }
+        }
       }
     }
   }
