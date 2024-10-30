@@ -27,6 +27,21 @@ var swiper = new Swiper(".slide-studio", {
     },
   },
 });
+
+// sonykorea swiper 적용
+var swiper = new Swiper(".latest-lst", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  loop: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 var swiper = new Swiper(".hot-lst__text", {
   loop: true,
   spaceBetween: 30,

@@ -16,9 +16,6 @@
     justify-content: center;
     align-items: flex-end;
     height: 100%;
-    @include mobileMore {
-      padding: 30px;
-    }
   }
   .intro-text {
     position: relative;
@@ -35,10 +32,6 @@
       font-size: 2rem;
       font-weight: normal;
       color: $white;
-      @include mobileMore {
-        font-size: 3rem;
-        bottom: 515px;
-      }
     }
     &__tit {
       width: 100%;
@@ -59,27 +52,15 @@
         border-top: 1px solid #999;
       }
     }
-    @include mobileMore {
-      .intro-text {
-        &__tit {
-          font-size: 12rem;
-          transform: translate(0, -160%);
-        }
-      }
-    }
   }
   .img-wrap {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 600px;
-    transform: scale(0.6) translate(-45%, -65%);
+    transform: scale(0.6) translate(-50%, -70%);
     transform-origin: 0 0;
-    @include mobileMore {
-      top: 20%;
-      left: 9%;
-      transform: scale(0.75);
-    }
+    text-align: center;
   }
   .btn_view {
     position: absolute;
@@ -101,14 +82,16 @@
         color: $white;
         font-size: 2.5rem;
       }
-    } 
-    @include mobileMore {
-      transform: translate(-70%, -330%)
     }
   }
 }
 
 .sec-latest {
+  .latest-lst{
+  overflow: visible;
+  width: 80%;
+  margin-left: 20px;
+  }
   .swiper-slide {
     flex-direction: column;
     background: $gray-10;
@@ -124,7 +107,7 @@
 }
 
 .cont-parallax {
-  padding: 10vw 0;
+  padding-top: 10vw;
   width: 100%;
   height: 100%;
   &__wrapper {
@@ -143,6 +126,126 @@
   }
 }
 
-.sec-news {
+.cont-headline {
+  padding-top: 10vw;
+  width: 100%;
+  background: $black;
+  .cont-head {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+  }
+  .head-text {
+    position: relative;
+    padding-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    &__tit {
+      text-align: left;
+      color: $white;
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 1.5;
+      letter-spacing: 0.3;
+    }
+    &__desc {
+      padding-top: 20px;
+      text-align: left;
+      color: $white;
+      font-weight: lighter;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  }
+  .btn-all {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    width: 180px;
+    height: 40px;
+    background-color: $gray-90;
+    border-radius: 30px;
+    transform: translate(-50%, -50%);
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      span {
+        text-align: center;
+        color: $white;
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .head-video {
+    padding-top: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    video {
+      width: auto;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.sec-hot {
+  padding-top: 10vw;
+  .hot-lst {
+    .swiper-slide {
+      border-radius: 50%;
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  .hot-lst__text {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .text-area {
+      text-align: center;
+      line-height: 1.5;
+      em {
+        line-height: 3;
+      }
+    }
+  }
+}
+
+.sec-info {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  .cont {
+    margin-top: -15px;
+    .line {
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: $black;
+      }
+    }
+    img {
+      padding-top: 20px;
+    }
+    .text-area {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 15px 10px 0 10px;
+      margin-bottom: 40px;
+    }
+  }
 }
