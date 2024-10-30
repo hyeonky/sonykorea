@@ -646,7 +646,7 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-g__tit {
-    font-size: 65px;
+    font-size: 70px;
   }
 }
 .sec-g__icon {
@@ -684,7 +684,7 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-g__desc {
-    font-size: 18px;
+    font-size: 21px;
   }
 }
 .sec-g__more {
@@ -840,7 +840,7 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-latest .latest-lst {
-    width: 70%;
+    width: 80%;
   }
 }
 .sec-latest .swiper-slide {
@@ -853,7 +853,6 @@ legend {
   -o-object-fit: cover;
      object-fit: cover;
   background-color: #000;
-  opacity: 95%;
 }
 @media (min-width: 600px) {
   .sec-latest .swiper-slide img {
@@ -909,10 +908,12 @@ legend {
   white-space: nowrap;
 }
 .cont-parallax img {
+  display: block;
   width: 500px;
   height: 400px;
   -o-object-fit: cover;
      object-fit: cover;
+  background-color: #000;
 }
 
 .cont-headline {
@@ -926,6 +927,14 @@ legend {
   align-items: flex-start;
   flex-wrap: nowrap;
 }
+@media (min-width: 600px) {
+  .cont-headline .cont-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+}
 .cont-headline .head-text {
   position: relative;
   padding-bottom: 80px;
@@ -933,12 +942,13 @@ legend {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  width: 100%;
 }
 .cont-headline .head-text__tit {
   text-align: left;
   color: #fff;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 3rem;
   line-height: 1.5;
   letter-spacing: 0.3;
 }
@@ -947,8 +957,25 @@ legend {
   text-align: left;
   color: #fff;
   font-weight: lighter;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.5;
+}
+@media (min-width: 600px) {
+  .cont-headline .head-text {
+    margin: 20vW 0 0 0;
+    flex: 1;
+  }
+  .cont-headline .head-text__tit {
+    margin-right: -140px;
+    font-size: 3.6rem;
+  }
+  .cont-headline .head-text__tit .t-br {
+    display: block;
+  }
+  .cont-headline .head-text__desc {
+    font-size: 1.5rem;
+    margin: 20px -150px 0 0;
+  }
 }
 .cont-headline .btn-all {
   position: sticky;
@@ -956,7 +983,9 @@ legend {
   left: 50%;
   width: 180px;
   height: 40px;
-  background-color: #1d1d1d;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   border-radius: 30px;
   transform: translate(-50%, -50%);
 }
@@ -972,6 +1001,14 @@ legend {
   color: #fff;
   font-size: 1.5rem;
 }
+@media (min-width: 600px) {
+  .cont-headline .btn-all {
+    position: absolute;
+    top: 500px;
+    left: 0;
+    transform: none;
+  }
+}
 .cont-headline .head-video {
   overflow: hidden;
   padding-top: 10vw;
@@ -981,10 +1018,22 @@ legend {
   height: 90vh;
 }
 .cont-headline .head-video video {
-  width: auto;
+  width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 600px) {
+  .cont-headline .head-video {
+    flex: 1;
+    padding-top: 0;
+    height: 70vh;
+  }
+}
+@media (min-width: 600px) {
+  .cont-headline {
+    padding-bottom: 10vw;
+  }
 }
 
 .sec-hot {
@@ -992,8 +1041,13 @@ legend {
   padding-top: 10vw;
 }
 .sec-hot .sec-g__desc em {
-  font-size: 11px;
+  font-size: 1.1rem;
   color: #d8d8d8;
+}
+@media (min-width: 600px) {
+  .sec-hot .sec-g__desc em {
+    font-size: 1.5rem;
+  }
 }
 .sec-hot .hot-lst {
   padding-top: 20px;
@@ -1016,7 +1070,7 @@ legend {
 }
 .sec-hot .hot-lst__text .text-area p {
   color: #8e8e8e;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 .sec-hot .hot-lst__text .text-area h3 {
   color: #1d1d1d;
@@ -1042,9 +1096,6 @@ legend {
   height: 2px;
   background-color: #000;
 }
-.sec-info .cont img {
-  padding-top: 20px;
-}
 .sec-info .cont .text-area {
   display: flex;
   flex-direction: column;
@@ -1055,13 +1106,15 @@ legend {
 }
 .sec-info .cont .text-area em {
   font-weight: normal;
-  color: #1d1d1d;
+  color: #0033CC;
+  font-size: 1.4rem;
 }
 .sec-info .cont .text-area h3 {
+  margin-top: 5px;
   color: #000000;
 }
 .sec-info .cont .text-area p {
-  padding-top: 15px;
+  padding-top: 2px;
   color: #555555;
-  font-size: 14px;
+  font-size: 1.4rem;
 }/*# sourceMappingURL=styles.css.map */

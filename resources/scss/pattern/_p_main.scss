@@ -117,7 +117,7 @@
     width: 90%;
     margin-left: 0;
     @include mobileMore {
-      width: 70%;
+      width: 80%;
     }
   }
   .swiper-slide {
@@ -128,7 +128,6 @@
       height: 200px;
       object-fit: cover;
       background-color: $black;
-      opacity: 95%;
       @include mobileMore {
         height: 300px;
       }
@@ -187,13 +186,15 @@
     white-space: nowrap;
   }
   img {
+    display: block;
     width: 500px;
     height: 400px;
     object-fit: cover;
+    background-color: $black;
   }
 }
 
-.cont-headline {
+.cont-headline {  
   padding-top: 10vw;
   width: 100%;
   background: $black;
@@ -202,6 +203,12 @@
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: nowrap;
+    @include mobileMore {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+    }
   }
   .head-text {
     position: relative;
@@ -210,11 +217,12 @@
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    width: 100%;
     &__tit {
       text-align: left;
       color: $white;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 3rem;
       line-height: 1.5;
       letter-spacing: 0.3;
     }
@@ -223,8 +231,23 @@
       text-align: left;
       color: $white;
       font-weight: lighter;
-      font-size: 14px;
+      font-size: 1.4rem;
       line-height: 1.5;
+    }
+    @include mobileMore {
+      margin: 20vW 0 0 0;
+      flex: 1;
+      &__tit {
+        margin-right: -140px;
+        font-size: 3.6rem;
+        .t-br {
+          display: block;
+        }
+      }
+      &__desc {
+        font-size: 1.5rem;
+        margin: 20px -150px 0 0;
+      }
     }
   }
   .btn-all {
@@ -233,7 +256,8 @@
     left: 50%;
     width: 180px;
     height: 40px;
-    background-color: $gray-90;
+    background-color: rgba(255,255,255,0.3);
+    backdrop-filter: blur(10px);
     border-radius: 30px;
     transform: translate(-50%, -50%);
     a {
@@ -248,6 +272,12 @@
         font-size: 1.5rem;
       }
     }
+    @include mobileMore {
+      position: absolute;
+      top: 500px;
+      left: 0;
+      transform: none;
+    }
   }
   .head-video {
     overflow: hidden;
@@ -257,20 +287,34 @@
     align-items: center;
     height: 90vh;
     video {
-      width: auto;
+      width: 100%;
       height: 100%;
       object-fit: cover;
     }
+    @include mobileMore {
+      flex: 1;
+      padding-top: 0;
+      height: 70vh;
+    }
+  }
+  @include mobileMore {
+    padding-bottom: 10vw;
   }
 }
 
 .sec-hot {
   position: relative;
   padding-top: 10vw;
+  // .inner {
+  //   padding: 0;
+  // }
   .sec-g__desc {
     em{
-      font-size: 11px;
+      font-size: 1.1rem;
       color: $gray-30;
+      @include mobileMore {
+        font-size: 1.5rem;
+      }
     }
   }
   .hot-lst {
@@ -292,7 +336,7 @@
       line-height: 1.5;
       p {
         color: $gray-50;
-        font-size: 14px;
+        font-size: 1.4rem;
       }
       h3 {
         color: $gray-90;
@@ -321,9 +365,6 @@
         background-color: $black;
       }
     }
-    img {
-      padding-top: 20px;
-    }
     .text-area {
       display: flex;
       flex-direction: column;
@@ -333,15 +374,17 @@
       margin-bottom: 40px;
       em {
         font-weight: normal;
-        color: $gray-90;
+        color: $primary;
+        font-size: 1.4rem;
       }
       h3 {
+        margin-top: 5px;
         color: $gray-100;
       }
       p {
-        padding-top: 15px;
+        padding-top: 2px;
         color: $gray-70;
-        font-size: 14px;
+        font-size: 1.4rem;
       }
     }
   }

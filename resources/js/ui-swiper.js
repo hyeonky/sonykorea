@@ -52,6 +52,7 @@ var swiper = new Swiper(".hot-lst__text", {
 });
 var swiper2 = new Swiper(".hot-lst", {
   loop: true,
+  spaceBetween: 30,
   grabCursor: true,
   effect: "creative",
   creativeEffect: {
