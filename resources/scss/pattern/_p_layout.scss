@@ -283,6 +283,9 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: -3px;
+    @include mobileMore {
+      font-size: 65px;
+    }
   }
   &__icon {
     position: absolute;
@@ -305,12 +308,18 @@
       font-weight: bold;
       text-align: center;
     }
+    @include mobileMore {
+      transform: translate(-357%, 394%) rotate(-10deg) skewX(-20deg) scale(1.5);
+    }
   }
   &__desc {
     font-size: 1.5rem;
     padding: 20px 0;
     color: $gray-70;
     text-align: center;
+    @include mobileMore {
+      font-size: 18px;
+    }
   }
   &__more {
     display: flex;

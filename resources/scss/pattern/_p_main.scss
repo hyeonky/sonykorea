@@ -52,6 +52,19 @@
         border-top: 1px solid #999;
       }
     }
+    // tablet ver
+    @include mobileMore {
+      padding: 350px 0 ;
+        .pd-name {
+          padding: 425px 0 ;
+        }
+        &__tit {
+          font-size: 12rem;
+          &::after {
+            padding-top: 30px;
+        }
+      }
+    }
   }
   .img-wrap {
     position: absolute;
@@ -61,6 +74,10 @@
     transform: scale(0.6) translate(-50%, -60%);
     transform-origin: 0 0;
     text-align: center;
+    @include mobileMore {
+      transform: scale(0.75) translate(-55%, -50%);
+
+    }
   }
   .btn_view {
     position: absolute;
@@ -84,23 +101,37 @@
         font-size: 2.5rem;
       }
     }
+    @include mobileMore {
+      top: 50%;
+      right: 0;
+      transform: translate(-65%, 30%);
+    }
   }
 }
 
 .sec-latest {
   position: relative;
   .latest-lst{
-  overflow: visible;
-  width: 90%;
-  margin-left: 0;
+    padding-top: 5px;
+    overflow: visible;
+    width: 90%;
+    margin-left: 0;
+    @include mobileMore {
+      width: 70%;
+    }
   }
   .swiper-slide {
     flex-direction: column;
-    background: $gray-10;
+    background: $gray-5;
     img {
       width: 100%;
       height: 200px;
       object-fit: cover;
+      background-color: $black;
+      opacity: 95%;
+      @include mobileMore {
+        height: 300px;
+      }
     }
     .text-area {
       padding: 20px;
@@ -109,17 +140,34 @@
       align-items: flex-start;
       flex-direction: column;
       width: 100%;
+      background-color: $black;
+      opacity: 90%;
       em {
         font-weight: normal;
-        color: $gray-90;
+        color: $gray-40;
+        // color: $white;
       }
       p {
-        color: $gray-50;
         font-size: 14px;
+        color: $gray-50;
+        // color: $white;
       }
       strong {
         padding-top: 15px;
-        color: $gray-70;
+        // color: $gray-70;
+        color: $white;
+      }
+      @include mobileMore {
+        em {
+          font-size: 21px;
+        }
+        p {
+          font-size: 16px;
+        }
+        strong {
+          padding-top: 20px;
+          font-size: 24px;
+        }
       }
     }
   }
