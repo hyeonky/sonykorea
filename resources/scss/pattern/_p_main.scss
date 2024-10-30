@@ -19,7 +19,7 @@
   }
   .intro-text {
     position: relative;
-    padding-bottom: 40px;
+    padding-bottom: 15px;
     width: 90%;
     white-space: nowrap;
     display: flex;
@@ -27,7 +27,7 @@
     align-items: center;
     .pd-name{
       position: absolute;
-      bottom: 170px;
+      bottom: 145px;
       left: 0;
       font-size: 2rem;
       font-weight: normal;
@@ -58,7 +58,7 @@
     top: 50%;
     left: 50%;
     width: 600px;
-    transform: scale(0.6) translate(-50%, -70%);
+    transform: scale(0.6) translate(-50%, -60%);
     transform-origin: 0 0;
     text-align: center;
   }
@@ -69,6 +69,7 @@
     width: 100px;
     height: 100px;
     background-color: $primary;
+    border: 1px solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     transform: translate(-15%, -20%);
     a {
@@ -87,14 +88,20 @@
 }
 
 .sec-latest {
+  position: relative;
   .latest-lst{
   overflow: visible;
-  width: 80%;
-  margin-left: 20px;
+  width: 90%;
+  margin-left: 0;
   }
   .swiper-slide {
     flex-direction: column;
     background: $gray-10;
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
     .text-area {
       padding: 20px;
       display: flex;
@@ -102,6 +109,18 @@
       align-items: flex-start;
       flex-direction: column;
       width: 100%;
+      em {
+        font-weight: normal;
+        color: $gray-90;
+      }
+      p {
+        color: $gray-50;
+        font-size: 14px;
+      }
+      strong {
+        padding-top: 15px;
+        color: $gray-70;
+      }
     }
   }
 }
@@ -183,6 +202,7 @@
     }
   }
   .head-video {
+    overflow: hidden;
     padding-top: 10vw;
     display: flex;
     justify-content: center;
@@ -197,8 +217,16 @@
 }
 
 .sec-hot {
+  position: relative;
   padding-top: 10vw;
+  .sec-g__desc {
+    em{
+      font-size: 11px;
+      color: $gray-30;
+    }
+  }
   .hot-lst {
+    padding-top: 20px;
     .swiper-slide {
       border-radius: 50%;
       img {
@@ -214,7 +242,16 @@
     .text-area {
       text-align: center;
       line-height: 1.5;
+      p {
+        color: $gray-50;
+        font-size: 14px;
+      }
+      h3 {
+        color: $gray-90;
+      }
       em {
+        font-weight: normal;
+        color: $gray-70;
         line-height: 3;
       }
     }
@@ -246,6 +283,18 @@
       align-items: flex-start;
       padding: 15px 10px 0 10px;
       margin-bottom: 40px;
+      em {
+        font-weight: normal;
+        color: $gray-90;
+      }
+      h3 {
+        color: $gray-100;
+      }
+      p {
+        padding-top: 15px;
+        color: $gray-70;
+        font-size: 14px;
+      }
     }
   }
 }
