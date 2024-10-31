@@ -649,6 +649,11 @@ legend {
     font-size: 70px;
   }
 }
+@media (min-width: 1024px) {
+  .sec-g__tit {
+    font-size: 90px;
+  }
+}
 .sec-g__icon {
   position: absolute;
   top: 0;
@@ -676,15 +681,26 @@ legend {
     transform: translate(-336%, 424%) rotate(-10deg) skewX(-20deg) scale(1.5);
   }
 }
+@media (min-width: 1024px) {
+  .sec-g__icon {
+    transform: translate(-765%, 554%) rotate(-10deg) skewX(-20deg) scale(1.9);
+  }
+}
 .sec-g__desc {
   font-size: 1.5rem;
   padding: 20px 0;
-  color: #555555;
+  color: #8e8e8e;
   text-align: center;
 }
 @media (min-width: 600px) {
   .sec-g__desc {
     font-size: 21px;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-g__desc {
+    margin-top: 20px;
+    font-size: 24px;
   }
 }
 .sec-g__more {
@@ -784,6 +800,20 @@ legend {
     padding-top: 30px;
   }
 }
+@media (min-width: 1024px) {
+  .intro .intro-text {
+    padding: 230px 0;
+  }
+  .intro .intro-text .pd-name {
+    padding: 340px 0;
+  }
+  .intro .intro-text__tit {
+    font-size: 14rem;
+  }
+  .intro .intro-text__tit::after {
+    padding-top: 30px;
+  }
+}
 .intro .img-wrap {
   position: absolute;
   top: 50%;
@@ -796,6 +826,11 @@ legend {
 @media (min-width: 600px) {
   .intro .img-wrap {
     transform: scale(0.75) translate(-55%, -35%);
+  }
+}
+@media (min-width: 1024px) {
+  .intro .img-wrap {
+    transform: scale(0.9) translate(-55%, -40%);
   }
 }
 .intro .btn_view {
@@ -828,6 +863,13 @@ legend {
     transform: translate(-65%, 120%);
   }
 }
+@media (min-width: 1024px) {
+  .intro .btn_view {
+    top: 50%;
+    right: 0;
+    transform: translate(-185%, 130%);
+  }
+}
 
 .sec-latest {
   position: relative;
@@ -841,6 +883,12 @@ legend {
 @media (min-width: 600px) {
   .sec-latest .latest-lst {
     width: 80%;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-latest .latest-lst {
+    padding-top: 30px;
+    width: 45%;
   }
 }
 .sec-latest .swiper-slide {
@@ -927,6 +975,12 @@ legend {
      object-fit: cover;
   background-color: #000;
 }
+@media (min-width: 1024px) {
+  .cont-parallax img {
+    width: 700px;
+    height: 500px;
+  }
+}
 
 .cont-headline {
   padding-top: 10vw;
@@ -989,6 +1043,21 @@ legend {
     margin: 20px -150px 0 0;
   }
 }
+@media (min-width: 1024px) {
+  .cont-headline .head-text {
+    margin-top: 5vw;
+  }
+  .cont-headline .head-text__tit {
+    font-size: 6rem;
+  }
+  .cont-headline .head-text__tit .t-br {
+    display: block;
+  }
+  .cont-headline .head-text__desc {
+    font-size: 2rem;
+    margin-top: 5vw;
+  }
+}
 .cont-headline .btn-all {
   position: sticky;
   top: 50%;
@@ -1020,6 +1089,15 @@ legend {
     left: 90px;
   }
 }
+@media (min-width: 1024px) {
+  .cont-headline .btn-all {
+    width: 300px;
+    height: 60px;
+    position: absolute;
+    top: 680px;
+    left: 300px;
+  }
+}
 .cont-headline .head-video {
   overflow: hidden;
   padding-top: 10vw;
@@ -1041,6 +1119,11 @@ legend {
     height: 70vh;
   }
 }
+@media (min-width: 1024px) {
+  .cont-headline .head-video {
+    height: 100vh;
+  }
+}
 @media (min-width: 600px) {
   .cont-headline {
     padding-bottom: 10vw;
@@ -1060,14 +1143,44 @@ legend {
     font-size: 1.5rem;
   }
 }
+@media (min-width: 1024px) {
+  .sec-hot .destop-circle .circle {
+    position: relative;
+  }
+  .sec-hot .destop-circle .circle .circle {
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 600px;
+    height: 600px;
+    border: 1px solid #1d1d1d;
+    border-radius: 50%;
+    background-color: #999;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-hot .desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+}
 .sec-hot .hot-lst {
   padding-top: 20px;
+  width: 60%;
 }
 .sec-hot .hot-lst .swiper-slide {
   border-radius: 50%;
 }
 .sec-hot .hot-lst .swiper-slide img {
   border-radius: 50%;
+}
+@media (min-width: 1024px) {
+  .sec-hot .hot-lst {
+    flex: 1;
+  }
 }
 .sec-hot .hot-lst__text {
   padding: 40px;
@@ -1103,6 +1216,12 @@ legend {
   }
   .sec-hot .hot-lst__text .text-area em {
     font-size: 2.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-hot .hot-lst__text {
+    flex: 1;
+    padding: 0;
   }
 }
 

@@ -65,6 +65,19 @@
         }
       }
     }
+    // desktop
+    @include tabletMore {
+      padding: 230px 0 ;
+        .pd-name {
+          padding: 340px 0;
+        }
+        &__tit {
+          font-size: 14rem;
+          &::after {
+            padding-top: 30px;
+        }
+      }
+    }
   }
   .img-wrap {
     position: absolute;
@@ -76,7 +89,9 @@
     text-align: center;
     @include mobileMore {
       transform: scale(0.75) translate(-55%, -35%);
-
+    }
+    @include tabletMore {
+      transform: scale(0.9) translate(-55%, -40%);
     }
   }
   .btn_view {
@@ -106,9 +121,13 @@
       right: 0;
       transform: translate(-65%, 120%);
     }
+    @include tabletMore {
+      top: 50%;
+      right: 0;
+      transform: translate(-185%, 130%);
+    }
   }
 }
-
 .sec-latest {
   position: relative;
   .latest-lst{
@@ -118,6 +137,10 @@
     margin-left: 0;
     @include mobileMore {
       width: 80%;
+    }
+    @include tabletMore {
+      padding-top: 30px;
+      width: 45%;
     }
   }
   .swiper-slide {
@@ -204,6 +227,10 @@
     height: 400px;
     object-fit: cover;
     background-color: $black;
+    @include tabletMore {
+      width: 700px;
+    height: 500px;
+    }
   }
 }
 
@@ -262,6 +289,19 @@
         margin: 20px -150px 0 0;
       }
     }
+    @include tabletMore {
+      margin-top: 5vw;
+      &__tit {
+        font-size: 6rem;
+        .t-br {
+          display: block;
+        }
+      }
+      &__desc {
+        font-size: 2rem;
+        margin-top: 5vw;
+      }
+    }
   }
   .btn-all {
     position: sticky;
@@ -290,6 +330,13 @@
       top: 520px;
       left: 90px;
     }
+    @include tabletMore {
+      width: 300px;
+      height: 60px;
+      position: absolute;
+      top: 680px;
+      left: 300px;
+    }
   }
   .head-video {
     overflow: hidden;
@@ -307,6 +354,9 @@
       flex: 1;
       padding-top: 0;
       height: 70vh;
+    }
+    @include tabletMore {
+      height: 100vh;
     }
   }
   @include mobileMore {
@@ -329,13 +379,43 @@
       }
     }
   }
+  .destop-circle {
+    .circle {
+    @include tabletMore {
+      position: relative;
+      .circle {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 600px;
+        height: 600px;
+        border: 1px solid $gray-90;
+        border-radius: 50%;
+        background-color: #999;
+      }
+    }
+  }
+}
+  .desktop {
+    @include tabletMore {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 40px;
+    }
+  }
   .hot-lst {
     padding-top: 20px;
+    width: 60%;
     .swiper-slide {
       border-radius: 50%;
       img {
         border-radius: 50%;
       }
+    }
+    @include tabletMore {
+      flex: 1;
     }
   }
   .hot-lst__text {
@@ -370,6 +450,10 @@
           font-size: 2.4rem;
         }
       }
+    }
+    @include tabletMore {
+      flex: 1;
+      padding: 0;
     }
   }
 }

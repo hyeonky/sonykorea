@@ -286,6 +286,9 @@
     @include mobileMore {
       font-size: 70px;
     }
+    @include tabletMore { 
+      font-size: 90px;
+    }
   }
   &__icon {
     position: absolute;
@@ -311,14 +314,21 @@
     @include mobileMore {
       transform: translate(-336%, 424%) rotate(-10deg) skewX(-20deg) scale(1.5);
     }
+    @include tabletMore {
+      transform: translate(-765%, 554%) rotate(-10deg) skewX(-20deg) scale(1.9);
+    }
   }
   &__desc {
     font-size: 1.5rem;
     padding: 20px 0;
-    color: $gray-70;
+    color: $gray-50;
     text-align: center;
     @include mobileMore {
       font-size: 21px;
+    }
+    @include tabletMore {
+      margin-top: 20px;
+      font-size: 24px;
     }
   }
   &__more {
