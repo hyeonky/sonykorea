@@ -122,25 +122,38 @@
   }
   .swiper-slide {
     flex-direction: column;
-    background: $gray-5;
+    background: $black;
     img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 120px;
       width: 100%;
-      height: 200px;
+      height: 370px;
       object-fit: cover;
       background-color: $black;
+      margin: 0 auto;
       @include mobileMore {
+        width: 100%;
         height: 300px;
+        margin-bottom: 130px;
+        padding-bottom: 10px;
       }
     }
     .text-area {
+      position: absolute;
+      bottom: 0;
+      left: 0;
       padding: 20px;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
       width: 100%;
-      background-color: $black;
-      opacity: 90%;
+      // background-color: $black;
+      // opacity: 0.3;
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(7px);
       em {
         font-weight: normal;
         color: $gray-40;
