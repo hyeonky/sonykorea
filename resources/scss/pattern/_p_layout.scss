@@ -315,7 +315,7 @@
       transform: translate(-336%, 424%) rotate(-10deg) skewX(-20deg) scale(1.5);
     }
     @include tabletMore {
-      transform: translate(-765%, 554%) rotate(-10deg) skewX(-20deg) scale(1.9);
+      transform: translate(-687%, 554%) rotate(-10deg) skewX(-20deg) scale(1.9);
     }
   }
   &__desc {
@@ -353,5 +353,31 @@
       background: $gray-20;
       border-radius: 50%;
     }
+  }
+}
+.bg {
+  width: 100%;
+  img {
+    text-align: center;
+    @include tabletMore {
+      padding-top: 26px;
+      transform: scale(1.3);
+    }
+  }
+}
+.desktop-only {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: visible;
+  @include mobileMore {
+    display: none;
+  }
+  @include tabletLess {
+    display: none;
+  }
+  @include tabletMore {
+    display: block;
   }
 }

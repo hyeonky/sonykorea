@@ -9,9 +9,9 @@
   align-items: flex-end;
   height: 100vh;
   background-color: $black;
-  padding-bottom: 50px;
+  padding-bottom: 5rem;
   .inner {
-    padding: 24px;
+    padding: 2.4rem;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -19,7 +19,7 @@
   }
   .intro-text {
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 1.5rem;
     width: 90%;
     white-space: nowrap;
     display: flex;
@@ -27,54 +27,54 @@
     align-items: center;
     .pd-name{
       position: absolute;
-      bottom: 145px;
+      bottom: 14.5rem;
       left: 0;
-      font-size: 2rem;
+      font-size: 20px;
       font-weight: normal;
       color: $white;
     }
     &__tit {
       width: 100%;
-      font-size: 8rem;
+      font-size: 80px;
       color: $white;
       &::before {
         content: "";
         display: block;
         width: 100%;
-        height: 1px;
-        border-top: 1px solid #999;
+        height: .1rem;
+        border-top: .1rem solid #999;
       }
       &::after {
         content: "";
         display: block;
         width: 100%;
-        height: 1px;
-        border-top: 1px solid #999;
+        height: .1rem;
+        border-top: .1rem solid #999;
       }
     }
     // tablet ver
     @include mobileMore {
-      padding: 260px 0 ;
+      padding: 26rem 0 ;
         .pd-name {
-          padding: 335px 0 ;
+          padding: 33.5rem 0 ;
         }
         &__tit {
-          font-size: 12rem;
+          font-size: 120px;
           &::after {
-            padding-top: 30px;
+            padding-top: 3rem;
         }
       }
     }
     // desktop
     @include tabletMore {
-      padding: 230px 0 ;
+      padding: 23rem 0 ;
         .pd-name {
-          padding: 340px 0;
+          padding: 34rem 0;
         }
         &__tit {
-          font-size: 14rem;
+          font-size: 140px;
           &::after {
-            padding-top: 30px;
+            padding-top: 3rem;
         }
       }
     }
@@ -83,7 +83,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 600px;
+    width: 60rem;
     transform: scale(0.6) translate(-50%, -60%);
     transform-origin: 0 0;
     text-align: center;
@@ -98,10 +98,10 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 100px;
-    height: 100px;
+    width: 10rem;
+    height: 10rem;
     background-color: $primary;
-    border: 1px solid rgb(255, 255, 255, 0.5);
+    border: .1rem solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
     transform: translate(-15%, -20%);
     a {
@@ -110,10 +110,16 @@
       align-items: center;
       width: 100%;
       height: 100%;
+      &:hover{
+        text-decoration: none;
+        background-color: $gray-40;
+        border-radius: 50%;
+        border: .1rem solid rgb(255, 255, 255, 0.5);
+      }
       span {
         text-align: center;
         color: $white;
-        font-size: 2.5rem;
+        font-size: 25px;
       }
     }
     @include mobileMore {
@@ -131,7 +137,7 @@
 .sec-latest {
   position: relative;
   .latest-lst{
-    padding-top: 5px;
+    padding-top: .5rem;
     overflow: visible;
     width: 90%;
     margin-left: 0;
@@ -139,7 +145,7 @@
       width: 80%;
     }
     @include tabletMore {
-      padding-top: 30px;
+      padding-top: 3rem;
       width: 45%;
     }
   }
@@ -150,24 +156,24 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding-bottom: 120px;
+      padding-bottom: 12rem;
       width: 100%;
-      height: 370px;
+      height: 37rem;
       object-fit: cover;
       background-color: $black;
       margin: 0 auto;
       @include mobileMore {
         width: 100%;
-        height: 300px;
-        margin-bottom: 130px;
-        padding-bottom: 10px;
+        height: 30rem;
+        margin-bottom: 13rem;
+        padding-bottom: 1rem;
       }
     }
     .text-area {
       position: absolute;
       bottom: 0;
       left: 0;
-      padding: 20px;
+      padding: 2.5rem;
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -176,32 +182,32 @@
       // background-color: $black;
       // opacity: 0.3;
       background-color: rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(7px);
+      backdrop-filter: blur(.7rem);
       em {
         font-weight: normal;
         color: $gray-40;
         // color: $white;
       }
       p {
-        font-size: 1.4rem;
+        font-size: 14px;
         color: $gray-50;
         // color: $white;
       }
       strong {
-        padding-top: 15px;
+        padding-top: 1.5rem;
         // color: $gray-70;
         color: $white;
       }
       @include mobileMore {
         em {
-          font-size: 2.1rem;
+          font-size: 18px;
         }
         p {
-          font-size: 1.6rem;
+          font-size: 16px;
         }
         strong {
-          padding-top: 20px;
-          font-size: 2.4rem;
+          padding-top: 2rem;
+          font-size: 21px;
         }
       }
     }
@@ -223,13 +229,13 @@
   }
   img {
     display: block;
-    width: 500px;
-    height: 400px;
+    width: 50rem;
+    height: 40rem;
     object-fit: cover;
     background-color: $black;
     @include tabletMore {
-      width: 700px;
-    height: 500px;
+      width: 70rem;
+    height: 50rem;
     }
   }
 }
@@ -252,7 +258,7 @@
   }
   .head-text {
     position: relative;
-    padding-bottom: 80px;
+    padding-bottom: 8rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -262,43 +268,43 @@
       text-align: left;
       color: $white;
       font-weight: bold;
-      font-size: 3rem;
+      font-size: 30px;
       line-height: 1.5;
       letter-spacing: 0.3;
     }
     &__desc {
-      padding-top: 20px;
+      padding-top: 2rem;
       text-align: left;
       color: $white;
       font-weight: lighter;
-      font-size: 1.4rem;
+      font-size: 14px;
       line-height: 1.5;
     }
     @include mobileMore {
       margin: 20vW 0 0 0;
       flex: 1;
       &__tit {
-        margin-right: -140px;
-        font-size: 3.6rem;
+        margin-right: -14rem;
+        font-size: 36px;
         .t-br {
           display: block;
         }
       }
       &__desc {
-        font-size: 1.5rem;
-        margin: 20px -150px 0 0;
+        font-size: 15px;
+        margin: 2rem -15rem 0 0;
       }
     }
     @include tabletMore {
       margin-top: 5vw;
       &__tit {
-        font-size: 6rem;
+        font-size: 60px;
         .t-br {
           display: block;
         }
       }
       &__desc {
-        font-size: 2rem;
+        font-size: 20px;
         margin-top: 5vw;
       }
     }
@@ -307,11 +313,11 @@
     position: sticky;
     top: 50%;
     left: 50%;
-    width: 180px;
-    height: 40px;
+    width: 18rem;
+    height: 4rem;
     background-color: rgba(255,255,255,0.3);
-    backdrop-filter: blur(10px);
-    border-radius: 30px;
+    backdrop-filter: blur(1rem);
+    border-radius: 3rem;
     transform: translate(-50%, -50%);
     a {
       display: flex;
@@ -319,23 +325,31 @@
       align-items: center;
       width: 100%;
       height: 100%;
+      &:hover{
+        text-decoration: none;
+        background-color: $gray-40;
+        border-radius: 3rem;
+      }
       span {
         text-align: center;
         color: $white;
-        font-size: 1.5rem;
+        font-size: 15px;
+        @include tabletMore {
+          font-size: 20px;
+        }
       }
     }
     @include mobileMore {
       position: absolute;
-      top: 520px;
-      left: 90px;
+      top: 52rem;
+      left: 9rem;
     }
     @include tabletMore {
-      width: 300px;
-      height: 60px;
+      width: 30rem;
+      height: 6rem;
       position: absolute;
-      top: 680px;
-      left: 300px;
+      top: 70rem;
+      left: 15rem;
     }
   }
   .head-video {
@@ -368,46 +382,63 @@
   position: relative;
   padding-top: 10vw;
   // .inner {
+  //   margin-left: 2rem;
   //   padding: 0;
   // }
   .sec-g__desc {
     em{
-      font-size: 1.1rem;
+      font-size: 11px;
       color: $gray-30;
       @include mobileMore {
-        font-size: 1.5rem;
+        font-size: 15px;
       }
     }
   }
-  .destop-circle {
-    .circle {
-    @include tabletMore {
-      position: relative;
-      .circle {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 600px;
-        height: 600px;
-        border: 1px solid $gray-90;
-        border-radius: 50%;
-        background-color: #999;
-      }
+  .desktop-only {
+    .circle1 {
+      position: absolute;
+      top: 36%;
+      left: -35%;
+      width: 59.1rem;
+      height: 59.1rem;
+      border: .1rem solid $gray-40;
+      border-radius: 50%;
+      background-color: $white;
+    }
+  .circle2 {
+    position: absolute;
+    top: 36%;
+    right: -35%;
+    width: 59.1rem;
+    height: 59.1rem;
+    border: .1rem solid $gray-40;
+    border-radius: 50%;
+    background-color: $white;
+    z-index: 200;
     }
   }
-}
   .desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    // width: 90%; 
+    @include mobileMore {
+      margin-left: 7rem;
+      width: 80%;
+    }
     @include tabletMore {
       display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;  
       justify-content: space-between;
       align-items: center;
-      margin-top: 40px;
+      margin-top: 4rem;
+      width: 90%;
     }
   }
   .hot-lst {
-    padding-top: 20px;
-    width: 60%;
     .swiper-slide {
       border-radius: 50%;
       img {
@@ -415,20 +446,25 @@
       }
     }
     @include tabletMore {
-      flex: 1;
+      // flex: 1;
     }
   }
   .hot-lst__text {
-    padding: 40px;
+    padding: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     .text-area {
       text-align: center;
       line-height: 1.5;
-      p {
-        color: $gray-50;
-        font-size: 1.4rem;
+      a {
+        &:hover{
+          text-decoration: none;
+        }
+      }
+      span {
+        color: $gray-40;
+        font-size: 14px;
       }
       h3 {
         color: $gray-90;
@@ -439,21 +475,45 @@
         line-height: 3;
       }
       @include mobileMore {
-        padding-top: 20px;
-        p {
-          font-size: 2.1rem;
+        padding-top: 2rem;
+        span {
+          font-size: 21px;
         }
         h3 {
-          font-size: 2.8rem;
+          font-size: 28px;
         }
         em {
-          font-size: 2.4rem;
+          font-size: 24px;
         }
       }
-    }
-    @include tabletMore {
-      flex: 1;
-      padding: 0;
+      @include tabletMore {
+        flex: 1;
+        margin-left: -10rem;
+        text-align: start;
+        padding-left: 150px;
+        span {
+          font-size: 22px;
+        }
+        h3 {
+          font-size: 28px;
+        }
+        .color-btn {
+          display: inline-block;
+          margin-top: 50px;
+          width: 26px;
+          height: 26px;
+          background-color: $black;
+          border: 1px solid $gray-40;
+        }
+        p {
+          margin-top: 10px;
+          font-size: 14px;
+          color: $gray-50;
+        }
+        em {
+          font-size: 24px;
+        }
+      }
     }
   }
 }
@@ -465,32 +525,63 @@
   align-items: center;
   .cont {
     position: relative;
-    margin-top: -15px;
+    margin: -1.5rem 0 1.5rem 0;
     text-align: center;
     .line {
       &::before {
         content: "";
         display: block;
         width: 100%;
-        height: 2px;
+        height: .2rem;
         background-color: $black;
+      }
+    }
+    .bg1 {
+      @include mobileMore {
+        width: 50.25%;
+        background: linear-gradient(to bottom, #EBEAEA, #DBDBDB, #C9C9CA, #C9C9C9);
+        backdrop-filter: blur(.01rem);
+        img {
+          height: 220px;
+          backdrop-filter: blur(0.09rem);
+        }
+      }
+      @include tabletMore {
+        height: 250px;
+        background: linear-gradient(to bottom,#E5E4E4, #DADADA, #CACACB, #C9C9CA, #C9C9C9);
+        backdrop-filter: blur(.01rem);
+      }
+    }
+    .bg2 {
+      background-color: #F9E4C9;
+      @include mobileMore {
+        width: 50.25%;
+      }
+      @include tabletMore {
+        width: 50.25%;
+        height: 250px;
       }
     }
     img {
       width: 100%;
-      height: 200px;
+      height: 20rem;
       object-fit: cover;
+    }
+    a {
+      &:hover{
+        text-decoration: none;
+      }
     }
     .text-area {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      padding: 30px 10px 30px 10px;
-      margin-bottom: 40px;
+      padding: 3rem 1rem 3rem 1rem;
+      margin-bottom: 2rem;
       background-color: #fff;
       em {
-        font-weight: normal;
+        font-weight: bold;
         color: #002699;
         font-size: 1.4rem;
       }
@@ -498,15 +589,26 @@
         color: $gray-100;
       }
       p {
-        padding-top: 15px;
+        padding-top: 1.5rem;
         color: $gray-60;
         font-size: 1.4rem;
+      }
+      @include tabletMore {
+        em {
+          font-size: 16px;
+        }
+        h3 {
+          font-size: 24px;
+        }
+        p {
+          font-size: 21px;
+        }
       }
     }
     @include mobileMore { 
       img {
         width: 50%;
-        height: 200px;
+        height: 20rem;
         text-align: center;
       }
       a {
@@ -514,10 +616,7 @@
         justify-content: space-between;
         .text-area {
           width: 50%;
-          padding: 44px 33px;
-          em {
-            font-weight: bold;
-          }
+          padding: 4.4rem 3.3rem;
         }
       }
     }

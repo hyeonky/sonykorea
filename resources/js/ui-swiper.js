@@ -35,7 +35,8 @@ var swiper = new Swiper(".latest-lst", {
   loop: false,
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
+    // clickable: true,
+    dynamicBullets: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
@@ -44,6 +45,7 @@ var swiper = new Swiper(".latest-lst", {
 });
 var swiper = new Swiper(".hot-lst__text", {
   loop: true,
+  autoplay: true,
   spaceBetween: 30,
   effect: "fade",
   slidesPerView: 1,
@@ -52,6 +54,7 @@ var swiper = new Swiper(".hot-lst__text", {
 });
 var swiper2 = new Swiper(".hot-lst", {
   loop: true,
+  autoplay: true,
   spaceBetween: 30,
   grabCursor: true,
   effect: "creative",
