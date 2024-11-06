@@ -43,6 +43,7 @@ var swiper = new Swiper(".latest-lst", {
     prevEl: ".swiper-button-prev",
   },
 });
+// 2번째
 var swiper = new Swiper(".hot-lst__text", {
   loop: true,
   autoplay: true,
