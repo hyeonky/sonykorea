@@ -43,19 +43,27 @@ var swiper = new Swiper(".latest-lst", {
     prevEl: ".swiper-button-prev",
   },
 });
+
 // 2번째
 var swiper = new Swiper(".hot-lst__text", {
-  loop: true,
-  autoplay: true,
+  loop: false,
+  // autoplay: {
+  //   delay: 3000,
+  // },
   spaceBetween: 30,
   effect: "fade",
+  fadeEffect: { crossFade: true },
   slidesPerView: 1,
   freeMode: true,
   watchSlidesProgress: true,
+  allowTouchMove: false,
+  speed: 1100,
 });
-var swiper2 = new Swiper(".hot-lst", {
-  loop: true,
-  autoplay: true,
+var swiper2 = new Swiper(".hot-lst__gallery", {
+  loop: false,
+  // autoplay: {
+  //   delay: 3000,
+  // },
   spaceBetween: 30,
   grabCursor: true,
   effect: "creative",
@@ -74,5 +82,32 @@ var swiper2 = new Swiper(".hot-lst", {
   },
   thumbs: {
     swiper: swiper,
+    speed:1500,
   },
 });
+
+var swiperBackground = new Swiper(".hot-lst__circle", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  loop: false,
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
+  allowTouchMove: false, // 사용자 터치 막기
+  speed: 1500, // 전환 속도 설정
+});
+function syncSwipers() {
+  // swiper1, swiper2, swiperBackground가 같은 인덱스로 이동하도록 설정
+  var index = swiper.realIndex;
+  swiper2.slideTo(index);
+  swiperBackground.slideTo(index);
+}
+
+// 각 swiper의 slideChange 이벤트에서 동기화
+swiper.on("slideChange", syncSwipers);
+swiper2.on("slideChange", syncSwipers);
+swiperBackground.on("slideChange", syncSwipers);
+
+// 시작 시 동기화
+syncSwipers();
