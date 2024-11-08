@@ -46,7 +46,7 @@ var swiper = new Swiper(".latest-lst", {
 
 // 2번째
 var swiper = new Swiper(".hot-lst__text", {
-  loop: true,
+  loop: false,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -60,8 +60,9 @@ var swiper = new Swiper(".hot-lst__text", {
   allowTouchMove: false,
   speed: 1100,
 });
+
 var swiper2 = new Swiper(".hot-lst__gallery", {
-  loop: true,
+  loop: false,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -84,7 +85,7 @@ var swiper2 = new Swiper(".hot-lst__gallery", {
   },
   thumbs: {
     swiper: swiper,
-    speed:1500,
+    speed:1000,
   },
 });
 
@@ -96,32 +97,20 @@ var swiperBackground = new Swiper(".hot-lst__circle", {
     delay: 3000,
     disableOnInteraction: false,
   },
-  allowTouchMove: false, // 사용자 터치 막기
-  speed: 1500, // 전환 속도 설정
+  allowTouchMove: false, 
+  speed: 1000, 
 });
-// function syncSwipers() {
-//   // swiper1, swiper2, swiperBackground가 같은 인덱스로 이동하도록 설정
-//   var index = swiper.realIndex;
-//   swiper2.slideTo(index);
-//   swiperBackground.slideTo(index);
-// }
+function syncSwipers() {
+  // swiper1, swiper2, swiperBackground가 같은 인덱스로 이동하도록 설정
+  var index = swiper.realIndex;
+  swiper2.slideTo(index);
+  swiperBackground.slideTo(index);
+}
 
-// // 각 swiper의 slideChange 이벤트에서 동기화
-// swiper.on("slideChange", syncSwipers);
-// swiper2.on("slideChange", syncSwipers);
-// swiperBackground.on("slideChange", syncSwipers);
+// 각 swiper의 slideChange 이벤트에서 동기화
+swiper.on("slideChange", syncSwipers);
+swiper2.on("slideChange", syncSwipers);
+swiperBackground.on("slideChange", syncSwipers);
 
-// // 시작 시 동기화
-// syncSwipers();
-swiper2.on("slideChange", function () {
-  swiper.slideToLoop(swiper2.realIndex);  // 무한 루프에서도 연동되게 slideToLoop 사용
-  swiperBackground.slideToLoop(swiper2.realIndex);
-});
-swiper.on("slideChange", function () {
-  swiper2.slideToLoop(swiper.realIndex);
-  swiperBackground.slideToLoop(swiper.realIndex);
-});
-swiperBackground.on("slideChange", function () {
-  swiper.slideToLoop(swiperBackground.realIndex);
-  swiper2.slideToLoop(swiperBackground.realIndex);
-});
+
+
