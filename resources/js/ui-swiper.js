@@ -46,7 +46,7 @@ var swiper = new Swiper(".latest-lst", {
 
 // 2번째
 var swiper = new Swiper(".hot-lst__text", {
-  loop: false,
+  loop: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -69,6 +69,7 @@ var swiper2 = new Swiper(".hot-lst__gallery", {
   },
   spaceBetween: 30,
   grabCursor: true,
+  allowTouchMove: true,
   effect: "creative",
   creativeEffect: {
     prev: {
@@ -91,26 +92,32 @@ var swiper2 = new Swiper(".hot-lst__gallery", {
 
 var swiperBackground = new Swiper(".hot-lst__circle", {
   slidesPerView: "auto",
-  spaceBetween: 30,
-  loop: true,
+  spaceBetween: 350,
+  loop: true, // 루프 설정
+  loopAdditionalSlides: 1, // 루프 시 미리보기를 위한 추가 슬라이드 설정
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
   },
-  allowTouchMove: false, 
-  speed: 1000, 
+  allowTouchMove: false, // 터치 이동 비활성화
+  speed: 1000, // 슬라이드 속도
 });
+
+
 function syncSwipers() {
-  // swiper1, swiper2, swiperBackground가 같은 인덱스로 이동하도록 설정
+  // 모든 swiper 인스턴스가 현재 슬라이드의 realIndex로 동기화
   var index = swiper.realIndex;
   swiper2.slideTo(index);
   swiperBackground.slideTo(index);
+
+  // autoplay 재시작
+  swiper.autoplay.start();
+  swiper2.autoplay.start();
+  swiperBackground.autoplay.start();
 }
 
-// 각 swiper의 slideChange 이벤트에서 동기화
-swiper.on("slideChange", syncSwipers);
-swiper2.on("slideChange", syncSwipers);
-swiperBackground.on("slideChange", syncSwipers);
-
-
+// transitionEnd 이벤트에서 동기화 호출
+swiper.on("transitionEnd", syncSwipers);
+swiper2.on("transitionEnd", syncSwipers);
+swiperBackground.on("transitionEnd", syncSwipers);
 

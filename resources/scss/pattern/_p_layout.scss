@@ -396,11 +396,13 @@
     width: 90%;
   }
   @include tabletMore {
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: row;  
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
+    z-index: 300;
   }
 }
