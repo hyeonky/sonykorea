@@ -1,6 +1,5 @@
 // 사이트 레이아웃 관련 요소
 
-
 // grid layout
 .inner {
   position: relative;
@@ -61,7 +60,7 @@
     }
   }
   &::before {
-    content: "";
+    content: '';
     // display: none;
     position: absolute;
     top: 102px;
@@ -91,7 +90,7 @@
       display: block;
       width: 200px;
       height: 35px;
-      background: url("../../../resources/images/pattern/common/head_logo.svg") no-repeat 0 0 / contain;
+      background: url('../../../resources/images/pattern/common/head_logo.svg') no-repeat 0 0 / contain;
     }
     span {
       @include sr-only;
@@ -120,7 +119,7 @@
       &:first-child {
         .gnb__depth2 {
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
@@ -146,7 +145,7 @@
           align-items: center;
           height: 100%;
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             bottom: 0;
             left: 50%;
@@ -171,7 +170,7 @@
     background: $gray-5;
     transition: all 0.3s;
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       right: 0;
@@ -203,7 +202,7 @@
     }
     &.active {
       .lang__btn::after {
-        content: "\f106";
+        content: '\f106';
         @include lineAwesome;
       }
       .lang__lst {
@@ -215,7 +214,7 @@
       margin-right: 10px;
       text-transform: uppercase;
       &::after {
-        content: "\f107";
+        content: '\f107';
         @include lineAwesome;
         margin-left: 5px;
         color: $gray-50;
@@ -242,14 +241,14 @@
   .search {
     transform: scaleX(-1);
     &::before {
-      content: "\f002";
+      content: '\f002';
       @include lineAwesome;
       font-size: 3rem;
     }
   }
   .all-menu {
     &::before {
-      content: "\f0c9";
+      content: '\f0c9';
       @include lineAwesome;
       font-size: 3rem;
     }
@@ -286,7 +285,7 @@
     @include mobileMore {
       font-size: 70px;
     }
-    @include tabletMore { 
+    @include tabletMore {
       font-size: 90px;
     }
   }
@@ -304,10 +303,10 @@
     border-radius: 4px;
     transform: translate(-87%, 284%) rotate(-10deg) skewX(-20deg);
     span {
-      padding: 10PX;
+      padding: 10px;
       color: $white;
       font-size: 9px;
-      line-height: 9PX;
+      line-height: 9px;
       font-weight: bold;
       text-align: center;
     }
@@ -343,7 +342,7 @@
       right: $p-tablet;
     }
     &::after {
-      content: "\f061";
+      content: '\f061';
       @include lineAwesome;
       display: flex;
       justify-content: center;
@@ -362,28 +361,63 @@
       justify-content: space-between;
       align-items: center;
       // .swiper-wrapper {
-      //   transform: translateX(-20%); 
+      //   transform: translateX(-20%);
       // }
+      .swiper-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 120px;
+        height: 120px;
+        background-color: $gray-80;
+        border-radius: 50%;
+        transform: translate(-50%, 50%);
+        text-align: center;
+        z-index: 400;
+        &-next {
+          content: '\f054';
+          color: $white;
+          width: 40px;
+          height: 40px;
+          font-weight: lighter;
+        }
+        &-prev {
+          content: '\f054';
+          color: $white;
+          width: 40px;
+          height: 40px;
+          font-weight: lighter;
+        }
+        @include tabletLess {
+          display: none;
+        }
+        @include mobileMore {
+          display: none;
+        }
+        @include tabletMore {
+          display: block;
+        }
+      }
     }
   }
 }
 .bg {
   width: 100%;
   @include tabletMore {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 15%;
-      left: 52%;
-  }
-  img {
-    @include tabletMore {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 240px;
-    height: 150px;
+    position: absolute;
+    top: 15%;
+    left: 52%;
+  }
+  img {
+    @include tabletMore {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 240px;
+      height: 150px;
     }
   }
 }
@@ -399,7 +433,7 @@
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    flex-direction: row;  
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-top: 4rem;
