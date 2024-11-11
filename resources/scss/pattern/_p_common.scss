@@ -56,34 +56,33 @@
     }
   }
   .swiper-button-next::before {
-    content: "\f138";
+    content: '\f138';
     position: absolute;
     top: -40%;
     left: 2510%;
   }
   .swiper-button-prev::before {
-    content: "\f137";
+    content: '\f137';
     position: absolute;
     top: -40%;
     right: 0;
   }
 }
 
-
 // 사이트 공통 스타일
 // text-align: center;
 .m-br {
   display: block;
-  @include tabletMore  {
+  @include tabletMore {
     display: none;
   }
-  @include mobileMore  {
+  @include mobileMore {
     display: none;
   }
 }
 .t-br {
   display: block;
-  @include tabletMore  {
+  @include tabletMore {
     display: none;
   }
 }

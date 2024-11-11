@@ -798,6 +798,47 @@ legend {
     justify-content: space-between;
     align-items: center;
   }
+  .sec-g__cont .swiper-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    background-color: #2d2d2d;
+    border-radius: 50%;
+    transform: translate(-50%, 50%);
+    text-align: center;
+    z-index: 400;
+  }
+  .sec-g__cont .swiper-button-next {
+    content: "\f054";
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-weight: lighter;
+  }
+  .sec-g__cont .swiper-button-prev {
+    content: "\f054";
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    font-weight: lighter;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1023px) {
+  .sec-g__cont .swiper-button {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (min-width: 600px) {
+  .sec-g__cont .swiper-button {
+    display: none;
+  }
+}
+@media (min-width: 1024px) and (min-width: 1024px) {
+  .sec-g__cont .swiper-button {
+    display: block;
+  }
 }
 
 .bg {
@@ -1285,7 +1326,6 @@ legend {
   transform: translate(-10%, -15%);
   width: 100%;
   height: 100%;
-  z-index: 200;
   flex-shrink: 0;
 }
 @media (min-width: 600px) {

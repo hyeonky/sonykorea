@@ -405,7 +405,7 @@
   transform: translate(-10%, -15%);
   width: 100%;
   height: 100%;
-  z-index: 200;
+  // z-index: 200;
   flex-shrink: 0;
   @include mobileMore {
     display: none;
@@ -443,8 +443,13 @@
       // top: 0;
       // left: 0;
       // transform: translate(-50%, 0%);
+<<<<<<< HEAD
       width: 599px;
       height: 599px;
+=======
+      width: 534px;
+      height: 534px;
+>>>>>>> 38ff46acb8ee08c4c1f0b8b5e7c1499b30da8280
       border: 0.1rem solid $gray-40;
       border-radius: 50%;
     }

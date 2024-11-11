@@ -1,19 +1,19 @@
-var swiper = new Swiper(".slide-intro", {
+var swiper = new Swiper('.slide-intro', {
   slidesPerView: 1,
   spaceBetween: 10,
   loop: true,
   // autoplay: true,
   pagination: {
-    el: ".slide-intro .swiper-pagination",
+    el: '.slide-intro .swiper-pagination',
     clickable: true,
   },
 });
 
-var swiper = new Swiper(".slide-studio", {
+var swiper = new Swiper('.slide-studio', {
   slidesPerView: 1,
   spaceBetween: 20,
   pagination: {
-    el: ".slide-studio .swiper-pagination",
+    el: '.slide-studio .swiper-pagination',
     clickable: true,
   },
   breakpoints: {
@@ -29,30 +29,30 @@ var swiper = new Swiper(".slide-studio", {
 });
 
 // sonykorea swiper 적용
-var swiper = new Swiper(".latest-lst", {
-  slidesPerView: "auto",
+var swiper = new Swiper('.latest-lst', {
+  slidesPerView: 'auto',
   spaceBetween: 30,
   loop: false,
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination',
     // clickable: true,
     dynamicBullets: true,
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
 });
 
 // 2번째
-var swiper = new Swiper(".hot-lst__text", {
-  loop: true,
+var swiper = new Swiper('.hot-lst__text', {
+  loop: false,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
   spaceBetween: 30,
-  effect: "fade",
+  effect: 'fade',
   fadeEffect: { crossFade: true },
   slidesPerView: 1,
   freeMode: true,
@@ -61,63 +61,57 @@ var swiper = new Swiper(".hot-lst__text", {
   speed: 1100,
 });
 
-var swiper2 = new Swiper(".hot-lst__gallery", {
+var swiper2 = new Swiper('.hot-lst__gallery', {
   loop: false,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
-  spaceBetween: 30,
+  spaceBetween: 10, // 슬라이드 간 간격
   grabCursor: true,
   allowTouchMove: true,
-  effect: "creative",
+  effect: 'creative',
   creativeEffect: {
     prev: {
       shadow: true,
       translate: [0, 0, -400],
     },
     next: {
-      translate: ["100%", 0, 0],
+      translate: ['100%', 0, 0],
     },
   },
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
   },
   thumbs: {
     swiper: swiper,
-    speed:1000,
+    speed: 2000,
   },
 });
 
-var swiperBackground = new Swiper(".hot-lst__circle", {
-  slidesPerView: "auto",
+var swiperBackground = new Swiper('.hot-lst__circle', {
+  slidesPerView: 'auto',
   spaceBetween: 350,
-  loop: true, // 루프 설정
-  loopAdditionalSlides: 1, // 루프 시 미리보기를 위한 추가 슬라이드 설정
+  loop: true,
+  loopAdditionalSlides: 1,
   autoplay: {
-    delay: 3000,
+    delay: 5000,
     disableOnInteraction: false,
   },
-  allowTouchMove: false, // 터치 이동 비활성화
-  speed: 1000, // 슬라이드 속도
+  allowTouchMove: false,
+  speed: 1200,
 });
 
-
 function syncSwipers() {
-  // 모든 swiper 인스턴스가 현재 슬라이드의 realIndex로 동기화
   var index = swiper.realIndex;
+
+  // 모든 swiper를 현재 슬라이드 index로 동기화
   swiper2.slideTo(index);
   swiperBackground.slideTo(index);
-
-  // autoplay 재시작
-  swiper.autoplay.start();
-  swiper2.autoplay.start();
-  swiperBackground.autoplay.start();
 }
 
-// transitionEnd 이벤트에서 동기화 호출
-swiper.on("transitionEnd", syncSwipers);
-swiper2.on("transitionEnd", syncSwipers);
-swiperBackground.on("transitionEnd", syncSwipers);
-
+// slideChangeTransitionStart 이벤트로 동기화 호출
+swiper.on('slideChangeTransitionStart', syncSwipers);
+swiper2.on('slideChangeTransitionStart', syncSwipers);
+swiperBackground.on('slideChangeTransitionStart', syncSwipers);
