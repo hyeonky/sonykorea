@@ -730,10 +730,10 @@ legend {
   transform: translate(-87%, 284%) rotate(-10deg) skewX(-20deg);
 }
 .sec-g__icon span {
-  padding: 10PX;
+  padding: 10px;
   color: #fff;
   font-size: 9px;
-  line-height: 9PX;
+  line-height: 9px;
   font-weight: bold;
   text-align: center;
 }
@@ -841,7 +841,8 @@ legend {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    width: 100%;
+    margin: 0;
     z-index: 300;
   }
 }
@@ -1150,7 +1151,7 @@ legend {
 }
 @media (min-width: 600px) {
   .cont-headline .head-text {
-    margin: 20vW 0 0 0;
+    margin: 20vw 0 0 0;
     flex: 1;
   }
   .cont-headline .head-text__tit {
@@ -1325,8 +1326,8 @@ legend {
   }
 }
 .hot-lst__circle .swiper-wrapper .circle {
-  width: 534px;
-  height: 534px;
+  width: 599px;
+  height: 599px;
   border: 0.1rem solid #c6c6c6;
   border-radius: 50%;
 }
@@ -1460,7 +1461,7 @@ legend {
 @media (min-width: 600px) {
   .sec-info .cont .bg1 {
     width: 50.25%;
-    background: linear-gradient(to bottom, #EBEAEA, #DBDBDB, #C9C9CA, #C9C9C9);
+    background: linear-gradient(to bottom, #ebeaea, #dbdbdb, #c9c9ca, #c9c9c9);
     -webkit-backdrop-filter: blur(0.01rem);
             backdrop-filter: blur(0.01rem);
   }
@@ -1480,7 +1481,7 @@ legend {
   }
 }
 .sec-info .cont .bg2 {
-  background-color: #F9E4C9;
+  background-color: #f9e4c9;
 }
 @media (min-width: 600px) {
   .sec-info .cont .bg2 {
