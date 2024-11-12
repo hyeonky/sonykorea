@@ -2,6 +2,40 @@
 :root {
   --swiper-theme-color: $black;
 }
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  width: 10rem;
+  background-color: #fff;
+  z-index: 10;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  .wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+  }
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 20px;
+  }
+  @include mobileMore {
+    display: none;
+  }
+  @include tabletLess {
+    display: none;
+  }
+  @include tabletMore {
+    display: block;
+  }
+}
+
 .intro {
   overflow: hidden;
   display: flex;
@@ -254,6 +288,7 @@
       flex-direction: row;
       justify-content: space-between;
       position: relative;
+      // margin-left: -50px;
     }
   }
   .head-text {
@@ -360,7 +395,7 @@
     align-items: center;
     height: 90vh;
     video {
-      width: 100%;
+      width: 90%;
       height: 100%;
       object-fit: cover;
     }

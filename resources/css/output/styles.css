@@ -342,13 +342,13 @@ legend {
   content: "\f138";
   position: absolute;
   top: -40%;
-  left: 2510%;
+  left: 1410%;
 }
 .swiper .swiper-button-prev::before {
   content: "\f137";
   position: absolute;
   top: -40%;
-  right: 0;
+  right: -40%;
 }
 
 .m-br {
@@ -895,6 +895,46 @@ legend {
   --swiper-theme-color: $black;
 }
 
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  width: 10rem;
+  background-color: #fff;
+  z-index: 10;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.sidebar .wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  will-change: transform;
+}
+.sidebar img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: 20px;
+}
+@media (min-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .sidebar {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .sidebar {
+    display: block;
+  }
+}
+
 .intro {
   overflow: hidden;
   display: flex;
@@ -1284,7 +1324,7 @@ legend {
   height: 90vh;
 }
 .cont-headline .head-video video {
-  width: 100%;
+  width: 90%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
