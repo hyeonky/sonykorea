@@ -360,43 +360,41 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      // .swiper-wrapper {
-      //   transform: translateX(-20%);
-      // }
-      .swiper-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 120px;
-        height: 120px;
-        background-color: $gray-80;
-        border-radius: 50%;
-        transform: translate(-50%, 50%);
-        text-align: center;
-        z-index: 400;
-        &-next {
-          content: '\f054';
-          color: $white;
-          width: 40px;
-          height: 40px;
-          font-weight: lighter;
-        }
-        &-prev {
-          content: '\f054';
-          color: $white;
-          width: 40px;
-          height: 40px;
-          font-weight: lighter;
-        }
-        @include tabletLess {
-          display: none;
-        }
-        @include mobileMore {
-          display: none;
-        }
-        @include tabletMore {
-          display: block;
-        }
+    }
+    .swiper-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 120px;
+      height: 120px;
+      background-color: $gray-80;
+      border-radius: 50%;
+      transform: translate(-50%, 50%);
+      text-align: center;
+      z-index: 400;
+      display: block;
+      &-next {
+        content: '\f054';
+        color: $white;
+        width: 40px;
+        height: 40px;
+        font-weight: lighter;
+      }
+      &-prev {
+        content: '\f054';
+        color: $white;
+        width: 40px;
+        height: 40px;
+        font-weight: lighter;
+      }
+      @include mobileMore {
+        display: none;
+      }
+      @include tabletLess {
+        display: none;
+      }
+      @include tabletMore {
+        display: block;
       }
     }
   }
@@ -425,6 +423,7 @@
 .desktop {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
   @include mobileMore {
     margin-left: 35px;
     width: 90%;
@@ -436,7 +435,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    width: 100%;
+    margin: 0 auto;
     z-index: 300;
+    flex-shrink: 0;
   }
 }
