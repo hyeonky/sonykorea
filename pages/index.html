@@ -84,6 +84,7 @@
       defer
       src="../resources/js/ui-swiper.js"
     ></script>
+    <script src="../resources/js/gsap.js"></script>
   </head>
   <body>
     <div id="skip-nav">
@@ -164,7 +165,7 @@
       <!-- /.header -->
 
       <div class="sidebar">
-        <div class="wrapper">
+        <div class="sidebar-wrapper">
           <div class="sidebar__logo">
             <img
               src="../resources/images/pattern/common/logo1.png"
@@ -605,5 +606,12 @@
         include-html="./layout/footer.html"
       ></footer>
     </div>
+    <script>
+      // use a script tag or an external JS file
+      document.addEventListener('DOMContentLoaded', (event) => {
+        gsap.registerPlugin(ScrollTrigger);
+        // gsap code here!
+      });
+    </script>
   </body>
 </html>
