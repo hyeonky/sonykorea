@@ -7,24 +7,26 @@
   display: block;
   flex-direction: column;
   position: fixed;
+  top: 0;
   right: 0;
   width: 8rem;
+  height: 100vh;
   background-color: #fff;
-  backdrop-filter: blur(50px);
-  z-index: 1;
+  // backdrop-filter: blur(200px);
+  z-index: 100;
   padding: 0 1rem;
+  // transform: translate3d(0%, -5%);
   .sidebar-wrapper {
-    transform: translate(0%, -5%);
-    position: relative;
+    position: absolute;
     flex-direction: column;
+    backdrop-filter: blur(200px);
     will-change: transform;
   }
   img {
     width: 100%;
     transform: scale(1.2);
-    height: auto;
-    object-fit: contain;
     margin-bottom: 100px;
+    padding-right: 10px;
   }
   @include mobileMore {
     display: none;
