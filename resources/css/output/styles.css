@@ -899,26 +899,22 @@ legend {
   display: block;
   flex-direction: column;
   position: fixed;
+  top: 0;
   right: 0;
   width: 8rem;
+  height: 2000vh;
   background-color: #fff;
-  -webkit-backdrop-filter: blur(50px);
-          backdrop-filter: blur(50px);
-  z-index: 1;
+  z-index: 100;
   padding: 0 1rem;
+  transform: translate(0%, -2%);
 }
 .sidebar .sidebar-wrapper {
-  transform: translate(0%, -5%);
   position: relative;
-  flex-direction: column;
-  will-change: transform;
+  top: 0;
 }
 .sidebar img {
   width: 100%;
   transform: scale(1.2);
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
   margin-bottom: 100px;
 }
 @media (min-width: 600px) {
@@ -955,7 +951,6 @@ legend {
 }
 .intro .intro-text {
   position: relative;
-  padding-bottom: 1.5rem;
   width: 90%;
   white-space: nowrap;
   display: flex;
@@ -974,18 +969,32 @@ legend {
   width: 100%;
   font-size: 80px;
   color: #fff;
+  animation-name: main-marquee-ani;
+  animation-iteration-count: infinite;
+  animation-duration: 30s;
+  animation-direction: normal;
+  animation-timing-function: linear;
+  white-space: nowrap;
+}
+@keyframes main-marquee-ani {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 .intro .intro-text__tit::before {
   content: "";
   display: block;
-  width: 100%;
+  width: 1000vh;
   height: 0.1rem;
   border-top: 0.1rem solid #999;
 }
 .intro .intro-text__tit::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 1000vh;
   height: 0.1rem;
   border-top: 0.1rem solid #999;
 }
@@ -1022,18 +1031,37 @@ legend {
   top: 50%;
   left: 50%;
   width: 60rem;
-  transform: scale(0.6) translate(-50%, -60%);
-  transform-origin: 0 0;
   text-align: center;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floating 3s infinite;
+}
+@keyframes floating {
+  0%, 100% {
+    transform: scale(0.6) translate(-84%, -99%);
+  }
+  50% {
+    transform: scale(0.6) translate(-84%, -102%); /* 위로 이동 */
+  }
 }
 @media (min-width: 600px) {
-  .intro .img-wrap {
-    transform: scale(0.75) translate(-55%, -35%);
+  @keyframes floating {
+    0%, 100% {
+      transform: scale(0.8) translate(-65%, -42%);
+    }
+    50% {
+      transform: scale(0.8) translate(-65%, -45%); /* 위로 이동 */
+    }
   }
 }
 @media (min-width: 1024px) {
-  .intro .img-wrap {
-    transform: scale(0.9) translate(-55%, -40%);
+  @keyframes floating {
+    0%, 100% {
+      transform: scale(1) translate(-60%, -42%);
+    }
+    50% {
+      transform: scale(1) translate(-60%, -45%); /* 위로 이동 */
+    }
   }
 }
 .intro .btn_view {
@@ -1043,7 +1071,6 @@ legend {
   width: 10rem;
   height: 10rem;
   background-color: #0033CC;
-  border: 0.1rem solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   transform: translate(-15%, -20%);
 }
@@ -1103,7 +1130,7 @@ legend {
 @media (min-width: 1024px) {
   .sec-latest .latest-lst {
     padding-top: 3rem;
-    width: 45%;
+    width: 41%;
   }
 }
 .sec-latest .swiper-slide {
@@ -1201,6 +1228,9 @@ legend {
   padding-top: 10vw;
   width: 100%;
   background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cont-headline .cont-head {
   display: flex;
