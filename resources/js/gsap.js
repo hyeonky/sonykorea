@@ -1,5 +1,6 @@
 // gsap.registerPlugin(ScrollTrigger);
 
+<<<<<<< HEAD
 // // gsap.to('.sidebar__logo', {
 // //   yPercent: -100, // 콘텐츠를 스크롤과 함께 아래로 이동
 // //   ease: 'none', // 스크롤과 부드럽게 동기화
@@ -21,3 +22,19 @@
 //   },
 //   y: 500,
 // });
+=======
+// gsap.fromTo(
+//   '.sidebar__logo',
+//   { top: '0' }, // 시작 위치
+//   {
+//     bottom: '80%', // 끝 위치
+//     scrollTrigger: {
+//       trigger: '.sidebar-wrapper',
+//       start: 'top top', // 애니메이션 시작 지점
+//       end: '90% 80%', // 애니메이션 끝 지점
+//       scrub: 1, // 스크롤 양에 따라 부드럽게 이동
+//       markers: false,
+//     },
+//   }
+// );
+>>>>>>> a0d596488f79e333b4177753db4b625caca70981

@@ -10,20 +10,34 @@
   top: 0;
   right: 0;
   width: 8rem;
+<<<<<<< HEAD
   height: 2000vh;
+=======
+  height: 100vh;
+>>>>>>> a0d596488f79e333b4177753db4b625caca70981
   background-color: #fff;
   // backdrop-filter: blur(200px);
   z-index: 100;
   padding: 0 1rem;
+<<<<<<< HEAD
   transform: translate(0%, -2%);
   .sidebar-wrapper {
     position: relative;
     top: 0;
+=======
+  // transform: translate3d(0%, -5%);
+  .sidebar-wrapper {
+    position: absolute;
+    flex-direction: column;
+    backdrop-filter: blur(200px);
+    will-change: transform;
+>>>>>>> a0d596488f79e333b4177753db4b625caca70981
   }
   img {
     width: 100%;
     transform: scale(1.2);
     margin-bottom: 100px;
+    padding-right: 10px;
   }
   @include mobileMore {
     display: none;

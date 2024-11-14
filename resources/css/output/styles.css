@@ -902,20 +902,33 @@ legend {
   top: 0;
   right: 0;
   width: 8rem;
+<<<<<<< HEAD
   height: 2000vh;
+=======
+  height: 100vh;
+>>>>>>> a0d596488f79e333b4177753db4b625caca70981
   background-color: #fff;
   z-index: 100;
   padding: 0 1rem;
   transform: translate(0%, -2%);
 }
 .sidebar .sidebar-wrapper {
+<<<<<<< HEAD
   position: relative;
   top: 0;
+=======
+  position: absolute;
+  flex-direction: column;
+  -webkit-backdrop-filter: blur(200px);
+          backdrop-filter: blur(200px);
+  will-change: transform;
+>>>>>>> a0d596488f79e333b4177753db4b625caca70981
 }
 .sidebar img {
   width: 100%;
   transform: scale(1.2);
   margin-bottom: 100px;
+  padding-right: 10px;
 }
 @media (min-width: 600px) {
   .sidebar {
