@@ -10,28 +10,16 @@
   top: 0;
   right: 0;
   width: 8rem;
-<<<<<<< HEAD
   height: 2000vh;
-=======
-  height: 100vh;
->>>>>>> a0d596488f79e333b4177753db4b625caca70981
-  background-color: #fff;
-  // backdrop-filter: blur(200px);
+  background-color: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(100px);
   z-index: 100;
   padding: 0 1rem;
-<<<<<<< HEAD
-  transform: translate(0%, -2%);
-  .sidebar-wrapper {
-    position: relative;
-    top: 0;
-=======
-  // transform: translate3d(0%, -5%);
+  transform: translate(0%, -5%);
   .sidebar-wrapper {
     position: absolute;
     flex-direction: column;
-    backdrop-filter: blur(200px);
     will-change: transform;
->>>>>>> a0d596488f79e333b4177753db4b625caca70981
   }
   img {
     width: 100%;
@@ -147,19 +135,17 @@
     top: 50%;
     left: 50%;
     width: 60rem;
-    // transform: scale(0.6) translate(-50%, -60%);
     text-align: center;
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-
     animation: floating 3s infinite;
     @keyframes floating {
       0%,
       100% {
-        transform: scale(0.6) translate(-84%, -99%);
+        transform: scale(0.7) translate(-71%, -80%);
       }
       50% {
-        transform: scale(0.6) translate(-84%, -102%); /* 위로 이동 */
+        transform: scale(0.7) translate(-71%, -77%); /* 위로 이동 */
       }
     }
     // img {
@@ -173,10 +159,10 @@
       @keyframes floating {
         0%,
         100% {
-          transform: scale(0.8) translate(-65%, -42%);
+          transform: scale(0.9) translate(-60%, -28%);
         }
         50% {
-          transform: scale(0.8) translate(-65%, -45%); /* 위로 이동 */
+          transform: scale(0.9) translate(-60%, -25%); /* 위로 이동 */
         }
       }
     }
@@ -185,10 +171,10 @@
       @keyframes floating {
         0%,
         100% {
-          transform: scale(1) translate(-60%, -42%);
+          transform: scale(1) translate(-60%, -30%);
         }
         50% {
-          transform: scale(1) translate(-60%, -45%); /* 위로 이동 */
+          transform: scale(1) translate(-60%, -27%); /* 위로 이동 */
         }
       }
     }

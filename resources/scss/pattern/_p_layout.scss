@@ -276,6 +276,9 @@
 .sec-g {
   overflow: hidden;
   padding: 10vw 0;
+  &__container {
+    position: relative;
+  }
   &__tit {
     padding-bottom: 2.34375vw;
     font-size: 50px;
@@ -292,7 +295,7 @@
   &__icon {
     position: absolute;
     top: 0;
-    right: 0;
+    left: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,7 +304,7 @@
     background-color: $primary;
     border: 2px solid $white;
     border-radius: 4px;
-    transform: translate(-87%, 284%) rotate(-10deg) skewX(-20deg);
+    transform: translate(90px, 52px) rotate(-10deg) skewX(-20deg);
     span {
       padding: 10px;
       color: $white;
@@ -311,10 +314,10 @@
       text-align: center;
     }
     @include mobileMore {
-      transform: translate(-336%, 424%) rotate(-10deg) skewX(-20deg) scale(1.5);
+      transform: translate(140px, 77px) rotate(-10deg) skewX(-20deg) scale(1.5);
     }
     @include tabletMore {
-      transform: translate(-687%, 554%) rotate(-10deg) skewX(-20deg) scale(1.9);
+      transform: translate(190px, 101px) rotate(-10deg) skewX(-20deg) scale(1.9);
     }
   }
   &__desc {
@@ -369,7 +372,7 @@
       height: 120px;
       background-color: $gray-80;
       border-radius: 50%;
-      transform: translate(-50%, 50%);
+      transform: scale(0.9) translate(-50%, 50%);
       text-align: center;
       z-index: 400;
       display: block;
@@ -387,18 +390,19 @@
         height: 40px;
         font-weight: lighter;
       }
-      @include mobileMore {
-        display: none;
-      }
-      @include tabletLess {
-        display: none;
-      }
-      @include tabletMore {
-        display: block;
-      }
+    }
+    @include mobileMore {
+      display: none;
+    }
+    @include tabletLess {
+      display: none;
+    }
+    @include tabletMore {
+      display: block;
     }
   }
 }
+
 .bg {
   width: 100%;
   @include tabletMore {

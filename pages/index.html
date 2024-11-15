@@ -214,8 +214,34 @@
               alt=""
             />
           </div>
+          <div class="sidebar__logo">
+            <img
+              src="../resources/images/pattern/common/side_logo.png"
+              alt=""
+            />
+          </div>
+          <div class="sidebar__logo">
+            <img
+              src="../resources/images/pattern/common/side_logo.png"
+              alt=""
+            />
+          </div>
+          <div class="sidebar__logo">
+            <img
+              src="../resources/images/pattern/common/side_logo.png"
+              alt=""
+            />
+          </div>
+          <div class="sidebar__logo">
+            <img
+              src="../resources/images/pattern/common/side_logo.png"
+              alt=""
+            />
+          </div>
         </div>
       </div>
+
+      <div class="intro-canvas"></div>
 
       <div class="intro">
         <div class="intro-text">
@@ -224,7 +250,7 @@
         </div>
         <div class="img-wrap">
           <img
-            src="../resources/images/pattern/common/intro.png"
+            src="../resources/images/pattern/common/intro-removebg.png"
             alt="헤드셋"
           />
         </div>
@@ -251,9 +277,11 @@
 
         <section class="sec-g sec-latest">
           <div class="inner">
-            <h2 class="sec-g__tit">the latest</h2>
-            <div class="sec-g__icon">
-              <span>NEW</span>
+            <div class="sec-g__container">
+              <h2 class="sec-g__tit">the latest</h2>
+              <div class="sec-g__icon">
+                <span>NEW</span>
+              </div>
             </div>
             <p class="sec-g__desc">
               “혁신과 감성을 담다,
@@ -618,25 +646,5 @@
         include-html="./layout/footer.html"
       ></footer>
     </div>
-    <script>
-      // use a script tag or an external JS file
-      document.addEventListener('DOMContentLoaded', (event) => {
-        gsap.registerPlugin(ScrollTrigger);
-        gsap.fromTo(
-          '.sidebar__wrapper',
-          { top: '0' }, // 시작 위치
-          {
-            bottom: '80%', // 끝 위치
-            scrollTrigger: {
-              trigger: '.sidebar',
-              start: 'top top', // 애니메이션 시작 지점
-              end: '90% 80%', // 애니메이션 끝 지점
-              scrub: 1, // 스크롤 양에 따라 부드럽게 이동
-              markers: false,
-            },
-          }
-        );
-      });
-    </script>
   </body>
 </html>
