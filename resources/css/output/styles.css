@@ -1221,17 +1221,20 @@ legend {
 }
 
 .cont-parallax {
-  padding-top: 10vw;
+  overflow: hidden;
+  margin-top: 10vw;
   width: 100%;
-  height: 100%;
+  height: 50vh;
 }
 .cont-parallax__wrapper {
-  overflow-x: hidden;
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
-  height: 100%;
+  height: 50vh;
   white-space: nowrap;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-snap-type: x mandatory;
 }
 .cont-parallax img {
   display: block;
@@ -1618,6 +1621,21 @@ legend {
   width: 50%;
   height: 0.2rem;
   background-color: #000;
+}
+@media (min-width: 600px) {
+  .sec-info .cont .line-center {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .sec-info .cont .line-center {
+    display: none;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-info .cont .line-center {
+    display: block;
+  }
 }
 @media (min-width: 600px) {
   .sec-info .cont .bg1 {
