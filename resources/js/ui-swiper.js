@@ -47,10 +47,10 @@ var swiper = new Swiper('.latest-lst', {
 // 2번째
 var swiper = new Swiper('.hot-lst__text', {
   loop: false,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   spaceBetween: 30,
   effect: 'fade',
   fadeEffect: { crossFade: true },
@@ -63,10 +63,10 @@ var swiper = new Swiper('.hot-lst__text', {
 
 var swiper2 = new Swiper('.hot-lst__gallery', {
   loop: false,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   spaceBetween: 30,
   grabCursor: true,
   allowTouchMove: true,
@@ -95,10 +95,10 @@ var swiperBackground = new Swiper('.hot-lst__circle', {
   spaceBetween: 360,
   loop: false,
   loopAdditionalSlides: 1,
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 3000,
+  //   disableOnInteraction: false,
+  // },
   allowTouchMove: false,
   speed: 1100, // 다른 슬라이드와 동일한 속도로 설정
 });
