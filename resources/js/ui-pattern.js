@@ -37,57 +37,38 @@ window.addEventListener('scroll', () => {
 // parallax
 gsap.registerPlugin(ScrollTrigger);
 
-// 전체 섹션의 가로 스크롤 구현
 gsap.to('.cont-parallax', {
   x: () => `-${document.querySelector('.cont-parallax').offsetWidth - window.innerWidth}px`,
   ease: 'none',
   scrollTrigger: {
     trigger: '.cont-parallax__wrapper',
-    start: 'top top',
+    start: 'center center',
     end: () => `+=${document.querySelector('.cont-parallax__wrapper').offsetWidth - window.innerWidth}`,
-    scrub: 1, // 스크롤에 따라 자연스럽게 움직임
-    pin: true, // 고정 스크롤 효과
+    scrub: 0.2,
+    pin: true,
     anticipatePin: 1,
   },
 });
 
-// 패럴랙스 레이어 애니메이션
-gsap.to('.layer1', {
-  x: '-100%', // 레이어 속도 제어
-  scrollTrigger: {
-    trigger: '.cont-parallax__wrapper',
-    scrub: 1,
-  },
-});
+const layers = document.querySelectorAll('.layer');
+layers.forEach((layer, index) => {
+  const layerWidth = layer.offsetWidth;
+  const totalWidth = document.querySelector('.cont-parallax').offsetWidth;
 
-gsap.to('.layer2', {
-  x: '-200%', // 레이어 속도 제어
-  scrollTrigger: {
-    trigger: '.cont-parallax__wrapper',
-    scrub: 1,
-  },
-});
+  // 각 레이어의 이동 거리 계산
+  const travelDistance = totalWidth - layerWidth;
+  const speedFactor = 0.3;
+  const adjustedDistance = travelDistance * speedFactor;
 
-gsap.to('.layer3', {
-  x: '-300%', // 레이어 속도 제어
-  scrollTrigger: {
-    trigger: '.cont-parallax__wrapper',
-    scrub: 1,
-  },
-});
-
-gsap.to('.layer4', {
-  x: '-400%', // 레이어 속도 제어
-  scrollTrigger: {
-    trigger: '.cont-parallax__wrapper',
-    scrub: 1,
-  },
-});
-
-gsap.to('.layer5', {
-  x: '-500%', // 레이어 속도 제어
-  scrollTrigger: {
-    trigger: '.cont-parallax__wrapper',
-    scrub: 1,
-  },
+  // 겹치지 않도록 이동 거리와 속도 조정
+  gsap.to(layer, {
+    x: `${-adjustedDistance * 10}px`,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '.cont-parallax__wrapper',
+      start: 'bottom bottom',
+      end: `+=${travelDistance}`,
+      scrub: 0.2,
+    },
+  });
 });

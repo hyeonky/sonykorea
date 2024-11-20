@@ -1,5 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap");
+@font-face {
+  font-family: sstSony;
+  src: url(SSTLight.woff2);
+}
+@font-face {
+  font-family: sstSony;
+  src: url(SSTRg.woff2);
+}
+@font-face {
+  font-family: sstSony;
+  src: url(SSTMedium.woff2);
+}
+@font-face {
+  font-family: sstSony;
+  src: url(SSTBold.woff2);
+}
+@font-face {
+  font-family: sstSony;
+  src: url(SSTHeavy.woff2);
+}
 /* reset */
 body,
 div,
@@ -127,7 +147,7 @@ html {
 body {
   font-size: 1.7rem;
   line-height: 1.5;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "sstSony", Noto Sans KR;
   color: #1d1d1d;
   font-weight: 400;
 }
@@ -446,7 +466,7 @@ legend {
   justify-content: center;
   flex-direction: row;
   outline-offset: -0.4rem;
-  outline: 2px solid #0033CC;
+  outline: 2px solid #0033cc;
   font-size: 1.5rem;
   color: #fff;
   width: 100%;
@@ -538,7 +558,7 @@ legend {
   position: relative;
 }
 #gnb .gnb__depth1 > li:hover > a > span {
-  color: #0033CC;
+  color: #0033cc;
 }
 #gnb .gnb__depth1 > li:hover > a > span::after {
   width: 100%;
@@ -577,7 +597,7 @@ legend {
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: #0033CC;
+  background: #0033cc;
   transition: all 0.3s;
 }
 #gnb .gnb__depth2 {
@@ -727,7 +747,7 @@ legend {
   align-items: center;
   width: 55px;
   height: 18px;
-  background-color: #0033CC;
+  background-color: #0033cc;
   border: 2px solid #fff;
   border-radius: 4px;
   transform: translate(90px, 52px) rotate(-10deg) skewX(-20deg);
@@ -1081,10 +1101,10 @@ legend {
 @media (min-width: 1024px) {
   @keyframes floating {
     0%, 100% {
-      transform: scale(1.2) translate(-60%, -30%);
+      transform: scale(1.2) translate(-50%, -38%);
     }
     50% {
-      transform: scale(1.2) translate(-60%, -27%); /* 위로 이동 */
+      transform: scale(1.2) translate(-50%, -35%); /* 위로 이동 */
     }
   }
 }
@@ -1094,7 +1114,7 @@ legend {
   right: 0;
   width: 10rem;
   height: 10rem;
-  background-color: #0033CC;
+  background-color: #0033cc;
   border-radius: 50%;
   transform: translate(-15%, -20%);
 }
@@ -1222,19 +1242,18 @@ legend {
 
 .cont-parallax {
   overflow: hidden;
+  background-color: #000;
   margin-top: 10vw;
   width: 100%;
-  height: 50vh;
+  height: 100%;
 }
 .cont-parallax__wrapper {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
-  height: 50vh;
   white-space: nowrap;
-  overflow-x: hidden;
-  overflow-y: auto;
   scroll-snap-type: x mandatory;
+  height: 100%;
 }
 .cont-parallax img {
   display: block;
@@ -1434,7 +1453,6 @@ legend {
   transform: translate(-10%, -15%);
   width: 100%;
   height: 100%;
-  z-index: -200;
   flex-shrink: 0;
 }
 @media (min-width: 600px) {
