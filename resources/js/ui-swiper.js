@@ -44,7 +44,7 @@ var swiper = new Swiper('.latest-lst', {
   },
 });
 
-// 2번째
+// hor-swiper
 var swiper = new Swiper('.hot-lst__text', {
   loop: false,
   // autoplay: {
