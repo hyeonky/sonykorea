@@ -29,19 +29,36 @@ var swiper = new Swiper('.slide-studio', {
 });
 
 // sonykorea swiper 적용
-var swiper = new Swiper('.latest-lst', {
-  slidesPerView: 'auto',
-  spaceBetween: 30,
-  loop: false,
-  pagination: {
-    el: '.swiper-pagination',
-    // clickable: true,
-    dynamicBullets: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+// var swiper = new Swiper('.latest-lst', {
+//   slidesPerView: 'auto',
+//   spaceBetween: 30,
+//   loop: false,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     // clickable: true,
+//     dynamicBullets: true,
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
+
+// Swiper 초기화
+const swiper = new Swiper('.latest-lst', {
+  slidesPerView: 'auto', // autoWidth와 동일한 효과
+  loop: true, // 무한 루프
+  spaceBetween: 10, // 슬라이드 간 간격 (원하는 대로 조정)
+});
+
+// 클릭 이벤트 처리
+document.querySelectorAll('.swiper-wrapper .swiper-slide').forEach((slide) => {
+  slide.addEventListener('click', function () {
+    // 기존 active 클래스 제거
+    document.querySelectorAll('.swiper-wrapper .swiper-slide').forEach((s) => s.classList.remove('active'));
+    // 클릭한 슬라이드에 active 클래스 추가
+    this.classList.add('active');
+  });
 });
 
 // hor-swiper

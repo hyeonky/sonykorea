@@ -1177,21 +1177,50 @@ legend {
     width: 41%;
   }
 }
+.sec-latest .swiper-wrapper {
+  display: flex;
+}
 .sec-latest .swiper-slide {
   flex-direction: column;
   background: #000;
-}
-.sec-latest .swiper-slide img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 12rem;
+  position: relative;
+  flex-shrink: 0;
   width: 100%;
-  height: 37rem;
+  height: auto;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  background: #343434 no-repeat center center;
   -o-object-fit: cover;
      object-fit: cover;
-  background-color: #000;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.sec-latest .swiper-slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+}
+.sec-latest .swiper-slide.active {
+  width: 100%; /* 활성화된 슬라이드 확대 */
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+.sec-latest .swiper-slide img {
+  width: 100%;
+  height: auto;
   margin: 0 auto;
+  color: #000;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease-in-out;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sec-latest .swiper-slide img.active {
+  transform: translateY(0);
 }
 @media (min-width: 600px) {
   .sec-latest .swiper-slide img {
@@ -1203,17 +1232,21 @@ legend {
 }
 .sec-latest .swiper-slide .text-area {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   left: 0;
-  padding: 2.5rem;
+  padding: 10px 25px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(0.7rem);
-          backdrop-filter: blur(0.7rem);
+  transform: translateY(calc(100% - 64px));
+  transition: opacity 0.4s ease-in-out 0.2s, transform 0.4s ease-in-out 0.2s;
+  z-index: 2;
+}
+.sec-latest .swiper-slide .text-area.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .sec-latest .swiper-slide .text-area em {
   font-weight: normal;
