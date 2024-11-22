@@ -140,6 +140,10 @@
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     animation: floating 3s infinite;
+    img {
+      display: block;
+      margin: 0 auto;
+    }
     @keyframes floating {
       0%,
       100% {
@@ -223,16 +227,15 @@
 
 .container {
   width: 100%;
-  height: 200vh;
   padding-right: 200px;
 }
 .sec-latest {
   position: relative;
   .latest-lst {
-    padding-top: 0.5rem;
+    padding-top: 3rem;
+    margin-bottom: 10px;
     overflow: visible;
-    width: 90%;
-    margin-left: 0;
+    width: 80%;
     @include mobileMore {
       width: 80%;
     }
@@ -245,47 +248,55 @@
     display: flex;
   }
   .swiper-slide {
-    flex-direction: column;
-    background: $black;
     position: relative;
     flex-shrink: 0;
     width: 100%;
-    height: auto;
-    margin: 0 10px;
-    display: flex;
-    align-items: flex-end;
+    height: 350px;
+    margin: 0 auto;
     background: #343434 no-repeat center center;
     object-fit: cover;
-    border-radius: 15px;
-    overflow: hidden;
+    border-radius: 16px;
+    flex-direction: column;
+    overflow: visible;
+    // display: flex;
+    // align-items: flex-end;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
+    z-index: 10;
+
+    &.swiper-active {
+      em {
+      }
+      p {
+      }
+      strong {
+      }
+    }
 
     &::after {
       content: '';
+      border-radius: 16px;
       position: absolute;
       inset: 0;
       background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     }
     &.active {
-      width: 100%; /* 활성화된 슬라이드 확대 */
-      box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+      transform: scale(1.1);
+      width: 100%;
+      z-index: 10;
+      box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.25);
     }
     img {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-      // padding-bottom: 12rem;
       width: 100%;
-      height: auto;
-      margin: 0 auto;
-      color: $black;
-      position: relative;
-      z-index: 1;
+      height: 100%;
+      object-fit: cover;
+      z-index: 10;
+      border-radius: 16px;
+
       transition: transform 0.4s ease-in-out;
       object-fit: cover;
       &.active {
-        transform: translateY(0);
+        transform: translateY(1.1);
       }
       @include mobileMore {
         width: 100%;
@@ -296,36 +307,40 @@
     }
     .text-area {
       position: absolute;
-      bottom: 5px;
+      bottom: 0;
       left: 0;
-      padding: 10px 25px;
+      padding: 10px 20px;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
       width: 100%;
-      transform: translateY(calc(100% - 64px));
-      // transform: translateY(32px);
-      transition: opacity 0.4s ease-in-out 0.2s, transform 0.4s ease-in-out 0.2s;
-      z-index: 2;
+      transform: translateY(calc(100% - 55px));
+      transition: transform 0.4s ease-in-out;
+      // overflow: hidden;
+      overflow: visible;
+      z-index: 30;
       &.active {
         opacity: 1;
         transform: translateY(0);
       }
       em {
         font-weight: normal;
-        color: $gray-40;
-        // color: $white;
+        color: $gray-30;
       }
       p {
+        opacity: 0;
         font-size: 14px;
         color: $gray-50;
-        // color: $white;
+        transform: translateY(32px);
+        transition: all 0.4s ease-in-out;
       }
       strong {
+        opacity: 0;
         padding-top: 1.5rem;
-        // color: $gray-70;
         color: $white;
+        transform: translateY(32px);
+        transition: all 0.4s ease-in-out;
       }
       @include mobileMore {
         em {
@@ -696,32 +711,32 @@
         background-color: $black;
       }
     }
-    .line-center {
-      &::before {
-        position: absolute;
-        top: 47%;
-        left: 78%;
-        transform: rotate(90deg);
-        z-index: 300;
-        content: '';
-        display: block;
-        width: 50%;
-        height: 0.2rem;
-        background-color: $black;
-      }
-      @include mobileMore {
-        display: none;
-      }
-      @include tabletLess {
-        display: none;
-      }
-      @include tabletMore {
-        display: block;
-      }
-    }
+    // .line-center {
+    //   &::before {
+    //     position: absolute;
+    //     top: 47%;
+    //     left: 78%;
+    //     transform: rotate(90deg);
+    //     z-index: 300;
+    //     content: '';
+    //     display: block;
+    //     width: 50%;
+    //     height: 0.2rem;
+    //     background-color: $black;
+    //   }
+    //   @include mobileMore {
+    //     display: none;
+    //   }
+    //   @include tabletLess {
+    //     display: none;
+    //   }
+    //   @include tabletMore {
+    //     display: block;
+    //   }
+    // }
     .bg1 {
       @include mobileMore {
-        width: 50.25%;
+        width: 40%;
         background: linear-gradient(to bottom, #ebeaea, #dbdbdb, #c9c9ca, #c9c9c9);
         backdrop-filter: blur(0.01rem);
         img {
@@ -740,7 +755,7 @@
     .bg2 {
       background-color: #f9e4c9;
       @include mobileMore {
-        width: 50.25%;
+        width: 40%;
       }
       @include tabletMore {
         background: none;
@@ -774,6 +789,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      text-align: center;
       padding: 3rem 1rem 3rem 1rem;
       margin-bottom: 2rem;
       background-color: #fff;
@@ -811,18 +827,10 @@
       }
     }
     @include mobileMore {
-      img {
-        width: 50%;
-        height: 20rem;
-        text-align: center;
-      }
       a {
         display: flex;
-        justify-content: space-between;
-        .text-area {
-          width: 50%;
-          padding: 4.4rem 3.3rem;
-        }
+        justify-content: flex-start;
+        gap: 30px;
       }
     }
   }

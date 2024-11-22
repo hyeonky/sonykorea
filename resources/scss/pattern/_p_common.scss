@@ -34,6 +34,12 @@
   .swiper-pagination {
     display: flex;
     justify-content: center;
+    @include mobileMore {
+      display: none;
+    }
+    @include tabletLess {
+      display: none;
+    }
   }
   .swiper-button-next::after,
   .swiper-button-prev::after {
