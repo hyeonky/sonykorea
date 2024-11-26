@@ -237,16 +237,18 @@
     overflow: visible;
     width: 80%;
     @include mobileMore {
-      width: 80%;
+      padding-top: 4rem;
+      width: 70%;
     }
     @include tabletMore {
-      padding-top: 3rem;
-      width: 41%;
+      padding-top: 5rem;
+      width: 45%;
     }
   }
   .swiper-wrapper {
     display: flex;
   }
+
   .swiper-slide {
     position: relative;
     flex-shrink: 0;
@@ -261,6 +263,8 @@
     transition: all 0.4s ease-in-out;
     cursor: pointer;
     z-index: 10;
+    @include mobileMore {
+    }
     &::after {
       content: '';
       border-radius: 16px;
@@ -313,6 +317,9 @@
         &.active {
           transform: translateY(-55px);
           transition: all 0.4s ease-in-out;
+          @include mobileMore {
+            transform: translateY(-60px);
+          }
         }
       }
 
@@ -322,10 +329,12 @@
         color: $gray-50;
         transform: translateY(30px);
         transition: all 0.4s ease-in-out;
-
         &.active {
           opacity: 1;
           transform: translateY(-55px);
+          @include mobileMore {
+            transform: translateY(-65px);
+          }
         }
       }
 
@@ -335,10 +344,12 @@
         color: $white;
         transform: translateY(30px);
         transition: all 0.4s ease-in-out;
-
         &.active {
           opacity: 1;
           transform: translateY(-60px);
+          @include mobileMore {
+            transform: translateY(-70px);
+          }
         }
       }
 

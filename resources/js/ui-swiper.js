@@ -1,9 +1,8 @@
-// // sonykorea swiper 적용
+// sonykorea swiper 적용
 var swiper = new Swiper('.latest-lst', {
-  slidesPerView: 'auto', // 슬라이드 크기를 자동으로 조정
-  spaceBetween: 45, // 슬라이드 간격
-  loop: true, // 무한 루프
-  centeredSlides: true, // 활성 슬라이드를 중앙에 위치
+  slidesPerView: 'auto',
+  loop: false,
+  centeredSlides: true,
   allowTouchMove: true,
   pagination: {
     el: '.swiper-pagination',
@@ -14,24 +13,35 @@ var swiper = new Swiper('.latest-lst', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    390: {
+      spaceBetween: 40,
+    },
+    600: {
+      spaceBetween: 50,
+    },
+    1024: {
+      spaceBetween: 55,
+    },
+    1280: {
+      spaceBetween: 70,
+    },
+  },
 })
 
-// 슬라이드 상태 변경 시 active 클래스 관리
 swiper.on('slideChangeTransitionEnd', function () {
   document.querySelectorAll('.swiper-slide').forEach((slide) => {
-    // 슬라이드와 그 내부의 em, p, strong에서 active 제거
     slide.classList.remove('active')
     slide.querySelectorAll('em, p, strong').forEach((element) => {
       element.classList.remove('active')
     })
   })
 
-  // 현재 활성화된 슬라이드에 active 클래스 추가
   const activeSlide = document.querySelector('.swiper-slide.swiper-slide-active')
   if (activeSlide) {
     activeSlide.classList.add('active')
     activeSlide.querySelectorAll('em, p, strong').forEach((element) => {
-      element.classList.add('active') // em, p, strong에 active 추가
+      element.classList.add('active')
     })
   }
 })
