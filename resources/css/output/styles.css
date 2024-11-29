@@ -326,17 +326,12 @@ legend {
 }
 .swiper .swiper-pagination {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  bottom: -50px;
-  left: 50%;
-  z-index: 21;
-  right: 20px;
-  width: 3rem;
-  text-align: center;
+  bottom: -70px;
+  left: 50px;
+  width: 130px;
+  height: 50px;
+  background-color: #555555;
   transform: translateY(-50%);
-  background: #555555;
 }
 @media (max-width: 1023px) {
   .swiper .swiper-pagination {
@@ -1242,6 +1237,11 @@ legend {
 }
 .sec-latest .swiper-slide img.active {
   transform: translateY(1.1);
+}
+@media (min-width: 1024px) {
+  .sec-latest .swiper-slide img.active {
+    transform: translateY(1.5);
+  }
 }
 .sec-latest .swiper-slide .text-area {
   position: absolute;

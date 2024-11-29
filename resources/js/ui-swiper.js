@@ -29,6 +29,18 @@ var swiper = new Swiper('.latest-lst', {
   },
 })
 
+// 초기 로드 시 첫 번째 슬라이드에 active 추가
+document.addEventListener('DOMContentLoaded', () => {
+  const activeSlide = document.querySelector('.swiper-slide.swiper-slide-active')
+  if (activeSlide) {
+    activeSlide.classList.add('active')
+    activeSlide.querySelectorAll('em, p, strong').forEach((element) => {
+      element.classList.add('active')
+    })
+  }
+})
+
+// 슬라이드 변경 이벤트 처리
 swiper.on('slideChangeTransitionEnd', function () {
   document.querySelectorAll('.swiper-slide').forEach((slide) => {
     slide.classList.remove('active')

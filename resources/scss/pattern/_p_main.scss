@@ -288,10 +288,10 @@
       object-fit: cover;
       &.active {
         transform: translateY(1.1);
+        @include tabletMore {
+          transform: translateY(1.5);
+        }
       }
-      // @include mobileMore {
-      //   width: 100%;
-      // }
     }
     .text-area {
       position: absolute;

@@ -33,24 +33,14 @@
   }
   .swiper-pagination {
     position: absolute;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    bottom: -50px;
-    left: 50%;
-    z-index: 21;
-    right: 20px;
-    width: 3rem;
-    text-align: center;
+    bottom: -70px;
+    left: 50px;
+    width: 130px;
+    height: 50px;
+    background-color: $gray-70;
     transform: translateY(-50%);
-    background: $gray-70;
-    @include mobileMore {
-      // display: block;
-    }
     @include tabletLess {
       display: none;
-    }
-    @include tabletMore {
     }
   }
   .swiper-button-next::after,
