@@ -326,12 +326,15 @@ legend {
 }
 .swiper .swiper-pagination {
   position: absolute;
-  bottom: -70px;
+  bottom: -90px;
   left: 50px;
   width: 130px;
   height: 50px;
-  background-color: #555555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: translateY(-50%);
+  z-index: 200;
 }
 @media (max-width: 1023px) {
   .swiper .swiper-pagination {
@@ -340,6 +343,7 @@ legend {
 }
 .swiper .swiper-button-next::after,
 .swiper .swiper-button-prev::after {
+  transform: scale(0.5);
   display: none;
 }
 .swiper .swiper-button-next::before,
@@ -837,9 +841,9 @@ legend {
 .sec-g__cont .swiper-button-next {
   content: "\f054";
   color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 45px;
   font-weight: lighter;
+  transform: scale(0.8);
 }
 @media (min-width: 600px) {
   .sec-g__cont .swiper-button-next {
@@ -859,9 +863,9 @@ legend {
 .sec-g__cont .swiper-button-prev {
   content: "\f054";
   color: #fff;
-  width: 40px;
-  height: 40px;
+  width: 45px;
   font-weight: lighter;
+  transform: scale(0.8);
 }
 @media (min-width: 600px) {
   .sec-g__cont .swiper-button-prev {
@@ -1174,11 +1178,16 @@ legend {
 
 .sec-latest {
   position: relative;
+  /* 일반 불릿 */
+  /* 활성 불릿 */
+  /* 이전과 다음 불릿 */
+  /* 간격 조정 */
 }
 .sec-latest .latest-lst {
   padding-top: 3rem;
   margin-bottom: 10px;
   overflow: visible;
+  display: flex;
   width: 80%;
 }
 @media (min-width: 600px) {
@@ -1189,12 +1198,39 @@ legend {
 }
 @media (min-width: 1024px) {
   .sec-latest .latest-lst {
+    gap: 100px;
     padding-top: 5rem;
-    width: 45%;
+    width: 50%;
   }
 }
 .sec-latest .swiper-wrapper {
   display: flex;
+}
+.sec-latest .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #8e8e8e;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+.sec-latest .swiper-pagination-bullet-active {
+  width: 16px; /* 활성화된 불릿 크기 */
+  height: 16px;
+  background: #0033cc; /* 활성화된 불릿 색상 */
+  opacity: 1;
+}
+.sec-latest .swiper-pagination-bullet-prev,
+.sec-latest .swiper-pagination-bullet-next {
+  width: 10px;
+  height: 10px;
+  background: #555555;
+  opacity: 0.8;
+}
+.sec-latest .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50%; /* 불릿 사이 간격 */
 }
 .sec-latest .swiper-slide {
   position: relative;

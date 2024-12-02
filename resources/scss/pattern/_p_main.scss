@@ -235,18 +235,53 @@
     padding-top: 3rem;
     margin-bottom: 10px;
     overflow: visible;
+    display: flex;
     width: 80%;
     @include mobileMore {
       padding-top: 4rem;
       width: 70%;
     }
     @include tabletMore {
+      gap: 100px;
       padding-top: 5rem;
-      width: 45%;
+      width: 50%;
     }
   }
   .swiper-wrapper {
     display: flex;
+  }
+  /* 일반 불릿 */
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: $gray-50;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+  }
+
+  /* 활성 불릿 */
+  .swiper-pagination-bullet-active {
+    width: 16px; /* 활성화된 불릿 크기 */
+    height: 16px;
+    background: $primary; /* 활성화된 불릿 색상 */
+    opacity: 1;
+  }
+
+  /* 이전과 다음 불릿 */
+  .swiper-pagination-bullet-prev,
+  .swiper-pagination-bullet-next {
+    width: 10px;
+    height: 10px;
+    background: $gray-70;
+    opacity: 0.8;
+  }
+
+  /* 간격 조정 */
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50%; /* 불릿 사이 간격 */
   }
 
   .swiper-slide {

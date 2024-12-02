@@ -368,9 +368,9 @@
       &-next {
         content: '\f054';
         color: $white;
-        width: 40px;
-        height: 40px;
+        width: 45px;
         font-weight: lighter;
+        transform: scale(0.8);
         @include mobileMore {
           display: none;
         }
@@ -384,9 +384,9 @@
       &-prev {
         content: '\f054';
         color: $white;
-        width: 40px;
-        height: 40px;
+        width: 45px;
         font-weight: lighter;
+        transform: scale(0.8);
         @include mobileMore {
           display: none;
         }
