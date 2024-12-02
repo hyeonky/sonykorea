@@ -414,27 +414,6 @@
   }
 }
 
-.bg {
-  width: 100%;
-  @include tabletMore {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 15%;
-    left: 52%;
-  }
-  img {
-    @include tabletMore {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 240px;
-      height: 150px;
-    }
-  }
-}
-
 .desktop {
   display: flex;
   flex-direction: column;
