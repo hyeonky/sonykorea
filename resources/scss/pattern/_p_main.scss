@@ -9,11 +9,11 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 8rem;
+  width: 7.5rem;
   height: 2000vh;
   background-color: rgb(255, 255, 255, 0.5);
   backdrop-filter: blur(100px);
-  z-index: 100;
+  z-index: 1001;
   padding: 0 1rem;
   transform: translate(0%, -5%);
   .sidebar-wrapper {
@@ -193,7 +193,7 @@
     background-color: $primary;
     // border: 0.1rem solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
-    transform: translate(-15%, -20%);
+    transform: translate(-15%, -35%);
     a {
       display: flex;
       justify-content: center;
@@ -214,12 +214,12 @@
       }
     }
     @include mobileMore {
-      top: 50%;
+      top: 53%;
       right: 0;
       transform: translate(-65%, 120%);
     }
     @include tabletMore {
-      top: 50%;
+      top: 55%;
       right: 0;
       transform: translate(-185%, 130%);
     }
@@ -233,7 +233,7 @@
 .sec-latest {
   position: relative;
   .latest-lst {
-    padding-top: 3rem;
+    padding: 3rem 0;
     margin-bottom: 10px;
     overflow: visible;
     display: flex;
@@ -243,21 +243,36 @@
       width: 70%;
     }
     @include tabletMore {
-      gap: 100px;
-      padding-top: 5rem;
-      width: 45%;
+      width: 50%;
     }
   }
   .swiper-wrapper {
     display: flex;
   }
+  .swiper-button {
+    &-next {
+      display: none;
+    }
+    &-prev {
+      display: none;
+    }
+  }
+  .swiper-pagination-bullet {
+    transition: all 0.7s;
+  }
+  .swiper-pagination-bullet-active {
+    width: 40px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: $gray-20;
+  }
+
   .swiper-slide {
     position: relative;
     flex-shrink: 0;
     width: 100%;
     height: 350px;
     margin: 0 auto;
-    // background: #343434 no-repeat center center;
     object-fit: cover;
     border-radius: 16px;
     flex-direction: column;
@@ -711,7 +726,9 @@
   justify-content: center;
   align-items: center;
   &__tit {
-    text-align: left;
+    @include tabletMore {
+      text-align: left;
+    }
   }
   ul {
     @include tabletMore {
@@ -719,42 +736,55 @@
       justify-content: space-between;
     }
   }
-  // .cont {
-
-  //   text-align: center;
-  //   @include tabletMore {
-  //     position: relative;
-  //   }
-  //   // .line {
-  //   //   &::before {
-  //   //     content: '';
-  //   //     display: block;
-  //   //     width: 100%;
-  //   //     height: 0.2rem;
-  //   //     background-color: $black;
-  //   //   }
-  //   // }
-  a {
+  .cont {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mobileMore {
+      gap: 30px;
+    }
     @include tabletMore {
+      display: block;
+      gap: 0;
+    }
+  }
+  a {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    @include mobileMore {
+      width: 100%;
+    }
+    @include tabletMore {
+      display: flex;
+      flex-direction: row;
       width: 95%;
       height: 340px;
       border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      background-color: $white;
     }
     &:hover {
-      text-decoration: none;
-      position: relative;
-      transform: scale(1.05);
-      transition: all 0.4s;
-      box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.25);
+      @include tabletMore {
+        background-color: $gray-10;
+        text-decoration: none;
+        position: relative;
+        transform: scale(1.01);
+        transition: all 0.4s;
+        box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.25);
+      }
     }
   }
 
   .bg {
-    width: 100%;
+    width: 95%;
+    @include mobileMore {
+      width: 70%;
+    }
     @include tabletMore {
       width: 50%;
     }
@@ -762,71 +792,59 @@
       width: 100%;
       object-fit: cover;
       @include mobileMore {
-        display: flex;
-        justify-content: flex-start;
-        width: 80%;
+        width: 100%;
         height: 240px;
+        display: flex;
       }
       @include tabletMore {
         width: 100%;
-        height: 100%;
+        height: 240px;
         display: flex;
-        object-fit: cover;
         justify-content: center;
         align-items: center;
-        margin-top: 50px;
-        height: 240px;
       }
     }
   }
-  // .line-center {
-  //   &::before {
-  //     position: absolute;
-  //     top: 47%;
-  //     left: 78%;
-  //     transform: rotate(90deg);
-  //     z-index: 300;
-  //     content: '';
-  //     display: block;
-  //     width: 50%;
-  //     height: 0.2rem;
-  //     background-color: $black;
-  //   }
-  //   @include mobileMore {
-  //     display: none;
-  //   }
-  //   @include tabletLess {
-  //     display: none;
-  //   }
-  //   @include tabletMore {
-  //     display: block;
-  //   }
-  // }
 
   .text-area {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     text-align: center;
-    padding: 3rem 1rem 3rem 1rem;
-    margin-bottom: 2rem;
-    // background-color: #fff;
+    margin-top: -20px;
+    padding: 2rem 2rem;
+    // margin-bottom: 3rem;
     em {
       font-weight: normal;
       color: $gray-80;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
     }
     h3 {
+      font-size: 2.1rem;
       color: $gray-100;
     }
     p {
       padding-top: 1.5rem;
       color: #002699;
-      font-size: 1.4rem;
+      font-size: 1.2rem;
+    }
+    @include mobileMore {
+      margin-top: 10px;
+      em {
+        font-size: 1.5rem;
+      }
+      h3 {
+        font-size: 2.8rem;
+      }
+      p {
+        padding-top: 30px;
+        font-size: 1.6rem;
+      }
     }
     @include tabletMore {
-      margin-top: 50px;
+      // margin-top: 50px;
       padding: 0;
       width: 50%;
       display: flex;
@@ -834,24 +852,16 @@
       align-items: flex-start;
       text-align: center;
       em {
-        font-size: 18px;
+        font-size: 1.8rem;
       }
       h3 {
         padding-top: 10px;
-
-        font-size: 28px;
+        font-size: 2.8rem;
       }
       p {
-        padding-top: 135px;
-        font-size: 16px;
+        padding-top: 120px;
+        font-size: 1.6rem;
       }
-    }
-  }
-  @include mobileMore {
-    a {
-      display: flex;
-      justify-content: flex-start;
-      gap: 30px;
     }
   }
 }

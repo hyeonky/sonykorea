@@ -33,16 +33,16 @@
   }
   .swiper-pagination {
     position: absolute;
-    bottom: -90px;
-    left: 50px;
-    width: 130px;
+    bottom: -100px;
+    left: 35%;
+    width: 250px;
     height: 50px;
-    // background-color: $gray-70;
+    border-radius: 50px;
+    background-color: $gray-60;
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-50%);
-    z-index: 200;
+    gap: 3px;
     @include tabletLess {
       display: none;
     }

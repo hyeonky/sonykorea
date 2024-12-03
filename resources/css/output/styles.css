@@ -326,15 +326,16 @@ legend {
 }
 .swiper .swiper-pagination {
   position: absolute;
-  bottom: -90px;
-  left: 50px;
-  width: 130px;
+  bottom: -100px;
+  left: 35%;
+  width: 250px;
   height: 50px;
+  border-radius: 50px;
+  background-color: #717171;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateY(-50%);
-  z-index: 200;
+  gap: 3px;
 }
 @media (max-width: 1023px) {
   .swiper .swiper-pagination {
@@ -498,9 +499,15 @@ legend {
 }
 
 #header {
-  display: none;
   position: relative;
+  width: 100%;
   z-index: 1000;
+  background: #000;
+}
+@media (min-width: 1024px) {
+  #header {
+    width: calc(100% - 75px);
+  }
 }
 #header.active::before {
   height: 218px;
@@ -524,12 +531,7 @@ legend {
   justify-content: space-between;
   align-items: center;
   max-width: none;
-  height: 73px;
-}
-@media (min-width: 1024px) {
-  #header .inner {
-    height: auto;
-  }
+  height: 74px;
 }
 #header #logo {
   transform: scale(0.8);
@@ -544,7 +546,7 @@ legend {
   display: block;
   width: 200px;
   height: 35px;
-  background: url("../../../resources/images/pattern/common/head_logo.svg") no-repeat 0 0/contain;
+  background: url("../../../resources/images/pattern/common/sony-logo.svg") no-repeat 0 0/contain;
 }
 #header #logo span {
   position: absolute !important;
@@ -558,28 +560,36 @@ legend {
   border: 0 !important;
 }
 
-#gnb {
+.gnb {
   display: none;
   position: relative;
 }
 @media (min-width: 1024px) {
-  #gnb {
+  .gnb {
     display: block;
   }
 }
-#gnb .gnb__depth1 {
+.gnb .nav-all__depth1 {
   display: flex;
 }
-#gnb .gnb__depth1 > li {
+@media (min-width: 1024px) {
+  .gnb .nav-all__depth1 {
+    width: calc(100% - 75px);
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+  }
+}
+.gnb .nav-all__depth1 > li {
   position: relative;
 }
-#gnb .gnb__depth1 > li:hover > a > span {
+.gnb .nav-all__depth1 > li:hover > a > span {
   color: #0033cc;
 }
-#gnb .gnb__depth1 > li:hover > a > span::after {
+.gnb .nav-all__depth1 > li:hover > a > span::after {
   width: 100%;
 }
-#gnb .gnb__depth1 > li:first-child .gnb__depth2::before {
+.gnb .nav-all__depth1 > li:first-child .nav-all__depth2::before {
   content: "";
   position: absolute;
   top: 0;
@@ -588,24 +598,25 @@ legend {
   height: 100%;
   background: #e4e4e4;
 }
-#gnb .gnb__depth1 > li > a {
+.gnb .nav-all__depth1 > li > a {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 102px;
   padding: 0 50px;
   font-size: 1.8rem;
 }
-#gnb .gnb__depth1 > li > a:hover {
+.gnb .nav-all__depth1 > li > a:hover {
   text-decoration: none;
 }
-#gnb .gnb__depth1 > li > a span {
+.gnb .nav-all__depth1 > li > a span {
   position: relative;
   display: flex;
   align-items: center;
   height: 100%;
 }
-#gnb .gnb__depth1 > li > a span::after {
+.gnb .nav-all__depth1 > li > a span::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -616,7 +627,7 @@ legend {
   background: #0033cc;
   transition: all 0.3s;
 }
-#gnb .gnb__depth2 {
+.gnb .nav-all__depth2 {
   overflow: hidden;
   position: absolute;
   top: 102px;
@@ -627,7 +638,7 @@ legend {
   background: #f8f8f8;
   transition: all 0.3s;
 }
-#gnb .gnb__depth2::after {
+.gnb .nav-all__depth2::after {
   content: "";
   position: absolute;
   top: 0;
@@ -636,20 +647,25 @@ legend {
   height: 100%;
   background: #e4e4e4;
 }
-#gnb .gnb__depth2 a {
+.gnb .nav-all__depth2 a {
   display: block;
   padding: 7px 0;
   text-align: center;
   color: #555555;
 }
-#gnb .gnb__depth2 a:hover {
+.gnb .nav-all__depth2 a:hover {
   font-weight: 700;
   color: #1d1d1d;
 }
 
 .util {
   display: flex;
-  gap: 15px;
+  gap: 20px;
+}
+@media (min-width: 1024px) {
+  .util {
+    gap: 30px;
+  }
 }
 .util .lang {
   display: none;
@@ -675,6 +691,7 @@ legend {
 }
 .util .lang__btn::after {
   content: "\f107";
+  color: #fff;
   font-family: "Line Awesome Free";
   font-weight: 900;
   margin-left: 5px;
@@ -702,12 +719,14 @@ legend {
 }
 .util .search::before {
   content: "\f002";
+  color: #fff;
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 3rem;
 }
 .util .all-menu::before {
   content: "\f0c9";
+  color: #fff;
   font-family: "Line Awesome Free";
   font-weight: 900;
   font-size: 3rem;
@@ -715,7 +734,7 @@ legend {
 
 #nav-all {
   position: fixed;
-  top: 0;
+  top: 0%;
   left: 100%;
   width: 100%;
   height: 100%;
@@ -725,9 +744,19 @@ legend {
           backdrop-filter: blur(10px);
   transition: all 0.3s;
 }
+@media (min-width: 1024px) {
+  #nav-all {
+    bottom: 100%;
+  }
+}
 #nav-all.active {
   display: block;
   left: 0;
+}
+@media (min-width: 1024px) {
+  #nav-all.active {
+    bottom: 0%;
+  }
 }
 
 .sec-g {
@@ -934,12 +963,12 @@ legend {
   position: fixed;
   top: 0;
   right: 0;
-  width: 8rem;
+  width: 7.5rem;
   height: 2000vh;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(100px);
           backdrop-filter: blur(100px);
-  z-index: 100;
+  z-index: 1001;
   padding: 0 1rem;
   transform: translate(0%, -5%);
 }
@@ -1113,7 +1142,7 @@ legend {
   height: 10rem;
   background-color: #0033cc;
   border-radius: 50%;
-  transform: translate(-15%, -20%);
+  transform: translate(-15%, -35%);
 }
 .intro .btn_view a {
   display: flex;
@@ -1136,14 +1165,14 @@ legend {
 }
 @media (min-width: 600px) {
   .intro .btn_view {
-    top: 50%;
+    top: 53%;
     right: 0;
     transform: translate(-65%, 120%);
   }
 }
 @media (min-width: 1024px) {
   .intro .btn_view {
-    top: 50%;
+    top: 55%;
     right: 0;
     transform: translate(-185%, 130%);
   }
@@ -1158,7 +1187,7 @@ legend {
   position: relative;
 }
 .sec-latest .latest-lst {
-  padding-top: 3rem;
+  padding: 3rem 0;
   margin-bottom: 10px;
   overflow: visible;
   display: flex;
@@ -1172,13 +1201,26 @@ legend {
 }
 @media (min-width: 1024px) {
   .sec-latest .latest-lst {
-    gap: 100px;
-    padding-top: 5rem;
-    width: 45%;
+    width: 50%;
   }
 }
 .sec-latest .swiper-wrapper {
   display: flex;
+}
+.sec-latest .swiper-button-next {
+  display: none;
+}
+.sec-latest .swiper-button-prev {
+  display: none;
+}
+.sec-latest .swiper-pagination-bullet {
+  transition: all 0.7s;
+}
+.sec-latest .swiper-pagination-bullet-active {
+  width: 40px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #e4e4e4;
 }
 .sec-latest .swiper-slide {
   position: relative;
@@ -1680,8 +1722,10 @@ legend {
   justify-content: center;
   align-items: center;
 }
-.sec-info__tit {
-  text-align: left;
+@media (min-width: 1024px) {
+  .sec-info__tit {
+    text-align: left;
+  }
 }
 @media (min-width: 1024px) {
   .sec-info ul {
@@ -1689,26 +1733,64 @@ legend {
     justify-content: space-between;
   }
 }
+.sec-info .cont {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (min-width: 600px) {
+  .sec-info .cont {
+    gap: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  .sec-info .cont {
+    display: block;
+    gap: 0;
+  }
+}
+.sec-info a {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+@media (min-width: 600px) {
+  .sec-info a {
+    width: 100%;
+  }
+}
 @media (min-width: 1024px) {
   .sec-info a {
+    display: flex;
+    flex-direction: row;
     width: 95%;
     height: 340px;
     border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: #fff;
   }
 }
-.sec-info a:hover {
-  text-decoration: none;
-  position: relative;
-  transform: scale(1.05);
-  transition: all 0.4s;
-  box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.25);
+@media (min-width: 1024px) {
+  .sec-info a:hover {
+    background-color: #f0f0f0;
+    text-decoration: none;
+    position: relative;
+    transform: scale(1.01);
+    transition: all 0.4s;
+    box-shadow: 5px 12px 12px rgba(0, 0, 0, 0.25);
+  }
 }
 .sec-info .bg {
-  width: 100%;
+  width: 95%;
+}
+@media (min-width: 600px) {
+  .sec-info .bg {
+    width: 70%;
+  }
 }
 @media (min-width: 1024px) {
   .sec-info .bg {
@@ -1722,50 +1804,61 @@ legend {
 }
 @media (min-width: 600px) {
   .sec-info .bg img {
-    display: flex;
-    justify-content: flex-start;
-    width: 80%;
+    width: 100%;
     height: 240px;
+    display: flex;
   }
 }
 @media (min-width: 1024px) {
   .sec-info .bg img {
     width: 100%;
-    height: 100%;
+    height: 240px;
     display: flex;
-    -o-object-fit: cover;
-       object-fit: cover;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-    height: 240px;
   }
 }
 .sec-info .text-area {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   text-align: center;
-  padding: 3rem 1rem 3rem 1rem;
-  margin-bottom: 2rem;
+  margin-top: -20px;
+  padding: 2rem 2rem;
 }
 .sec-info .text-area em {
   font-weight: normal;
   color: #2d2d2d;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
 }
 .sec-info .text-area h3 {
+  font-size: 2.1rem;
   color: #000000;
 }
 .sec-info .text-area p {
   padding-top: 1.5rem;
   color: #002699;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+}
+@media (min-width: 600px) {
+  .sec-info .text-area {
+    margin-top: 10px;
+  }
+  .sec-info .text-area em {
+    font-size: 1.5rem;
+  }
+  .sec-info .text-area h3 {
+    font-size: 2.8rem;
+  }
+  .sec-info .text-area p {
+    padding-top: 30px;
+    font-size: 1.6rem;
+  }
 }
 @media (min-width: 1024px) {
   .sec-info .text-area {
-    margin-top: 50px;
     padding: 0;
     width: 50%;
     display: flex;
@@ -1774,21 +1867,14 @@ legend {
     text-align: center;
   }
   .sec-info .text-area em {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
   .sec-info .text-area h3 {
     padding-top: 10px;
-    font-size: 28px;
+    font-size: 2.8rem;
   }
   .sec-info .text-area p {
-    padding-top: 135px;
-    font-size: 16px;
-  }
-}
-@media (min-width: 600px) {
-  .sec-info a {
-    display: flex;
-    justify-content: flex-start;
-    gap: 30px;
+    padding-top: 120px;
+    font-size: 1.6rem;
   }
 }/*# sourceMappingURL=styles.css.map */

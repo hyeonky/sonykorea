@@ -1,13 +1,10 @@
 // sonykorea swiper 적용
 var swiper = new Swiper('.latest-lst', {
   slidesPerView: 'auto',
-  loop: false,
   centeredSlides: true,
-  allowTouchMove: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
-    dynamicBullets: true,
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -15,16 +12,16 @@ var swiper = new Swiper('.latest-lst', {
   },
   breakpoints: {
     390: {
-      spaceBetween: 40,
+      spaceBetween: 45,
     },
     600: {
-      spaceBetween: 50,
-    },
-    1024: {
       spaceBetween: 55,
     },
+    1024: {
+      spaceBetween: 60,
+    },
     1280: {
-      spaceBetween: 70,
+      spaceBetween: 75,
     },
   },
 })
