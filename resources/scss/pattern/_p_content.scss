@@ -1,1 +1,42 @@
 // 서브페이지
+.hero {
+  background-color: $black;
+  height: 100vh;
+  color: $white;
+  h2 {
+    padding-top: 10vw;
+    text-align: center;
+    font-size: 21px;
+  }
+  .img-wrap {
+    margin: 50px 0;
+  }
+  .btn-buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    width: 80px;
+    height: 40px;
+    background-color: #0071e3;
+    border-radius: 50px;
+    font-size: 14px;
+    color: $white;
+  }
+  .textarea {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    em {
+      margin-top: 10px;
+      font-weight: lighter;
+    }
+  }
+}
+.main_fct {
+  background-color: #1d1d1d;
+  color: $white;
+}

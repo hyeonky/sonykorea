@@ -52,9 +52,9 @@
   width: 100%;
   z-index: 1000;
   background: $black;
-  @include tabletMore {
-    width: calc(100% - 75px);
-  }
+  // @include tabletMore {
+  //   width: calc(100% - 75px);
+  // }
   &.active {
     &::before {
       height: 218px;
@@ -66,7 +66,7 @@
   }
   &::before {
     content: '';
-    // display: none;
+    display: none;
     position: absolute;
     top: 102px;
     left: 0;
@@ -272,7 +272,7 @@
 }
 
 #nav-all {
-  // display: none;
+  display: none;
   position: fixed;
   top: 0%;
   left: 100%;

@@ -504,11 +504,6 @@ legend {
   z-index: 1000;
   background: #000;
 }
-@media (min-width: 1024px) {
-  #header {
-    width: calc(100% - 75px);
-  }
-}
 #header.active::before {
   height: 218px;
 }
@@ -518,6 +513,7 @@ legend {
 }
 #header::before {
   content: "";
+  display: none;
   position: absolute;
   top: 102px;
   left: 0;
@@ -733,6 +729,7 @@ legend {
 }
 
 #nav-all {
+  display: none;
   position: fixed;
   top: 0%;
   left: 100%;
@@ -747,6 +744,7 @@ legend {
 @media (min-width: 1024px) {
   #nav-all {
     bottom: 100%;
+    left: 0;
   }
 }
 #nav-all.active {
@@ -755,7 +753,8 @@ legend {
 }
 @media (min-width: 1024px) {
   #nav-all.active {
-    bottom: 0%;
+    bottom: 0;
+    left: 0;
   }
 }
 
@@ -1877,4 +1876,47 @@ legend {
     padding-top: 120px;
     font-size: 1.6rem;
   }
+}
+
+.hero {
+  background-color: #000;
+  height: 100vh;
+  color: #fff;
+}
+.hero h2 {
+  padding-top: 10vw;
+  text-align: center;
+  font-size: 21px;
+}
+.hero .img-wrap {
+  margin: 50px 0;
+}
+.hero .btn-buy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero button {
+  width: 80px;
+  height: 40px;
+  background-color: #0071e3;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #fff;
+}
+.hero .textarea {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero .textarea em {
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+.main_fct {
+  background-color: #1d1d1d;
+  color: #fff;
 }/*# sourceMappingURL=styles.css.map */
