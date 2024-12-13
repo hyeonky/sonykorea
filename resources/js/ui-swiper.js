@@ -124,3 +124,39 @@ function syncSwipers() {
 swiper.on('slideChange', syncSwipers)
 swiper2.on('slideChange', syncSwipers)
 swiperBackground.on('slideChange', syncSwipers)
+
+// content swiper
+var imageSwiper = new Swiper('.main-fct__img', {
+  spaceBetween: 0,
+  speed: 700,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+})
+
+var textSwiper = new Swiper('.main-fct__text', {
+  allowTouchMove: true,
+  speed: 700, // 슬라이드 전환 속도
+  on: {
+    slideChangeTransitionStart: function () {
+      // 모든 텍스트를 초기화 (안 보이게 설정)
+      const allSlides = document.querySelectorAll('.main-fct__text .swiper-slide p')
+      allSlides.forEach((slide) => {
+        slide.style.opacity = 0
+        slide.style.transform = 'translateX(100px)' // 초기 위치
+      })
+    },
+    slideChangeTransitionEnd: function () {
+      // 활성 슬라이드만 보이게 설정
+      const activeSlide = document.querySelector('.main-fct__text .swiper-slide-active p')
+      if (activeSlide) {
+        activeSlide.style.opacity = 1
+        activeSlide.style.transform = 'translateX(0)' // 제자리로 이동
+      }
+    },
+  },
+})
+
+imageSwiper.controller.control = textSwiper
+textSwiper.controller.control = imageSwiper

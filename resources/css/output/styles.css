@@ -1920,36 +1920,23 @@ legend {
 .main_fct {
   padding: 10vw 0;
   background-color: #1d1d1d;
+  position: relative;
 }
 .main_fct h2 {
   padding-left: 20px;
   font-size: 32px;
   color: #fff;
 }
-.main_fct .swiper-wrapper {
-  position: relative;
-}
-.main_fct .swiper-slide {
-  width: 100%;
-}
-.main_fct .swiper-slide img {
-  width: 350px;
-  height: 450px;
-  border-radius: 30px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.main_fct .textarea {
+.main_fct .swiper-pagination {
+  display: block;
   position: absolute;
-  top: 30px;
-  left: 40px;
-  text-align: left;
-  color: #fff;
-}
-.main_fct .textarea p {
-  font-size: 16px;
+  bottom: 0;
+  left: 0;
 }
 .main_fct .swiper-pagination-bullet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   transition: all 0.7s;
 }
 .main_fct .swiper-pagination-bullet-active {
@@ -1957,6 +1944,50 @@ legend {
   height: 10px;
   border-radius: 10px;
   background-color: #e4e4e4;
+}
+.main_fct .main-fct__img {
+  margin-top: 40px;
+}
+.main_fct .main-fct__img .swiper-wrapper {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  position: relative;
+}
+.main_fct .main-fct__img .swiper-wrapper .swiper-slide {
+  width: 100%;
+}
+.main_fct .main-fct__img .swiper-wrapper .swiper-slide img {
+  width: 320px;
+  height: 450px;
+  border-radius: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main_fct .main-fct__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+  overflow: hidden;
+}
+.main_fct .main-fct__text .swiper-slide p {
+  margin: 0 auto;
+  opacity: 0; /* 초기 상태: 보이지 않음 */
+  transform: translateX(100px); /* 오른쪽에서 시작 */
+  transition: transform 0.7s ease, opacity 0.7s ease; /* 애니메이션 속도 */
+}
+.main_fct .main-fct__text .swiper-slide-active p {
+  opacity: 1; /* 활성 슬라이드에서 보임 */
+  transform: translateX(0); /* 제자리로 이동 */
+}
+.main_fct .main-fct__text .textarea {
+  text-align: left;
+  color: #fff;
+}
+.main_fct .main-fct__text .textarea p {
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .detail {
@@ -1967,15 +1998,6 @@ legend {
   text-align: center;
   font-size: 32px;
   color: #fff;
-}
-.detail .swiper-pagination-bullet {
-  transition: all 0.7s;
-}
-.detail .swiper-pagination-bullet-active {
-  width: 40px;
-  height: 10px;
-  border-radius: 10px;
-  background-color: #e4e4e4;
 }
 
 .perpect {
@@ -2010,15 +2032,15 @@ legend {
   padding: 0 20px;
 }
 .perpect-text .text-warp .textarea {
-  padding-left: 30px;
-  width: 85%;
+  padding: 0 30px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
   color: #999;
+  word-break: break-all;
 }
 .perpect-text .text-warp .textarea p {
-  font-size: 17px;
+  font-size: 16px;
 }
 .perpect-text .text-warp .textarea .highlight {
   font-weight: bold;
@@ -2061,14 +2083,14 @@ legend {
   color: #999;
 }
 .pro .text-warp .textarea {
-  padding-left: 30px;
-  width: 85%;
+  padding: 0 30px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
+  word-break: break-all;
 }
 .pro .text-warp .textarea p {
-  font-size: 17px;
+  font-size: 16px;
 }
 .pro .text-warp .textarea .highlight {
   font-weight: bold;
@@ -2144,14 +2166,14 @@ legend {
   color: #999;
 }
 .gallery .text-warp .textarea {
-  padding-left: 30px;
-  width: 85%;
+  padding: 0 30px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
+  word-break: break-all;
 }
 .gallery .text-warp .textarea p {
-  font-size: 17px;
+  font-size: 16px;
 }
 .gallery .text-warp .textarea strong {
   color: #fff;
@@ -2173,14 +2195,14 @@ legend {
   color: #999;
 }
 .af-drive .text-warp .textarea {
-  padding-left: 30px;
-  width: 85%;
+  padding: 0 30px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
+  word-break: break-all;
 }
 .af-drive .text-warp .textarea p {
-  font-size: 17px;
+  font-size: 16px;
 }
 .af-drive .text-warp .textarea strong {
   color: #fff;
@@ -2190,6 +2212,18 @@ legend {
 .af-drive .text-warp .textarea .highlight {
   font-weight: bold;
   color: #fff;
+}
+.af-drive .video-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: 40px;
+}
+.af-drive .video-wrap video {
+  width: 80%;
 }
 .af-drive .textbox {
   padding: 0 20px;
@@ -2257,15 +2291,15 @@ legend {
   padding: 0 20px;
 }
 .timing .text-warp .textarea {
-  padding-left: 30px;
-  width: 80%;
+  padding: 0 30px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
   color: #999;
+  word-break: break-all;
 }
 .timing .text-warp .textarea p {
-  font-size: 17px;
+  font-size: 16px;
 }
 .timing .text-warp .textarea strong {
   color: #fff;
@@ -2310,15 +2344,15 @@ legend {
   padding: 0 20px;
 }
 .compact .text-warp .textarea {
-  padding-left: 30px;
-  width: 80%;
+  padding: 0 30px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
   color: #999;
+  word-break: break-all;
 }
 .compact .text-warp .textarea p {
-  font-size: 17px;
+  font-size: 16px;
 }
 .compact .text-warp .textarea .highlight {
   font-weight: bold;
@@ -2339,19 +2373,23 @@ legend {
   color: #fff;
 }
 .eco .text-warp {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(5%, -80%);
   margin: 10vw 0;
   padding: 0 20px;
 }
 .eco .text-warp .textarea {
-  padding-left: 30px;
-  width: 80%;
+  padding: 0 20px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
   color: #999;
+  word-break: break-all;
 }
 .eco .text-warp .textarea p {
-  font-size: 17px;
+  font-size: 16px;
 }
 .eco .text-warp .textarea strong {
   color: #fff;
@@ -2361,4 +2399,10 @@ legend {
 .eco .text-warp .textarea .highlight {
   font-weight: bold;
   color: #fff;
+}
+.eco__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-55%, 180%);
 }/*# sourceMappingURL=styles.css.map */

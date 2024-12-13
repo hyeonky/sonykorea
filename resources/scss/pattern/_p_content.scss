@@ -41,34 +41,22 @@
 .main_fct {
   padding: 10vw 0;
   background-color: #1d1d1d;
+  position: relative;
   h2 {
     padding-left: 20px;
     font-size: 32px;
     color: $white;
   }
-  .swiper-wrapper {
-    position: relative;
-  }
-  .swiper-slide {
-    width: 100%;
-    img {
-      width: 350px;
-      height: 450px;
-      border-radius: 30px;
-      object-fit: cover;
-    }
-  }
-  .textarea {
+  .swiper-pagination {
+    display: block;
     position: absolute;
-    top: 30px;
-    left: 40px;
-    text-align: left;
-    color: $white;
-    p {
-      font-size: 16px;
-    }
+    bottom: 0;
+    left: 0;
   }
   .swiper-pagination-bullet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     transition: all 0.7s;
   }
   .swiper-pagination-bullet-active {
@@ -76,6 +64,53 @@
     height: 10px;
     border-radius: 10px;
     background-color: $gray-20;
+  }
+  .main-fct__img {
+    margin-top: 40px;
+    .swiper-wrapper {
+      width: 100%;
+      display: grid;
+
+      grid-auto-flow: column;
+
+      position: relative;
+      .swiper-slide {
+        width: 100%;
+        img {
+          width: 320px;
+          height: 450px;
+          border-radius: 30px;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .main-fct__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    overflow: hidden;
+
+    .swiper-slide p {
+      margin: 0 auto;
+      opacity: 0; /* 초기 상태: 보이지 않음 */
+      transform: translateX(100px); /* 오른쪽에서 시작 */
+      transition: transform 0.7s ease, opacity 0.7s ease; /* 애니메이션 속도 */
+    }
+
+    .swiper-slide-active p {
+      opacity: 1; /* 활성 슬라이드에서 보임 */
+      transform: translateX(0); /* 제자리로 이동 */
+    }
+    .textarea {
+      text-align: left;
+      color: $white;
+      p {
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
   }
 }
 .detail {
@@ -85,15 +120,6 @@
     text-align: center;
     font-size: 32px;
     color: $white;
-  }
-  .swiper-pagination-bullet {
-    transition: all 0.7s;
-  }
-  .swiper-pagination-bullet-active {
-    width: 40px;
-    height: 10px;
-    border-radius: 10px;
-    background-color: $gray-20;
   }
 }
 .perpect {
@@ -124,14 +150,15 @@
     color: $white;
     padding: 0 20px;
     .textarea {
-      padding-left: 30px;
-      width: 85%;
+      padding: 0 30px;
       font-weight: bold;
       text-align: left;
       line-height: 1.6;
       color: #999;
+      word-break: break-all;
+
       p {
-        font-size: 17px;
+        font-size: 16px;
       }
       .highlight {
         font-weight: bold;
@@ -174,13 +201,13 @@
     padding: 0 20px;
     color: #999;
     .textarea {
-      padding-left: 30px;
-      width: 85%;
+      padding: 0 30px;
       font-weight: bold;
       text-align: left;
       line-height: 1.6;
+      word-break: break-all;
       p {
-        font-size: 17px;
+        font-size: 16px;
       }
       .highlight {
         font-weight: bold;
@@ -258,13 +285,13 @@
     padding: 0 20px;
     color: #999;
     .textarea {
-      padding-left: 30px;
-      width: 85%;
+      padding: 0 30px;
       font-weight: bold;
       text-align: left;
       line-height: 1.6;
+      word-break: break-all;
       p {
-        font-size: 17px;
+        font-size: 16px;
       }
       strong {
         color: $white;
@@ -286,13 +313,13 @@
     padding: 0 20px;
     color: #999;
     .textarea {
-      padding-left: 30px;
-      width: 85%;
+      padding: 0 30px;
       font-weight: bold;
       text-align: left;
       line-height: 1.6;
+      word-break: break-all;
       p {
-        font-size: 17px;
+        font-size: 16px;
       }
       strong {
         color: $white;
@@ -303,6 +330,17 @@
         font-weight: bold;
         color: $white;
       }
+    }
+  }
+  .video-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    margin-top: 40px;
+    video {
+      width: 80%;
     }
   }
   .textbox {
@@ -369,14 +407,14 @@
     margin: 10vw 0;
     padding: 0 20px;
     .textarea {
-      padding-left: 30px;
-      width: 80%;
+      padding: 0 30px;
       font-weight: bold;
       text-align: left;
       line-height: 1.6;
       color: #999;
+      word-break: break-all;
       p {
-        font-size: 17px;
+        font-size: 16px;
       }
       strong {
         color: $white;
@@ -422,14 +460,14 @@
     margin: 10vw 0;
     padding: 0 20px;
     .textarea {
-      padding-left: 30px;
-      width: 80%;
+      padding: 0 30px;
       font-weight: bold;
       text-align: left;
       line-height: 1.6;
       color: #999;
+      word-break: break-all;
       p {
-        font-size: 17px;
+        font-size: 16px;
       }
       .highlight {
         font-weight: bold;
@@ -451,17 +489,21 @@
     color: $white;
   }
   .text-warp {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(5%, -80%);
     margin: 10vw 0;
     padding: 0 20px;
     .textarea {
-      padding-left: 30px;
-      width: 80%;
+      padding: 0 20px;
       font-weight: bold;
       text-align: left;
       line-height: 1.6;
       color: #999;
+      word-break: break-all;
       p {
-        font-size: 17px;
+        font-size: 16px;
       }
       strong {
         color: $white;
@@ -473,5 +515,11 @@
         color: $white;
       }
     }
+  }
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-55%, 180%);
   }
 }
