@@ -39,41 +39,28 @@
   }
 }
 .main_fct {
+  height: 100vh;
   padding: 10vw 0;
   background-color: #1d1d1d;
   position: relative;
   h2 {
+    margin-top: 50px;
     padding-left: 20px;
-    font-size: 32px;
+    font-size: 28px;
     color: $white;
   }
-  .swiper-pagination {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-  .swiper-pagination-bullet {
+  span {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transition: all 0.7s;
-  }
-  .swiper-pagination-bullet-active {
-    width: 40px;
-    height: 10px;
-    border-radius: 10px;
-    background-color: $gray-20;
+    color: #0071e3;
+    font-size: 14px;
+    margin-left: 20px;
+    margin-top: 10px;
   }
   .main-fct__img {
-    margin-top: 40px;
+    padding: 50px 0;
     .swiper-wrapper {
       width: 100%;
-      display: grid;
-
-      grid-auto-flow: column;
-
-      position: relative;
+      height: 100%;
       .swiper-slide {
         width: 100%;
         img {
@@ -84,42 +71,117 @@
         }
       }
     }
-  }
-  .main-fct__text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -70%);
-    overflow: hidden;
-
-    .swiper-slide p {
-      margin: 0 auto;
-      opacity: 0; /* 초기 상태: 보이지 않음 */
-      transform: translateX(100px); /* 오른쪽에서 시작 */
-      transition: transform 0.7s ease, opacity 0.7s ease; /* 애니메이션 속도 */
-    }
-
-    .swiper-slide-active p {
-      opacity: 1; /* 활성 슬라이드에서 보임 */
-      transform: translateX(0); /* 제자리로 이동 */
-    }
     .textarea {
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-40%, 60%);
+      overflow: hidden;
       text-align: left;
       color: $white;
+      width: 80%;
       p {
         font-size: 16px;
         font-weight: bold;
+        margin: 0 auto;
+        opacity: 1;
+        transform: translateX(100px);
+        transition: transform 0.7s ease, opacity 0.7s ease;
+        &.active {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
+    }
+    .swiper-pagination {
+      position: sticky;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 60%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(55, 55, 57, 0.6);
+      backdrop-filter: blur(10px);
+      width: 200px;
+      gap: 10px;
+    }
+    .swiper-pagination-bullet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: all 0.7s;
+      background-color: $gray-20;
+    }
+    .swiper-pagination-bullet-active {
+      width: 40px;
+      height: 10px;
+      border-radius: 10px;
+      background-color: $gray-20;
     }
   }
 }
 .detail {
+  height: 100vh;
   padding: 10vw 0;
   background-color: $black;
   h2 {
+    margin-top: 50px;
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
     color: $white;
+  }
+  .detail-product {
+    padding: 60px 0;
+    .swiper-wrapper {
+      width: 100%;
+      margin: 20px 0;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      opacity: 0;
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .pd_selectors {
+      margin-top: 10px;
+      position: sticky;
+      top: 50%;
+      left: 50%;
+      transform: translate(-22%, 0%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 270px;
+      height: 50px;
+      border-radius: 50px;
+      background-color: rgb(55, 55, 57, 0.6);
+      backdrop-filter: blur(10px);
+    }
+
+    .product-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: border 0.3s ease;
+      border: 2px solid $gray-40;
+      &.active {
+        // box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+        border: 2px solid $white;
+        background-color: $white;
+      }
+    }
   }
 }
 .perpect {
@@ -127,7 +189,7 @@
   background-color: $black;
   h2 {
     text-align: center;
-    font-size: 32px;
+    font-size: 28px;
     color: $white;
   }
   .video-warp {
@@ -166,25 +228,65 @@
       }
     }
   }
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    img {
-      width: 300px;
-      height: 320px;
-      border-radius: 35px;
+  .perpect_text {
+    margin: 50px 0;
+    position: relative;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      img {
+        width: 300px;
+        height: 320px;
+        border-radius: 35px;
+      }
+      .text-tit {
+        text-align: left;
+        font-size: 16px;
+        font-weight: bold;
+        background: linear-gradient(to right, #fff, #c5a6b6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
-    .text-tit {
-      text-align: left;
-      font-size: 16px;
-      font-weight: bold;
-      background: linear-gradient(to right, #fff, #c5a6b6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+
+    // .swiper-button-prev {
+    //   &::before {
+    //     content: '\f137';
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     font-size: 32px;
+    //   }
+    // }
+  }
+  .swiper-button {
+    .swiper-button-next {
+      &::before {
+        content: '\f138';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 32px;
+        color: $white;
+        z-index: 10;
+      }
+    }
+    .swiper-button-prev {
+      &::before {
+        content: '\f137';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: 32px;
+        color: $white;
+        z-index: 10;
+      }
     }
   }
 }
@@ -194,7 +296,7 @@
   position: relative;
   h2 {
     padding-left: 20px;
-    font-size: 32px;
+    font-size: 28px;
     color: $white;
   }
   .text-warp {
@@ -397,7 +499,7 @@
     top: 20%;
     left: 0;
     padding-left: 20px;
-    font-size: 32px;
+    font-size: 28px;
     color: $white;
   }
   img {
@@ -433,7 +535,7 @@
   background-color: $black;
   position: relative;
   h2 {
-    font-size: 32px;
+    font-size: 28px;
     color: $white;
     text-align: center;
   }
@@ -484,7 +586,7 @@
     position: absolute;
     top: 10%;
     left: 20%;
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
     color: $white;
   }

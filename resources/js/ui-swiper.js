@@ -133,23 +133,16 @@ var imageSwiper = new Swiper('.main-fct__img', {
     el: '.swiper-pagination',
     clickable: true,
   },
-})
-
-var textSwiper = new Swiper('.main-fct__text', {
-  allowTouchMove: true,
-  speed: 700, // 슬라이드 전환 속도
   on: {
     slideChangeTransitionStart: function () {
-      // 모든 텍스트를 초기화 (안 보이게 설정)
-      const allSlides = document.querySelectorAll('.main-fct__text .swiper-slide p')
+      const allSlides = document.querySelectorAll('.main-fct__img .swiper-slide p')
       allSlides.forEach((slide) => {
         slide.style.opacity = 0
-        slide.style.transform = 'translateX(100px)' // 초기 위치
+        slide.style.transform = 'translateX(100px)'
       })
     },
     slideChangeTransitionEnd: function () {
-      // 활성 슬라이드만 보이게 설정
-      const activeSlide = document.querySelector('.main-fct__text .swiper-slide-active p')
+      const activeSlide = document.querySelector('.main-fct__img .swiper-slide-active p')
       if (activeSlide) {
         activeSlide.style.opacity = 1
         activeSlide.style.transform = 'translateX(0)' // 제자리로 이동
@@ -158,5 +151,37 @@ var textSwiper = new Swiper('.main-fct__text', {
   },
 })
 
-imageSwiper.controller.control = textSwiper
-textSwiper.controller.control = imageSwiper
+// detail
+document.addEventListener('DOMContentLoaded', function () {
+  const swiper = new Swiper('.detail-product', {
+    loop: true,
+    effect: 'fade',
+    speed: 500,
+    allowTouchMove: false,
+  })
+
+  const productButtons = document.querySelectorAll('.product-btn')
+  const productImages = document.querySelectorAll('.product-img')
+
+  productButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      swiper.slideToLoop(index)
+
+      productButtons.forEach((btn) => btn.classList.remove('active'))
+      productImages.forEach((img) => img.classList.remove('active'))
+      button.classList.add('active')
+      productImages[index].classList.add('active')
+    })
+  })
+
+  productButtons[0].classList.add('active')
+  productImages[0].classList.add('active')
+})
+
+// perpect-text
+var swiper = new Swiper('.perpect_text', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})

@@ -1918,41 +1918,30 @@ legend {
 }
 
 .main_fct {
+  height: 100vh;
   padding: 10vw 0;
   background-color: #1d1d1d;
   position: relative;
 }
 .main_fct h2 {
+  margin-top: 50px;
   padding-left: 20px;
-  font-size: 32px;
+  font-size: 28px;
   color: #fff;
 }
-.main_fct .swiper-pagination {
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.main_fct .swiper-pagination-bullet {
+.main_fct span {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  transition: all 0.7s;
-}
-.main_fct .swiper-pagination-bullet-active {
-  width: 40px;
-  height: 10px;
-  border-radius: 10px;
-  background-color: #e4e4e4;
+  color: #0071e3;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 .main_fct .main-fct__img {
-  margin-top: 40px;
+  padding: 50px 0;
 }
 .main_fct .main-fct__img .swiper-wrapper {
   width: 100%;
-  display: grid;
-  grid-auto-flow: column;
-  position: relative;
+  height: 100%;
 }
 .main_fct .main-fct__img .swiper-wrapper .swiper-slide {
   width: 100%;
@@ -1964,40 +1953,116 @@ legend {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.main_fct .main-fct__text {
+.main_fct .main-fct__img .textarea {
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -70%);
+  transform: translate(-40%, 60%);
   overflow: hidden;
-}
-.main_fct .main-fct__text .swiper-slide p {
-  margin: 0 auto;
-  opacity: 0; /* 초기 상태: 보이지 않음 */
-  transform: translateX(100px); /* 오른쪽에서 시작 */
-  transition: transform 0.7s ease, opacity 0.7s ease; /* 애니메이션 속도 */
-}
-.main_fct .main-fct__text .swiper-slide-active p {
-  opacity: 1; /* 활성 슬라이드에서 보임 */
-  transform: translateX(0); /* 제자리로 이동 */
-}
-.main_fct .main-fct__text .textarea {
   text-align: left;
   color: #fff;
+  width: 80%;
 }
-.main_fct .main-fct__text .textarea p {
+.main_fct .main-fct__img .textarea p {
   font-size: 16px;
   font-weight: bold;
+  margin: 0 auto;
+  opacity: 1;
+  transform: translateX(100px);
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+.main_fct .main-fct__img .textarea p.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+.main_fct .main-fct__img .swiper-pagination {
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(55, 55, 57, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  width: 200px;
+  gap: 10px;
+}
+.main_fct .main-fct__img .swiper-pagination-bullet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all 0.7s;
+  background-color: #e4e4e4;
+}
+.main_fct .main-fct__img .swiper-pagination-bullet-active {
+  width: 40px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: #e4e4e4;
 }
 
 .detail {
+  height: 100vh;
   padding: 10vw 0;
   background-color: #000;
 }
 .detail h2 {
+  margin-top: 50px;
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   color: #fff;
+}
+.detail .detail-product {
+  padding: 60px 0;
+}
+.detail .detail-product .swiper-wrapper {
+  width: 100%;
+  margin: 20px 0;
+}
+.detail .detail-product img {
+  display: block;
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0;
+}
+.detail .detail-product img.active {
+  opacity: 1;
+}
+.detail .detail-product .pd_selectors {
+  margin-top: 10px;
+  position: sticky;
+  top: 50%;
+  left: 50%;
+  transform: translate(-22%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 270px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: rgba(55, 55, 57, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.detail .detail-product .product-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  border: 2px solid #c6c6c6;
+}
+.detail .detail-product .product-btn.active {
+  border: 2px solid #fff;
+  background-color: #fff;
 }
 
 .perpect {
@@ -2006,7 +2071,7 @@ legend {
 }
 .perpect h2 {
   text-align: center;
-  font-size: 32px;
+  font-size: 28px;
   color: #fff;
 }
 .perpect .video-warp {
@@ -2046,7 +2111,11 @@ legend {
   font-weight: bold;
   color: #fff;
 }
-.perpect-text .swiper-slide {
+.perpect-text .perpect_text {
+  margin: 50px 0;
+  position: relative;
+}
+.perpect-text .perpect_text .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -2054,18 +2123,38 @@ legend {
   gap: 10px;
   width: 100%;
 }
-.perpect-text .swiper-slide img {
+.perpect-text .perpect_text .swiper-slide img {
   width: 300px;
   height: 320px;
   border-radius: 35px;
 }
-.perpect-text .swiper-slide .text-tit {
+.perpect-text .perpect_text .swiper-slide .text-tit {
   text-align: left;
   font-size: 16px;
   font-weight: bold;
   background: linear-gradient(to right, #fff, #c5a6b6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.perpect-text .swiper-button .swiper-button-next::before {
+  content: "\f138";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  color: #fff;
+  z-index: 10;
+}
+.perpect-text .swiper-button .swiper-button-prev::before {
+  content: "\f137";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 32px;
+  color: #fff;
+  z-index: 10;
 }
 
 .pro {
@@ -2075,7 +2164,7 @@ legend {
 }
 .pro h2 {
   padding-left: 20px;
-  font-size: 32px;
+  font-size: 28px;
   color: #fff;
 }
 .pro .text-warp {
@@ -2280,7 +2369,7 @@ legend {
   top: 20%;
   left: 0;
   padding-left: 20px;
-  font-size: 32px;
+  font-size: 28px;
   color: #fff;
 }
 .timing img {
@@ -2317,7 +2406,7 @@ legend {
   position: relative;
 }
 .compact h2 {
-  font-size: 32px;
+  font-size: 28px;
   color: #fff;
   text-align: center;
 }
@@ -2368,7 +2457,7 @@ legend {
   position: absolute;
   top: 10%;
   left: 20%;
-  font-size: 32px;
+  font-size: 28px;
   text-align: center;
   color: #fff;
 }
