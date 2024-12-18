@@ -30,6 +30,7 @@ button,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  // cursor: none;
 }
 
 fieldset,
@@ -53,7 +54,7 @@ q {
 blockquote {
   &:before,
   &:after {
-    content: "";
+    content: '';
     content: none;
   }
 }
@@ -61,7 +62,7 @@ blockquote {
 q {
   &:before,
   &:after {
-    content: "";
+    content: '';
     content: none;
   }
 }
@@ -92,15 +93,15 @@ body {
 
 /* 뷰표트 변환시 폰트크기 자동확대 방지 */
 input {
-  &[type="text"],
-  &[type="password"],
-  &[type="submit"],
-  &[type="search"] {
+  &[type='text'],
+  &[type='password'],
+  &[type='submit'],
+  &[type='search'] {
     appearance: none;
     border-radius: 0;
   }
 
-  &:checked[type="checkbox"] {
+  &:checked[type='checkbox'] {
     background-color: $gray-20;
     appearance: checkbox;
   }
@@ -112,15 +113,15 @@ button {
 }
 
 input {
-  &[type="button"],
-  &[type="submit"],
-  &[type="reset"],
-  &[type="file"] {
+  &[type='button'],
+  &[type='submit'],
+  &[type='reset'],
+  &[type='file'] {
     appearance: button;
     border-radius: 0;
   }
 
-  &[type="search"]::-webkit-search-cancel-button {
+  &[type='search']::-webkit-search-cancel-button {
     appearance: none;
   }
 }
@@ -174,8 +175,8 @@ hr {
   display: none;
 }
 
-input[type="password"] {
-  font-family: "Malgun Gothic";
+input[type='password'] {
+  font-family: 'Malgun Gothic';
 }
 
 /* 웹폰트 사용시 점이 안보임 - 기본 폰트 사용  */
@@ -282,6 +283,38 @@ legend {
     height: 0;
     font-size: 0;
     clear: both;
-    content: "";
+    content: '';
   }
 }
+// .circle-mouse {
+//   position: absolute;
+//   width: 30px;
+//   height: 30px;
+//   top: 50%;
+//   left: 50%;
+//   margin: -50px 0 0 -50px;
+//   background: $primary;
+//   opacity: 1;
+//   backdrop-filter: blur(10px);
+//   border-radius: 80%;
+//   backface-visibility: hidden;
+//   z-index: 1000;
+// }
+// .cursor {
+//   position: absolute;
+//   width: 48px;
+//   height: 48px;
+//   top: 50%;
+//   left: 50%;
+//   margin: -24px 0 0 -24px;
+//   border: 3px solid $white;
+//   border-radius: 50%;
+//   pointer-events: none;
+//   overflow: hidden;
+//   z-index: 10000;
+
+//   &.hover {
+//     transform: scale(1.5); /* 커서 크기 증가 */
+//     box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.6); /* 효과 추가 */
+//   }
+// }

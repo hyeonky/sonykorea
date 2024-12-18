@@ -88,7 +88,7 @@ var swiper2 = new Swiper('.hot-lst__gallery', {
       translate: [0, 0, -400],
     },
     next: {
-      translate: ['100%', 0, 0],
+      translate: [300, 0, 0],
     },
   },
   navigation: {
@@ -97,7 +97,7 @@ var swiper2 = new Swiper('.hot-lst__gallery', {
   },
   thumbs: {
     swiper: swiper,
-    speed: 2000,
+    // speed: 2000,
   },
 })
 

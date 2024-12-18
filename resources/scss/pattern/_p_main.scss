@@ -575,149 +575,149 @@
       }
     }
   }
-}
-
-// hot자리
-.hot-lst__circle {
-  overflow: visible;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-10%, -15%);
-  width: 100%;
-  height: 100%;
-  flex-shrink: 0;
-  @include mobileMore {
-    display: none;
-  }
-  @include tabletLess {
-    display: none;
-  }
-  @include tabletMore {
-    margin: 0;
-    display: block;
-    height: auto;
-    top: auto;
-    bottom: 0;
-    transform: translate(-80%, 0);
-  }
-  .swiper-wrapper {
+  .hot-lst__circle {
+    overflow: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%, -15%);
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
-    .swiper-slide {
-      // width: 100%;
-      flex-shrink: 0;
-      position: relative;
-      transition-property: transform;
-      @include tabletMore {
-        justify-content: flex-start;
+    flex-shrink: 0;
+    @include mobileMore {
+      display: none;
+    }
+    @include tabletLess {
+      display: none;
+    }
+    @include tabletMore {
+      margin: 0;
+      display: block;
+      height: auto;
+      top: auto;
+      bottom: 0;
+      transform: translate(-80%, 0);
+    }
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      .swiper-slide {
+        // width: 100%;
+        flex-shrink: 0;
+        position: relative;
+        transition-property: transform;
+        @include tabletMore {
+          justify-content: flex-start;
+        }
+      }
+      .circle {
+        width: 563px;
+        height: 563px;
+        border: 0.1rem solid $gray-40;
+        border-radius: 50%;
+        background-color: $white;
       }
     }
-    .circle {
-      width: 563px;
-      height: 563px;
-      border: 0.1rem solid $gray-40;
-      border-radius: 50%;
-      background-color: $white;
-    }
   }
-}
 
-.hot-lst__gallery {
-  width: 90%;
-  .swiper-slide {
-    border-radius: 50%;
-    img {
-      width: 100%;
+  .hot-lst__gallery {
+    width: 90%;
+    .swiper-slide {
       border-radius: 50%;
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+    }
+    @include mobileMore {
+      padding-top: 50px;
+      margin-left: 7rem;
+      width: 80%;
+    }
+    @include tabletMore {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      img {
+        display: block;
+        width: 563px;
+        height: 563px;
+      }
     }
   }
-  @include mobileMore {
-    padding-top: 50px;
-    margin-left: 7rem;
-    width: 80%;
-  }
-  @include tabletMore {
+  .hot-lst__text {
+    padding: 3rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    img {
-      display: block;
-      width: 563px;
-      height: 563px;
-    }
-  }
-}
-.hot-lst__text {
-  padding: 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .text-area {
-    text-align: center;
-    line-height: 1.5;
-    a {
-      &:hover {
-        text-decoration: none;
+    .text-area {
+      text-align: center;
+      line-height: 1.5;
+      a {
+        &:hover {
+          text-decoration: none;
+        }
       }
-    }
-    span {
-      color: $gray-50;
-      font-size: 14px;
-    }
-    h3 {
-      color: $gray-90;
-    }
-    em {
-      font-weight: normal;
-      color: $gray-70;
-      line-height: 3;
-    }
-    @include mobileMore {
-      padding-top: 2rem;
       span {
-        font-size: 21px;
-      }
-      h3 {
-        font-size: 28px;
-      }
-      em {
-        font-size: 24px;
-      }
-    }
-    @include tabletMore {
-      // flex: 1;
-      width: 370px;
-      margin-left: auto;
-      text-align: left;
-      span {
-        font-size: 22px;
-      }
-      h3 {
-        font-size: 28px;
-      }
-      .color-btn {
-        display: inline-block;
-        margin-top: 50px;
-        width: 26px;
-        height: 26px;
-        background-color: $black;
-        border: 1px solid $gray-40;
-      }
-      p {
-        margin-top: 10px;
-        font-size: 14px;
         color: $gray-50;
+        font-size: 14px;
+      }
+      h3 {
+        color: $gray-90;
       }
       em {
-        font-size: 24px;
+        font-weight: normal;
+        color: $gray-70;
+        line-height: 3;
+      }
+      @include mobileMore {
+        padding-top: 2rem;
+        span {
+          font-size: 21px;
+        }
+        h3 {
+          font-size: 28px;
+        }
+        em {
+          font-size: 24px;
+        }
+      }
+      @include tabletMore {
+        // flex: 1;
+        width: 370px;
+        margin-left: auto;
+        text-align: left;
+        span {
+          font-size: 22px;
+        }
+        h3 {
+          font-size: 28px;
+        }
+        .color-btn {
+          display: inline-block;
+          margin-top: 50px;
+          width: 26px;
+          height: 26px;
+          background-color: $black;
+          border: 1px solid $gray-40;
+        }
+        p {
+          margin-top: 10px;
+          font-size: 14px;
+          color: $gray-50;
+        }
+        em {
+          font-size: 24px;
+        }
       }
     }
   }
 }
+
+// hot자리
 
 .sec-info {
   background-color: #f5f5f7;
