@@ -127,7 +127,7 @@ swiperBackground.on('slideChange', syncSwipers)
 
 // content swiper
 var imageSwiper = new Swiper('.main-fct__img', {
-  spaceBetween: 0,
+  spaceBetween: -40,
   speed: 700,
   pagination: {
     el: '.swiper-pagination',
@@ -180,6 +180,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // perpect-text
 var swiper = new Swiper('.perpect_text', {
+  spaceBetween: -60,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+})
+
+// pro
+var swiper = new Swiper('.pro_lst', {
+  spaceBetween: -60,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',

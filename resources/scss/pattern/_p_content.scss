@@ -21,7 +21,7 @@
     width: 80px;
     height: 40px;
     background-color: #0071e3;
-    border-radius: 50px;
+    border-radius: 32px;
     font-size: 14px;
     color: $white;
   }
@@ -45,7 +45,7 @@
   position: relative;
   h2 {
     margin-top: 50px;
-    padding-left: 20px;
+    padding-left: 30px;
     font-size: 28px;
     color: $white;
   }
@@ -53,7 +53,7 @@
     display: flex;
     color: #0071e3;
     font-size: 14px;
-    margin-left: 20px;
+    margin-left: 30px;
     margin-top: 10px;
   }
   .main-fct__img {
@@ -64,9 +64,9 @@
       .swiper-slide {
         width: 100%;
         img {
-          width: 320px;
+          width: 85%;
           height: 450px;
-          border-radius: 30px;
+          border-radius: 32px;
           object-fit: cover;
         }
       }
@@ -161,7 +161,7 @@
       gap: 10px;
       width: 270px;
       height: 50px;
-      border-radius: 50px;
+      border-radius: 32px;
       background-color: rgb(55, 55, 57, 0.6);
       backdrop-filter: blur(10px);
     }
@@ -237,11 +237,10 @@
       justify-content: center;
       align-items: center;
       gap: 10px;
-      width: 100%;
       img {
-        width: 300px;
+        width: 80%;
         height: 320px;
-        border-radius: 35px;
+        border-radius: 32px;
       }
       .text-tit {
         text-align: left;
@@ -252,50 +251,36 @@
         -webkit-text-fill-color: transparent;
       }
     }
-
-    // .swiper-button-prev {
-    //   &::before {
-    //     content: '\f137';
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 50%;
-    //     font-size: 32px;
-    //   }
-    // }
   }
-  .swiper-button {
-    .swiper-button-next {
-      &::before {
-        content: '\f138';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 32px;
-        color: $white;
-        z-index: 10;
-      }
-    }
-    .swiper-button-prev {
-      &::before {
-        content: '\f137';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 32px;
-        color: $white;
-        z-index: 10;
-      }
-    }
-  }
+  // .swiper-button {
+  //   &-next {
+  //     content: '\f138';
+  //     display: block;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     font-size: 32px;
+  //     color: $white;
+  //     z-index: 10;
+  //   }
+  //   &-prev {
+  //     content: '\f137';
+  //     display: block;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     font-size: 32px;
+  //     color: $white;
+  //     z-index: 10;
+  //   }
+  // }
 }
 .pro {
   padding: 10vw 0;
   background-color: $black;
   position: relative;
   h2 {
-    padding-left: 20px;
+    padding-left: 30px;
     font-size: 28px;
     color: $white;
   }
@@ -317,27 +302,30 @@
       }
     }
   }
-  .swiper-slide {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
-    img {
-      width: 300px;
-      height: 320px;
-      border-radius: 35px;
-    }
-    .text-tit {
-      text-align: center;
-      font-size: 16px;
-      font-weight: bold;
-      background: linear-gradient(to right, #fff, #c5a6b6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+  .pro_lst {
+    margin: 50px 0;
+    .swiper-slide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      img {
+        width: 80%;
+        height: 320px;
+        border-radius: 32px;
+      }
+      .text-tit {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        background: linear-gradient(to right, #fff, #c5a6b6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
+
   .btn {
     padding: 10vw 0;
     display: flex;
@@ -345,17 +333,59 @@
     align-items: center;
     text-align: center;
     .view__more {
-      width: 200px;
+      position: sticky;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 25px;
+      width: 230px;
       height: 45px;
-      border-radius: 60px;
+      border-radius: 32px;
       background-color: #333;
+      backdrop-filter: blur(10px);
+      font-weight: bold;
       color: $white;
-      z-index: 1;
+      z-index: 3;
       font-size: 16px;
+      .btn-tit {
+        padding-left: -5px;
+      }
+      .icon-plus {
+        position: relative;
+        display: flex;
+        &__bg {
+          position: absolute; // 부모 기준으로 위치
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          width: 30px;
+          height: 30px;
+          background-color: $primary;
+          border-radius: 32px;
+        }
+        &__text {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+          &::before {
+            @include lineAwesome;
+            content: '\f067';
+            color: $white;
+            font-size: 18px;
+            border-radius: 30px;
+            font-weight: bold;
+          }
+        }
+      }
     }
   }
 }
-.gallery {
+.gallery_af {
   padding: 10vw 0;
   background-color: $black;
   position: relative;
@@ -406,90 +436,136 @@
       }
     }
   }
-}
-.af-drive {
-  padding: 10vw 0;
-  background-color: $black;
-  .text-warp {
-    margin-top: 30px;
-    padding: 0 20px;
-    color: #999;
-    .textarea {
-      padding: 0 30px;
-      font-weight: bold;
-      text-align: left;
-      line-height: 1.6;
-      word-break: break-all;
-      p {
-        font-size: 16px;
-      }
-      strong {
-        color: $white;
-        font-size: 28px;
-        line-height: 1.4;
-      }
-      .highlight {
+  .af-drive {
+    padding-top: 30px;
+    background-color: $black;
+    .text-warp {
+      padding: 0 20px;
+      color: #999;
+      .textarea {
+        padding: 0 30px;
         font-weight: bold;
-        color: $white;
-      }
-    }
-  }
-  .video-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: contain;
-    margin-top: 40px;
-    video {
-      width: 80%;
-    }
-  }
-  .textbox {
-    padding: 0 20px;
-    .box {
-      margin: 50px 0;
-      padding-left: 30px;
-      width: 90%;
-      text-align: left;
-      line-height: 1.6;
-      span {
-        color: $white;
-        font-weight: bold;
-      }
-      .line {
-        padding: 5px 0;
-        &::after {
-          content: '';
-          display: block;
-          width: 150px;
-          height: 3px;
-          background-color: $white;
+        text-align: left;
+        line-height: 1.6;
+        word-break: break-all;
+        p {
+          font-size: 16px;
+        }
+        strong {
+          color: $white;
+          font-size: 28px;
+          line-height: 1.4;
+        }
+        .highlight {
+          font-weight: bold;
+          color: $white;
         }
       }
-      p {
-        color: #999;
+    }
+    .video-wrap {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      object-fit: contain;
+      margin-top: 40px;
+      video {
+        width: 80%;
+      }
+    }
+    .textbox {
+      padding: 0 20px;
+      .box {
+        margin: 50px 0;
+        padding-left: 30px;
+        width: 90%;
+        text-align: left;
+        line-height: 1.6;
+        span {
+          color: $white;
+          font-weight: bold;
+        }
+        .line {
+          position: relative;
+          padding: 5px 0;
+          &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 3px;
+            background-color: $white;
+          }
+        }
+        p {
+          color: #999;
+        }
+      }
+    }
+    .btn {
+      padding: 10vw 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      .view__more {
+        position: sticky;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 25px;
+        width: 250px;
+        height: 45px;
+        border-radius: 32px;
+        background-color: #333;
+        backdrop-filter: blur(10px);
+        font-weight: bold;
+        color: $white;
+        z-index: 3;
+        font-size: 16px;
+        .btn-tit {
+          padding-left: -5px;
+        }
+        .icon-plus {
+          position: relative;
+          display: flex;
+          &__bg {
+            position: absolute; // 부모 기준으로 위치
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 30px;
+            height: 30px;
+            background-color: $primary;
+            border-radius: 32px;
+          }
+          &__text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            &::before {
+              @include lineAwesome;
+              content: '\f067';
+              color: $white;
+              font-size: 18px;
+              border-radius: 30px;
+              font-weight: bold;
+            }
+          }
+        }
       }
     }
   }
-  .btn {
-    padding: 10vw 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    .view__more {
-      width: 250px;
-      height: 45px;
-      border-radius: 60px;
-      background-color: #333;
-      color: $white;
-      z-index: 2;
-      font-size: 16px;
-    }
-  }
 }
+
 .timing {
   padding: 10vw 0;
   background-color: $black;
@@ -585,7 +661,7 @@
   h2 {
     position: absolute;
     top: 10%;
-    left: 20%;
+    left: 25%;
     font-size: 28px;
     text-align: center;
     color: $white;
@@ -594,7 +670,7 @@
     position: absolute;
     top: 50%;
     left: 0;
-    transform: translate(5%, -80%);
+    transform: translate(0%, -80%);
     margin: 10vw 0;
     padding: 0 20px;
     .textarea {

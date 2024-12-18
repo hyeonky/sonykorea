@@ -1900,7 +1900,7 @@ legend {
   width: 80px;
   height: 40px;
   background-color: #0071e3;
-  border-radius: 50px;
+  border-radius: 32px;
   font-size: 14px;
   color: #fff;
 }
@@ -1925,7 +1925,7 @@ legend {
 }
 .main_fct h2 {
   margin-top: 50px;
-  padding-left: 20px;
+  padding-left: 30px;
   font-size: 28px;
   color: #fff;
 }
@@ -1933,7 +1933,7 @@ legend {
   display: flex;
   color: #0071e3;
   font-size: 14px;
-  margin-left: 20px;
+  margin-left: 30px;
   margin-top: 10px;
 }
 .main_fct .main-fct__img {
@@ -1947,9 +1947,9 @@ legend {
   width: 100%;
 }
 .main_fct .main-fct__img .swiper-wrapper .swiper-slide img {
-  width: 320px;
+  width: 85%;
   height: 450px;
-  border-radius: 30px;
+  border-radius: 32px;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -2044,7 +2044,7 @@ legend {
   gap: 10px;
   width: 270px;
   height: 50px;
-  border-radius: 50px;
+  border-radius: 32px;
   background-color: rgba(55, 55, 57, 0.6);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -2121,12 +2121,11 @@ legend {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 100%;
 }
 .perpect-text .perpect_text .swiper-slide img {
-  width: 300px;
+  width: 80%;
   height: 320px;
-  border-radius: 35px;
+  border-radius: 32px;
 }
 .perpect-text .perpect_text .swiper-slide .text-tit {
   text-align: left;
@@ -2136,26 +2135,6 @@ legend {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.perpect-text .swiper-button .swiper-button-next::before {
-  content: "\f138";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 32px;
-  color: #fff;
-  z-index: 10;
-}
-.perpect-text .swiper-button .swiper-button-prev::before {
-  content: "\f137";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 32px;
-  color: #fff;
-  z-index: 10;
-}
 
 .pro {
   padding: 10vw 0;
@@ -2163,7 +2142,7 @@ legend {
   position: relative;
 }
 .pro h2 {
-  padding-left: 20px;
+  padding-left: 30px;
   font-size: 28px;
   color: #fff;
 }
@@ -2185,20 +2164,22 @@ legend {
   font-weight: bold;
   color: #fff;
 }
-.pro .swiper-slide {
+.pro .pro_lst {
+  margin: 50px 0;
+}
+.pro .pro_lst .swiper-slide {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 100%;
 }
-.pro .swiper-slide img {
-  width: 300px;
+.pro .pro_lst .swiper-slide img {
+  width: 80%;
   height: 320px;
-  border-radius: 35px;
+  border-radius: 32px;
 }
-.pro .swiper-slide .text-tit {
+.pro .pro_lst .swiper-slide .text-tit {
   text-align: center;
   font-size: 16px;
   font-weight: bold;
@@ -2214,21 +2195,65 @@ legend {
   text-align: center;
 }
 .pro .btn .view__more {
-  width: 200px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  width: 230px;
   height: 45px;
-  border-radius: 60px;
+  border-radius: 32px;
   background-color: #333;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  font-weight: bold;
   color: #fff;
-  z-index: 1;
+  z-index: 3;
   font-size: 16px;
 }
+.pro .btn .view__more .btn-tit {
+  padding-left: -5px;
+}
+.pro .btn .view__more .icon-plus {
+  position: relative;
+  display: flex;
+}
+.pro .btn .view__more .icon-plus__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-color: #0033cc;
+  border-radius: 32px;
+}
+.pro .btn .view__more .icon-plus__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.pro .btn .view__more .icon-plus__text::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  content: "\f067";
+  color: #fff;
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: bold;
+}
 
-.gallery {
+.gallery_af {
   padding: 10vw 0;
   background-color: #000;
   position: relative;
 }
-.gallery h2 {
+.gallery_af h2 {
   position: absolute;
   top: 0;
   left: 0;
@@ -2238,71 +2263,69 @@ legend {
   text-align: center;
   color: #fff;
 }
-.gallery .img-wrap img {
+.gallery_af .img-wrap img {
   width: 100%;
   height: 400px;
 }
-.gallery em {
+.gallery_af em {
   display: block;
   text-align: center;
   font-weight: lighter;
   font-size: 14px;
   color: #c6c6c6;
 }
-.gallery .text-warp {
+.gallery_af .text-warp {
   margin-top: 30px;
   padding: 0 20px;
   color: #999;
 }
-.gallery .text-warp .textarea {
+.gallery_af .text-warp .textarea {
   padding: 0 30px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
   word-break: break-all;
 }
-.gallery .text-warp .textarea p {
+.gallery_af .text-warp .textarea p {
   font-size: 16px;
 }
-.gallery .text-warp .textarea strong {
+.gallery_af .text-warp .textarea strong {
   color: #fff;
   font-size: 28px;
   line-height: 1.4;
 }
-.gallery .text-warp .textarea .highlight {
+.gallery_af .text-warp .textarea .highlight {
   font-weight: bold;
   color: #fff;
 }
-
-.af-drive {
-  padding: 10vw 0;
+.gallery_af .af-drive {
+  padding-top: 30px;
   background-color: #000;
 }
-.af-drive .text-warp {
-  margin-top: 30px;
+.gallery_af .af-drive .text-warp {
   padding: 0 20px;
   color: #999;
 }
-.af-drive .text-warp .textarea {
+.gallery_af .af-drive .text-warp .textarea {
   padding: 0 30px;
   font-weight: bold;
   text-align: left;
   line-height: 1.6;
   word-break: break-all;
 }
-.af-drive .text-warp .textarea p {
+.gallery_af .af-drive .text-warp .textarea p {
   font-size: 16px;
 }
-.af-drive .text-warp .textarea strong {
+.gallery_af .af-drive .text-warp .textarea strong {
   color: #fff;
   font-size: 28px;
   line-height: 1.4;
 }
-.af-drive .text-warp .textarea .highlight {
+.gallery_af .af-drive .text-warp .textarea .highlight {
   font-weight: bold;
   color: #fff;
 }
-.af-drive .video-wrap {
+.gallery_af .af-drive .video-wrap {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -2311,52 +2334,100 @@ legend {
      object-fit: contain;
   margin-top: 40px;
 }
-.af-drive .video-wrap video {
+.gallery_af .af-drive .video-wrap video {
   width: 80%;
 }
-.af-drive .textbox {
+.gallery_af .af-drive .textbox {
   padding: 0 20px;
 }
-.af-drive .textbox .box {
+.gallery_af .af-drive .textbox .box {
   margin: 50px 0;
   padding-left: 30px;
   width: 90%;
   text-align: left;
   line-height: 1.6;
 }
-.af-drive .textbox .box span {
+.gallery_af .af-drive .textbox .box span {
   color: #fff;
   font-weight: bold;
 }
-.af-drive .textbox .box .line {
+.gallery_af .af-drive .textbox .box .line {
+  position: relative;
   padding: 5px 0;
 }
-.af-drive .textbox .box .line::after {
+.gallery_af .af-drive .textbox .box .line::after {
   content: "";
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 150px;
   height: 3px;
   background-color: #fff;
 }
-.af-drive .textbox .box p {
+.gallery_af .af-drive .textbox .box p {
   color: #999;
 }
-.af-drive .btn {
+.gallery_af .af-drive .btn {
   padding: 10vw 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
 }
-.af-drive .btn .view__more {
+.gallery_af .af-drive .btn .view__more {
+  position: sticky;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
   width: 250px;
   height: 45px;
-  border-radius: 60px;
+  border-radius: 32px;
   background-color: #333;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  font-weight: bold;
   color: #fff;
-  z-index: 2;
+  z-index: 3;
   font-size: 16px;
+}
+.gallery_af .af-drive .btn .view__more .btn-tit {
+  padding-left: -5px;
+}
+.gallery_af .af-drive .btn .view__more .icon-plus {
+  position: relative;
+  display: flex;
+}
+.gallery_af .af-drive .btn .view__more .icon-plus__bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-color: #0033cc;
+  border-radius: 32px;
+}
+.gallery_af .af-drive .btn .view__more .icon-plus__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.gallery_af .af-drive .btn .view__more .icon-plus__text::before {
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  content: "\f067";
+  color: #fff;
+  font-size: 18px;
+  border-radius: 30px;
+  font-weight: bold;
 }
 
 .timing {
@@ -2456,7 +2527,7 @@ legend {
 .eco h2 {
   position: absolute;
   top: 10%;
-  left: 20%;
+  left: 25%;
   font-size: 28px;
   text-align: center;
   color: #fff;
@@ -2465,7 +2536,7 @@ legend {
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(5%, -80%);
+  transform: translate(0%, -80%);
   margin: 10vw 0;
   padding: 0 20px;
 }
