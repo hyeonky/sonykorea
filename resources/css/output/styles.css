@@ -1007,6 +1007,11 @@ legend {
   background-color: #000;
   padding-bottom: 5rem;
 }
+@media (min-width: 1024px) {
+  .intro {
+    background-color: transparent;
+  }
+}
 .intro .inner {
   padding: 2.4rem;
   display: flex;
@@ -1236,6 +1241,11 @@ legend {
   cursor: pointer;
   z-index: 10;
 }
+@media (min-width: 1024px) {
+  .sec-latest .swiper-slide {
+    height: 450px;
+  }
+}
 .sec-latest .swiper-slide::after {
   content: "";
   border-radius: 16px;
@@ -1355,34 +1365,52 @@ legend {
   }
 }
 
-.cont-parallax {
+.horizontal-scroll {
   overflow: hidden;
   background-color: #000;
   margin-top: 10vw;
   width: 100%;
-  height: 100%;
-}
-.cont-parallax__wrapper {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory;
-  height: 100%;
-}
-.cont-parallax img {
-  display: block;
-  width: 50rem;
-  height: 40rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  background-color: #000;
+  height: 100vh;
+  position: relative;
 }
 @media (min-width: 1024px) {
-  .cont-parallax img {
-    width: 70rem;
-    height: 50rem;
+  .horizontal-scroll {
+    background-color: transparent;
   }
+}
+.horizontal-scroll .filled-text {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  z-index: 1;
+  font-size: 100px;
+  font-weight: 600;
+  color: ghostwhite;
+}
+.horizontal-scroll .outline-text {
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  z-index: 3;
+  font-size: 100px;
+  font-weight: 600;
+  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-color: ghostwhite;
+  color: transparent;
+}
+.horizontal-scroll .image {
+  display: flex;
+  gap: 20px;
+}
+.horizontal-scroll .image img {
+  height: 600px;
+  width: 50%;
+  position: absolute;
+  top: 50px;
+  left: 600px;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .cont-headline {
@@ -1392,6 +1420,11 @@ legend {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media (min-width: 1024px) {
+  .cont-headline {
+    background-color: transparent;
+  }
 }
 .cont-headline .cont-head {
   display: flex;
@@ -1610,7 +1643,7 @@ legend {
   height: 563px;
   border: 0.1rem solid #c6c6c6;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: transparent;
 }
 .sec-hot .hot-lst__gallery {
   width: 90%;
@@ -1719,8 +1752,17 @@ legend {
   align-items: center;
 }
 @media (min-width: 1024px) {
+  .sec-info {
+    background-color: transparent;
+  }
+}
+.sec-info__tit {
+  color: #000;
+}
+@media (min-width: 1024px) {
   .sec-info__tit {
     text-align: left;
+    color: #f5f5f7;
   }
 }
 @media (min-width: 1024px) {

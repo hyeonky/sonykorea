@@ -12,7 +12,7 @@ var swiper = new Swiper('.latest-lst', {
   },
   breakpoints: {
     390: {
-      spaceBetween: 45,
+      spaceBetween: 35,
     },
     600: {
       spaceBetween: 55,
@@ -88,7 +88,7 @@ var swiper2 = new Swiper('.hot-lst__gallery', {
       translate: [0, 0, -400],
     },
     next: {
-      translate: [300, 0, 0],
+      translate: ['100%', 0, 0],
     },
   },
   navigation: {
@@ -178,8 +178,8 @@ document.addEventListener('DOMContentLoaded', function () {
   productImages[0].classList.add('active')
 })
 
-// perpect-text
-var swiper = new Swiper('.perpect_text', {
+// perpect - text
+var perpectSwiper = new Swiper('.perpect_text', {
   spaceBetween: -60,
   navigation: {
     nextEl: '.swiper-button-next',
@@ -188,7 +188,7 @@ var swiper = new Swiper('.perpect_text', {
 })
 
 // pro
-var swiper = new Swiper('.pro_lst', {
+var proSwiper = new Swiper('.pro_lst', {
   spaceBetween: -60,
   navigation: {
     nextEl: '.swiper-button-next',
