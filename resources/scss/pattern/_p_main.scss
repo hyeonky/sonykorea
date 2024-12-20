@@ -432,21 +432,16 @@
   }
 
   .image {
-    display: flex;
-    gap: 20px;
-
-    img {
-      height: 600px;
-      width: 50%;
-      position: absolute;
-      top: 50px;
-      left: 600px;
-      z-index: 2;
-      object-fit: cover;
-      // @include tabletMore {
-      //   width: 70rem;
-      //   height: 50rem;
-      // }
+    height: 400px;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 600px;
+    z-index: 2;
+    object-fit: cover;
+    @include tabletMore {
+      width: 70rem;
+      height: 50rem;
     }
   }
 }

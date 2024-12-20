@@ -1399,18 +1399,20 @@ legend {
   color: transparent;
 }
 .horizontal-scroll .image {
-  display: flex;
-  gap: 20px;
-}
-.horizontal-scroll .image img {
-  height: 600px;
-  width: 50%;
+  height: 400px;
+  width: 100%;
   position: absolute;
   top: 50px;
   left: 600px;
   z-index: 2;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .horizontal-scroll .image {
+    width: 70rem;
+    height: 50rem;
+  }
 }
 
 .cont-headline {

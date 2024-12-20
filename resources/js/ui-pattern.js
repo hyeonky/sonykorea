@@ -55,7 +55,7 @@ gsap.to('.image', {
     scrub: 1,
     markers: true,
   },
-  x: -550,
+  x: -250,
 })
 
 // ago
