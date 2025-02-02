@@ -2,6 +2,7 @@
 var swiper = new Swiper('.latest-lst', {
   slidesPerView: 'auto',
   centeredSlides: true,
+  loop: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,

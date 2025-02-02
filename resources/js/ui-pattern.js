@@ -37,76 +37,31 @@ window.addEventListener('scroll', () => {
 // parallax
 gsap.registerPlugin(ScrollTrigger)
 
-gsap.to('.filled-text, .outline-text', {
-  scrollTrigger: {
-    trigger: '.filled-text, .outline-text',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: 1,
-  },
-  x: 100,
+const pc = gsap.matchMedia()
+
+pc.add('(min-width: 1024px)', () => {
+  gsap.to('.filled-text, .outline-text', {
+    scrollTrigger: {
+      trigger: '.filled-text, .outline-text',
+      start: 'top top',
+      end: () => `+=${document.querySelector('.horizontal-item').scrollWidth}`,
+      scrub: 1,
+    },
+    x: 400,
+  })
+
+  gsap.to('.horizontal-item', {
+    scrollTrigger: {
+      trigger: '.horizontal-scroll',
+      start: 'top top',
+      end: () => `+=${document.querySelector('.horizontal-item').scrollWidth}`,
+      scrub: 1,
+      pin: true,
+      markers: true,
+    },
+    x: () => -document.querySelector('.horizontal-item').scrollWidth,
+  })
 })
-
-gsap.to('.image', {
-  scrollTrigger: {
-    trigger: '.image',
-    start: 'top bottom',
-    end: 'bottom top',
-    scrub: 1,
-    markers: true,
-  },
-  x: -250,
-})
-
-// ago
-// gsap.to('.cont-parallax', {
-//   x: () => `-${document.querySelector('.cont-parallax').offsetWidth - window.innerWidth}px`,
-//   ease: 'none',
-//   scrollTrigger: {
-//     trigger: '.cont-parallax__wrapper',
-//     start: 'center center',
-//     end: () => `+=${document.querySelector('.cont-parallax__wrapper').offsetWidth - window.innerWidth}`,
-//     scrub: 0.3,
-//     pin: true,
-//     anticipatePin: 1,
-//   },
-// })
-
-// const layers = document.querySelectorAll('.layer')
-
-// gsap.to('.layer', {
-//   x: -600,
-//   ease: 'none',
-//   scrollTrigger: {
-//     trigger: '.cont-parallax',
-//     start: 'top 50%',
-//     end: `+=800`,
-//     scrub: 0.3,
-//     markers: true,
-//   },
-// })
-
-// gsap.utils.toArray('.item').forEach((item) => {
-//   let color = item.getAttribute('data-bgcolor')
-
-//   ScrollTrigger.create({
-//     trigger: item,
-//     start: 'top 50%',
-//     end: 'bottom 50%',
-//     markers: true,
-
-//     onEnter: () =>
-//       gsap.to('body', {
-//         backgroundColor: color,
-//         duration: 1.4,
-//       }),
-//     onEnterBack: () =>
-//       gsap.to('body', {
-//         backgroundColor: color,
-//         duration: 1.4,
-//       }),
-//   })
-// })
 
 // desktop
 gsap.matchMedia().add('(min-width: 1024px)', () => {

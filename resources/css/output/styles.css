@@ -1306,7 +1306,7 @@ legend {
 }
 .sec-latest .swiper-slide .text-area em {
   font-weight: normal;
-  color: #d8d8d8;
+  color: #f0f0f0;
 }
 .sec-latest .swiper-slide .text-area em.active {
   transform: translateY(-55px);
@@ -1370,7 +1370,6 @@ legend {
   overflow: hidden;
   background-color: #000;
   margin-top: 10vw;
-  width: 100%;
   height: 100vh;
   position: relative;
 }
@@ -1381,16 +1380,31 @@ legend {
 }
 .horizontal-scroll .filled-text {
   position: absolute;
-  top: 200px;
-  left: 100px;
+  padding-right: 20px;
+  top: 80px;
+  left: 20px;
+  font-size: 50px;
   z-index: 1;
-  font-size: 100px;
   font-weight: 600;
   color: ghostwhite;
 }
+@media (min-width: 600px) {
+  .horizontal-scroll .filled-text {
+    top: 120px;
+    left: 30px;
+    font-size: 80px;
+  }
+}
+@media (min-width: 1024px) {
+  .horizontal-scroll .filled-text {
+    top: 360px;
+    left: 100px;
+    font-size: 100px;
+  }
+}
 .horizontal-scroll .outline-text {
   position: absolute;
-  top: 200px;
+  top: 360px;
   left: 100px;
   z-index: 3;
   font-size: 100px;
@@ -1399,20 +1413,52 @@ legend {
   -webkit-text-stroke-color: ghostwhite;
   color: transparent;
 }
-.horizontal-scroll .image {
-  height: 400px;
-  width: 100%;
+@media (max-width: 1023px) {
+  .horizontal-scroll .outline-text {
+    display: none;
+  }
+}
+.horizontal-scroll .horizontal-item {
   position: absolute;
-  top: 50px;
-  left: 600px;
+  overflow: hidden;
+  top: 350px;
+  left: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 300px;
   z-index: 2;
+}
+@media (min-width: 600px) {
+  .horizontal-scroll .horizontal-item {
+    padding-top: 80px;
+    overflow: hidden;
+    top: 300px;
+    left: 30px;
+    padding-right: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .horizontal-scroll .horizontal-item {
+    top: 110px;
+    left: 500px;
+  }
+}
+.horizontal-scroll .horizontal-item img {
+  width: 35rem;
+  height: 40rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 1024px) {
-  .horizontal-scroll .image {
-    width: 70rem;
+@media (min-width: 600px) {
+  .horizontal-scroll .horizontal-item img {
+    width: 71rem;
     height: 50rem;
+  }
+}
+@media (min-width: 1024px) {
+  .horizontal-scroll .horizontal-item img {
+    height: 50rem;
+    width: 80rem;
   }
 }
 
