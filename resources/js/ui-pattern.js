@@ -57,7 +57,7 @@ pc.add('(min-width: 1024px)', () => {
       end: () => `+=${document.querySelector('.horizontal-item').scrollWidth}`,
       scrub: 1,
       pin: true,
-      markers: true,
+      markers: false,
     },
     x: () => -document.querySelector('.horizontal-item').scrollWidth,
   })
