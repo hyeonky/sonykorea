@@ -1423,7 +1423,7 @@ legend {
 .horizontal-scroll .horizontal-item {
   position: absolute;
   overflow: hidden;
-  top: 350px;
+  top: 250px;
   left: 20px;
   display: flex;
   flex-direction: row;
@@ -1447,7 +1447,7 @@ legend {
 }
 .horizontal-scroll .horizontal-item img {
   width: 35rem;
-  height: 40rem;
+  height: 50rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1690,8 +1690,8 @@ legend {
   }
 }
 .sec-hot .hot-lst__circle .swiper-wrapper .circle {
-  width: 563px;
-  height: 563px;
+  width: 599px;
+  height: 599px;
   border: 0.1rem solid #c6c6c6;
   border-radius: 50%;
   background-color: transparent;
@@ -1704,7 +1704,7 @@ legend {
 }
 .sec-hot .hot-lst__gallery .swiper-slide img {
   width: 100%;
-  border-radius: 50%;
+  height: 315px;
 }
 @media (min-width: 600px) {
   .sec-hot .hot-lst__gallery {
@@ -1712,18 +1712,24 @@ legend {
     margin-left: 7rem;
     width: 80%;
   }
+  .sec-hot .hot-lst__gallery .swiper-slide {
+    width: 100%;
+  }
+  .sec-hot .hot-lst__gallery .swiper-slide img {
+    width: 510px;
+    height: 510px;
+  }
 }
 @media (min-width: 1024px) {
   .sec-hot .hot-lst__gallery {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
   }
-  .sec-hot .hot-lst__gallery img {
-    display: block;
-    width: 563px;
-    height: 563px;
+  .sec-hot .hot-lst__gallery .swiper-slide {
+    width: 100%;
+  }
+  .sec-hot .hot-lst__gallery .swiper-slide img {
+    width: 100%;
+    height: 599px;
   }
 }
 .sec-hot .hot-lst__text {
