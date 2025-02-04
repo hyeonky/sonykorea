@@ -499,10 +499,16 @@ legend {
 }
 
 #header {
-  position: relative;
+  position: fixed;
   width: 100%;
   z-index: 1000;
-  background: #000;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+@media (min-width: 1024px) {
+  #header {
+    width: calc(100% - 75px);
+  }
 }
 #header.active::before {
   height: 218px;
@@ -736,9 +742,7 @@ legend {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: #000;
   transition: all 0.3s;
 }
 @media (min-width: 1024px) {
@@ -756,6 +760,54 @@ legend {
     bottom: 0;
     left: 0;
   }
+}
+
+.nav-all__depth1 {
+  padding: 50px 30px;
+  display: flex;
+  gap: 50px;
+  width: calc(100% - 75px);
+  height: 100%;
+}
+.nav-all__depth1 li {
+  width: 250px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.nav-all__depth1 li span {
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+}
+.nav-all__depth1 a {
+  width: 210px;
+  height: 40px;
+  text-decoration: none;
+}
+.nav-all__depth1 em {
+  font-weight: lighter;
+  color: #fff;
+}
+.nav-all__depth1 em:hover {
+  color: #fff;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 0;
+}
+.close::before {
+  content: "\f00d";
+  font-family: "Line Awesome Free";
+  font-weight: 900;
+  color: #fff;
+  font-size: 30px;
 }
 
 .sec-g {

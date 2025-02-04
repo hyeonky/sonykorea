@@ -48,13 +48,14 @@
 // header
 #header {
   // display: none;
-  position: relative;
+  position: fixed;
   width: 100%;
   z-index: 1000;
-  background: $black;
-  // @include tabletMore {
-  //   width: calc(100% - 75px);
-  // }
+  // background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  @include tabletMore {
+    width: calc(100% - 75px);
+  }
   &.active {
     &::before {
       height: 218px;
@@ -279,9 +280,9 @@
   width: 100%;
   height: 100%;
   padding: $p-mobile;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
+  background: $black;
   transition: all 0.3s;
+
   @include tabletMore {
     bottom: 100%;
     left: 0;
@@ -293,6 +294,52 @@
       bottom: 0;
       left: 0;
     }
+  }
+}
+.nav-all__depth1 {
+  padding: 50px 30px;
+  display: flex;
+  gap: 50px;
+  width: calc(100% - 75px);
+  height: 100%;
+
+  li {
+    width: 250px;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    span {
+      font-weight: bold;
+      font-size: 25px;
+      color: $white;
+    }
+  }
+  a {
+    width: 210px;
+    height: 40px;
+    text-decoration: none;
+  }
+  em {
+    font-weight: lighter;
+    color: $white;
+    &:hover {
+      color: $white;
+      font-weight: normal;
+      font-size: 20px;
+    }
+  }
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  &::before {
+    content: '\f00d';
+    @include lineAwesome;
+    color: $white;
+    font-size: 30px;
   }
 }
 
