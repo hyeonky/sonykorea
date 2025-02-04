@@ -139,7 +139,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 60rem;
+    width: 55rem;
     text-align: center;
     display: inline-block;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -896,7 +896,7 @@
     }
     p {
       padding-top: 1.5rem;
-      color: #002699;
+      color: $gray-60;
       font-size: 1.2rem;
     }
     @include mobileMore {

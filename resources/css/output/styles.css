@@ -1101,7 +1101,7 @@ legend {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 60rem;
+  width: 55rem;
   text-align: center;
   display: inline-block;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1934,7 +1934,7 @@ legend {
 }
 .sec-info .text-area p {
   padding-top: 1.5rem;
-  color: #002699;
+  color: #717171;
   font-size: 1.2rem;
 }
 @media (min-width: 600px) {
