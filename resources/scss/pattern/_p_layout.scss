@@ -50,12 +50,10 @@
   // display: none;
   position: fixed;
   width: 100%;
-  z-index: 1000;
-  // background: rgba(0, 0, 0, 0.2);
+  z-index: 2000;
   backdrop-filter: blur(10px);
-  @include tabletMore {
-    width: calc(100% - 75px);
-  }
+  background: rgba(0, 0, 0, 0.8);
+
   &.active {
     &::before {
       height: 218px;
@@ -172,12 +170,11 @@
   .nav-all__depth2 {
     overflow: hidden;
     position: absolute;
-    top: 102px;
+    // top: 102px;
     left: 0;
     right: 0;
     height: 0;
     padding: 0;
-    background: $gray-5;
     transition: all 0.3s;
     &::after {
       content: '';
@@ -273,77 +270,102 @@
 }
 
 #nav-all {
-  display: none;
+  // display: none;
   position: fixed;
   top: 0%;
   left: 100%;
   width: 100%;
   height: 100%;
   padding: $p-mobile;
-  background: $black;
+  // background: #fff;
   transition: all 0.3s;
-
-  @include tabletMore {
-    bottom: 100%;
-    left: 0;
+  .nav-all__depth1 {
+    display: flex;
+    li {
+      width: 100%;
+      line-height: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+      span {
+        font-weight: bold;
+        font-size: 25px;
+        color: $white;
+      }
+      a {
+        width: 100%;
+        height: 40px;
+        text-decoration: none;
+      }
+      em {
+        font-weight: lighter;
+        color: $gray-40;
+        &:hover {
+          color: $white;
+          font-weight: normal;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    &::before {
+      content: '\f00d';
+      @include lineAwesome;
+      color: $white;
+      font-size: 30px;
+    }
   }
   &.active {
     display: block;
     left: 0;
-    @include tabletMore {
-      bottom: 0;
-      left: 0;
-    }
-  }
-}
-.nav-all__depth1 {
-  padding: 50px 30px;
-  display: flex;
-  gap: 50px;
-  width: calc(100% - 75px);
-  height: 100%;
-
-  li {
-    width: 250px;
-    line-height: 40px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    span {
-      font-weight: bold;
-      font-size: 25px;
-      color: $white;
-    }
-  }
-  a {
-    width: 210px;
-    height: 40px;
-    text-decoration: none;
-  }
-  em {
-    font-weight: lighter;
-    color: $white;
-    &:hover {
-      color: $white;
-      font-weight: normal;
-      font-size: 20px;
-    }
-  }
-}
-.close {
-  position: absolute;
-  top: 30px;
-  right: 0;
-  &::before {
-    content: '\f00d';
-    @include lineAwesome;
-    color: $white;
-    font-size: 30px;
   }
 }
 
-// section layout
+// #nav-all {
+//   // display: none;
+//   position: fixed;
+//   top: 0;
+//   left: 100%;
+//   width: 100%;
+//   height: 100%;
+//   padding: $p-mobile;
+//   background: hsla(0, 0%, 59%, 0.5);
+//   // background: hsla(0, 0%, 59%, 1);
+//   backdrop-filter: blur(10px);
+//   transition: all 0.3s;
+//   .gnb__depth1 {
+//     display: inline-flex;
+//     gap: 100px;
+//     .gnb-item {
+//       font-size: 3rem;
+//       color: $white;
+//       font-weight: bold;
+//     }
+//   }
+//   &.active {
+//     display: block;
+//     left: 0;
+//   }
+//   .close {
+//     &::before {
+//       content: '\f00d';
+//       @include lineAwesome;
+//       color: $white;
+//     }
+//   }
+//   .gnb__depth2 {
+//     a {
+//       font-size: 2rem;
+//       color: $gray-20;
+//     }
+//   }
+// }
+
 .sec-g {
   overflow: hidden;
   padding: 10vw 0;
