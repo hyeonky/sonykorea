@@ -170,7 +170,6 @@
   .nav-all__depth2 {
     overflow: hidden;
     position: absolute;
-    // top: 102px;
     left: 0;
     right: 0;
     height: 0;
@@ -277,7 +276,6 @@
   width: 100%;
   height: 100%;
   padding: $p-mobile;
-  // background: #fff;
   transition: all 0.3s;
   .nav-all__depth1 {
     display: flex;
@@ -321,6 +319,7 @@
     }
   }
   &.active {
+    background: #000;
     display: block;
     left: 0;
   }

@@ -780,6 +780,7 @@ legend {
   font-size: 30px;
 }
 #nav-all.active {
+  background: #000;
   display: block;
   left: 0;
 }
