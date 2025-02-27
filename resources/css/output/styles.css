@@ -1888,10 +1888,12 @@ legend {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 600px) {
   .sec-info a {
     width: 100%;
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
   }
 }
 @media (min-width: 1024px) {
@@ -1905,7 +1907,7 @@ legend {
 }
 @media (min-width: 1024px) {
   .sec-info a:hover {
-    background-color: #f0f0f0;
+    background-color: #c6c6c6;
     text-decoration: none;
     position: relative;
     transform: scale(1.01);

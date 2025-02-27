@@ -827,8 +827,11 @@
     justify-content: center;
     align-items: center;
     background-color: $white;
+    box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
     @include mobileMore {
       width: 100%;
+      // border: 1px solid $gray-40;
+      box-shadow: 5px 15px 15px rgba(0, 0, 0, 0.1);
     }
     @include tabletMore {
       display: flex;
@@ -839,7 +842,7 @@
     }
     &:hover {
       @include tabletMore {
-        background-color: $gray-10;
+        background-color: $gray-40;
         text-decoration: none;
         position: relative;
         transform: scale(1.01);
