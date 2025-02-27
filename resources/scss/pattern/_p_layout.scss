@@ -272,12 +272,14 @@
   // display: none;
   position: fixed;
   top: 0%;
-  left: 100%;
+  left: 0%;
   width: 100%;
   height: 100%;
   padding: $p-mobile;
-  transition: all 0.3s;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
   .nav-all__depth1 {
+    margin-top: 50px;
     display: flex;
     li {
       width: 100%;
@@ -319,51 +321,15 @@
     }
   }
   &.active {
-    background: #000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    transform: translateX(0);
+    width: 100%;
+    height: 100vh;
     display: block;
     left: 0;
   }
 }
-
-// #nav-all {
-//   // display: none;
-//   position: fixed;
-//   top: 0;
-//   left: 100%;
-//   width: 100%;
-//   height: 100%;
-//   padding: $p-mobile;
-//   background: hsla(0, 0%, 59%, 0.5);
-//   // background: hsla(0, 0%, 59%, 1);
-//   backdrop-filter: blur(10px);
-//   transition: all 0.3s;
-//   .gnb__depth1 {
-//     display: inline-flex;
-//     gap: 100px;
-//     .gnb-item {
-//       font-size: 3rem;
-//       color: $white;
-//       font-weight: bold;
-//     }
-//   }
-//   &.active {
-//     display: block;
-//     left: 0;
-//   }
-//   .close {
-//     &::before {
-//       content: '\f00d';
-//       @include lineAwesome;
-//       color: $white;
-//     }
-//   }
-//   .gnb__depth2 {
-//     a {
-//       font-size: 2rem;
-//       color: $gray-20;
-//     }
-//   }
-// }
 
 .sec-g {
   overflow: hidden;
