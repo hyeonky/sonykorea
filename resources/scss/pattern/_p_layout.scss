@@ -279,19 +279,44 @@
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
   .nav-all__depth1 {
-    margin-top: 50px;
+    margin-top: 250px;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include mobileMore {
+      margin-top: 55px;
+      flex-direction: row;
+    }
+    @include tabletMore {
+      margin-top: 60px;
+    }
+
     li {
       width: 100%;
-      line-height: 40px;
+      line-height: 20px;
       display: flex;
       flex-direction: column;
       gap: 20px;
       text-align: center;
+      @include mobileMore {
+        line-height: 40px;
+      }
+      ul {
+        display: none;
+        @include mobileMore {
+          display: block;
+        }
+      }
       span {
         font-weight: bold;
-        font-size: 25px;
+        font-size: 24px;
         color: $white;
+        @include mobileMore {
+          font-size: 21px;
+        }
+        @include tabletMore {
+          font-size: 25px;
+        }
       }
       a {
         width: 100%;
@@ -301,6 +326,15 @@
       em {
         font-weight: lighter;
         color: $gray-40;
+        display: none;
+        @include mobileMore {
+          font-size: 16px;
+          display: block;
+        }
+        @include tabletMore {
+          font-size: 18px;
+          display: block;
+        }
         &:hover {
           color: $white;
           font-weight: normal;
@@ -491,5 +525,29 @@
     margin: 0 auto;
     z-index: 300;
     flex-shrink: 0;
+  }
+}
+
+.footer {
+  background-color: #000;
+  height: 250px;
+  position: relative;
+
+  ul {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  span {
+    color: #fff;
   }
 }

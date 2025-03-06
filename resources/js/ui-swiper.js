@@ -2,6 +2,10 @@
 var swiper = new Swiper('.latest-lst', {
   slidesPerView: 'auto',
   centeredSlides: true,
+  autoplay: {
+    delay: 3000, // 3초
+    disableOnInteraction: false,
+  },
   loop: true,
   pagination: {
     el: '.swiper-pagination',
