@@ -1041,6 +1041,7 @@ legend {
   position: relative;
   color: #fff;
   padding-bottom: 30px;
+  overflow-x: hidden;
 }
 .footer .footer-container {
   width: 100%;
@@ -1084,7 +1085,7 @@ legend {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  gap: 50px;
+  gap: 55px;
 }
 .footer .textarea .footer-company-info {
   font-size: 14px;
@@ -1094,13 +1095,19 @@ legend {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 20px;
 }
 .footer .textarea .footer-socials a {
   color: #dfdfdf;
   text-decoration: none;
   font-size: 14px;
   color: #999;
+}
+.footer .textarea .footer-socials a img {
+  width: 24px;
+}
+.footer .textarea .footer-socials span {
+  display: none;
 }
 .footer .textarea p {
   font-size: 14px;

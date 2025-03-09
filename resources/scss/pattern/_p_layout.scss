@@ -534,6 +534,7 @@
   position: relative;
   color: #fff;
   padding-bottom: 30px;
+  overflow-x: hidden;
   .footer-container {
     width: 100%;
     font-weight: 300;
@@ -575,7 +576,7 @@
       display: flex;
       flex-direction: row;
       align-items: flex-end;
-      gap: 50px;
+      gap: 55px;
     }
     .footer-company-info {
       font-size: 14px;
@@ -585,12 +586,18 @@
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-      gap: 10px;
+      gap: 20px;
       a {
         color: #dfdfdf;
         text-decoration: none;
         font-size: 14px;
         color: #999;
+        img {
+          width: 24px;
+        }
+      }
+      span {
+        display: none;
       }
     }
     p {
