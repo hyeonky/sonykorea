@@ -530,24 +530,72 @@
 
 .footer {
   background-color: #000;
-  height: 250px;
+  height: auto;
   position: relative;
-
-  ul {
+  color: #fff;
+  padding-bottom: 30px;
+  .footer-container {
     width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     font-weight: 300;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
+    flex-direction: column;
+    margin-left: 50px;
+    .footer-logo {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 30px 0;
+      img {
+        width: 300px;
+      }
+    }
   }
-
-  span {
-    color: #fff;
+  .textarea {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .footer-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 50%;
+      margin-left: -4px;
+      a {
+        flex: 1;
+        color: #dfdfdf;
+        text-decoration: none;
+        text-align: center;
+        span {
+          width: 130px;
+        }
+      }
+    }
+    .footer-middle {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 50px;
+    }
+    .footer-company-info {
+      font-size: 14px;
+      color: #999;
+    }
+    .footer-socials {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 10px;
+      a {
+        color: #dfdfdf;
+        text-decoration: none;
+        font-size: 14px;
+        color: #999;
+      }
+    }
+    p {
+      font-size: 14px;
+      color: #999;
+    }
   }
 }

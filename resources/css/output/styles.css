@@ -1037,24 +1037,74 @@ legend {
 
 .footer {
   background-color: #000;
-  height: 250px;
+  height: auto;
   position: relative;
+  color: #fff;
+  padding-bottom: 30px;
 }
-.footer ul {
+.footer .footer-container {
   width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   font-weight: 300;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+}
+.footer .footer-container .footer-logo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+  padding: 30px 0;
+}
+.footer .footer-container .footer-logo img {
+  width: 300px;
+}
+.footer .textarea {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer .textarea .footer-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: -4px;
+}
+.footer .textarea .footer-links a {
+  flex: 1;
+  color: #dfdfdf;
+  text-decoration: none;
+  text-align: center;
+}
+.footer .textarea .footer-links a span {
+  width: 130px;
+}
+.footer .textarea .footer-middle {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
   gap: 50px;
 }
-.footer span {
-  color: #fff;
+.footer .textarea .footer-company-info {
+  font-size: 14px;
+  color: #999;
+}
+.footer .textarea .footer-socials {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.footer .textarea .footer-socials a {
+  color: #dfdfdf;
+  text-decoration: none;
+  font-size: 14px;
+  color: #999;
+}
+.footer .textarea p {
+  font-size: 14px;
+  color: #999;
 }
 
 :root {
