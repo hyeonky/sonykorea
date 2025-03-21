@@ -58,17 +58,6 @@
 │   │   └── styles.scss             # 전체 스타일 파일
 ```
 
-## 문자 인코딩(Character Encoding) 설정
-
-문자가 인코딩되는 방식을 설정합니다.
-
-```html
-<meta charset="UTF-8" />
-```
-
-- `UTF-8`: 초성, 중성, 종성으로 구분하여 문자를 작성(권장)
-- `EUC-KR`: 하나의 완성된 글자를 인식
-
 ## 뷰포트(Viewport) 렌더링 방식 설정
 
 웹페이지가 화면(Viewport)에 표현되는 방식을 설정합니다.<br>
@@ -113,27 +102,6 @@ KakaoTalk -
 - `og:image`: 페이지의 대표 이미지 주소(URL)
 - `og:url`: 페이지 주소(URL)
 
-## 트위터 카드(Twitter Cards)
-
-웹페이지가 소셜 미디어(트위터)로 공유될 때 우선적으로 활용되는 정보를 지정합니다.
-
-[더 많은 트위터 카드 보기](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started)
-
-```html
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="페이지 제목" />
-<meta name="twitter:description" content="페이지 설명" />
-<meta name="twitter:image" content="http://www.mysite.com/article/article1.html" />
-<meta name="twitter:domain" content="사이트 명" />
-```
-
-- `twitter:card`: 페이지(카드)의 유형(E.g. `summary`, `player`)
-- `twitter:site`: 속한 사이트의 이름
-- `twitter:title`: 페이지의 이름(제목)
-- `twitter:description`: 페이지의 간단한 설명
-- `twitter:image`: 페이지의 대표 이미지 주소(URL)
-- `twitter:url`: 페이지 주소(URL)
-
 ## Favicon(파비콘, favorites icon)
 
 웹페이지를 나타내는 아이콘, 웹페이지의 로고를 설정합니다.<br>
@@ -152,9 +120,7 @@ KakaoTalk -
 
 https://www.naver.com/favicon.ico?1
 
-### .ico 파일 제작
 
-이미지를 업로드하면 손쉽게 `.ico` 파일을 제작할 수 있습니다.
 
 [iconifier.net](https://iconifier.net/)
 
