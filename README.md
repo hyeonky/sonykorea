@@ -1,6 +1,4 @@
-# 프로젝트명
-
-웹 기본 템플릿 -  https://odada-o.github.io/-themplates-html-scss-js/pages/
+# SONY KOREA 리뉴얼 프로젝트
 
 ## 프로젝트 구조
 
