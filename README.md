@@ -1,4 +1,4 @@
-# SONY KOREA 리뉴얼 프로젝트
+# **SONY KOREA 리뉴얼 프로젝트
 
 ## 프로젝트 구조
 
