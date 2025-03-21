@@ -3,21 +3,21 @@
 # **SONY KOREA 리뉴얼 프로젝트**
 - 개인 프로젝트로 진행한 SONY KOREA의 첫 번째 리뉴얼 프로젝트입니다.
 
-
+------------------
 
 ## 프로젝트 소개(로고나 이미지)
 
 
 ## **프로젝트 개요**
-- 프로젝트: 리뉴얼 프로젝트
-
-- 기획 및 제작: 조현경
-  
-- 분류: 개인 프로젝트
- 
-- 주요 기능: 반응형 웹, open graph, custom Swiper
-
-- 사용 기술: Html 5, Css 3, Javascript, Gsap, Scss, Swiper, figma 등  
+> 프로젝트: 리뉴얼 프로젝트
+>
+> 기획 및 제작: 조현경
+> 
+> 분류: 개인 프로젝트
+> 
+> 주요 기능: 반응형 웹, open graph, custom Swiper
+>
+> 사용 기술: Html 5, Css 3, Javascript, Gsap, Scss, Swiper, figma 등  
 
 
 ## 프로젝트의 목적
