@@ -1,12 +1,12 @@
-![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=SONYKOREA%4&fontSize=80)
+![header](https://capsule-render.vercel.app/api?type=venom&color=0033cc&height=300&section=header&text=SONYKOREA%4&fontSize=80)
 
 # **SONY KOREA 리뉴얼 프로젝트**
 - 개인 프로젝트로 진행한 SONY KOREA의 첫 번째 리뉴얼 프로젝트입니다.
 
 ------------------
 
-## 프로젝트 소개(로고나 이미지)
-
+## 미리보기
+![image](https://github.com/user-attachments/assets/8f3f6376-591d-45de-944c-d9a826fba91a)
 
 ## **프로젝트 개요**
 > 프로젝트: 리뉴얼 프로젝트
@@ -26,6 +26,12 @@
   
 ## USE SKILL
 <img src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" />  <img src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" />  <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black" />  <img src="https://img.shields.io/badge/sass-%23CC6699.svg?&style=for-the-badge&logo=sass&logoColor=white" />  <img src="https://img.shields.io/badge/swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white"/>  <img src="https://img.shields.io/badge/figma-000000?style=for-the-badge&logo=figma&logoColor=white"/>
+
+----------
+
+## 프로젝트 소개
+
+
 
 ## 프로젝트 구조
 
