@@ -1,4 +1,14 @@
-# **SONY KOREA 리뉴얼 프로젝트
+# **SONY KOREA 프로젝트**
+
+<img src="" alt="">
+
+## **프로젝트 정보**
+<ul>
+  <li>SONY KOREA 사이트의 리뉴얼 프로젝트</li>
+  <li>개인 프로젝트</li>
+  <li>개발기간 : </li>
+</ul>
+
 
 ## 프로젝트 구조
 
