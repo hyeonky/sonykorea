@@ -1,14 +1,34 @@
-# **SONY KOREA 프로젝트**
+![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=SONYKOREA%4&fontSize=80)
 
-<img src="" alt="">
+# **SONY KOREA 리뉴얼 프로젝트**
+- 개인 프로젝트로 진행한 SONY KOREA의 첫 번째 리뉴얼 프로젝트입니다.
 
-## **프로젝트 정보**
-<ul>
-  <li>SONY KOREA 사이트의 리뉴얼 프로젝트</li>
-  <li>개인 프로젝트</li>
-  <li>개발기간 : </li>
-</ul>
 
+
+## 프로젝트 소개(로고나 이미지)
+
+
+## **프로젝트 개요**
+- 프로젝트: 리뉴얼 프로젝트
+
+- 기획 및 제작: 조현경
+  
+- 분류: 개인 프로젝트
+ 
+- 주요 기능: 반응형 웹, open graph, custom Swiper
+
+- 사용 기술: Html 5, Javascript, Gsap, Css 3, Scss, Swiper 등  
+
+
+## 프로젝트 정보
+- 기존 사이트와 달리 SONY와 어울리는 동적 효과와 함께 비주얼 사이트를 만들고자 함.
+
+  
+##  USE SKILL
+<img src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" />
+<img src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" />
+<img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/sass-%23CC6699.svg?&style=for-the-badge&logo=sass&logoColor=white" />
 
 ## 프로젝트 구조
 
