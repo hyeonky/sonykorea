@@ -38,20 +38,20 @@
 
 
 ## 기능 구현
-1. 반응형 웹 구현
+1. **반응형 웹 구현**
 - KRDS의 breakpoints를 기준으로 반응형 웹을 제작
 - 헤더를 메인 화면에서부터 햄버거 메뉴로 사용하여, 디스플레이 화면에서 불필요하게 공간을 차지하지 않도록 제작
 - desktop부분에서는 오른쪽 가장 자리에 로고 띠 디자인 구현(스크롤 시 같이 내려감)
+<br><br> 
+![video](https://raw.githubusercontent.com/hyeonky/sonykorea/a15774ca87e574121103bd8b44b43d120d9b8c62/resources/images/pattern/viedo/sonykorea-%EB%B0%98%EC%9D%91%ED%98%95.gif)
 
-2. 오픈 그래프 사용
+
+2. **오픈 그래프 사용**
 
    
 
-4. Swiper 커스텀
+4. **Swiper 커스텀**
 
-5. 
-6.
-- 
 
 
 
