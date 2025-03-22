@@ -3,81 +3,56 @@
 # **SONY KOREA 리뉴얼 프로젝트**
 - 개인 프로젝트로 진행한 SONY KOREA의 첫 번째 리뉴얼 프로젝트입니다.
 
-------------------
+<br><br> 
 
 ## 미리보기
 ![image](https://github.com/user-attachments/assets/8f3f6376-591d-45de-944c-d9a826fba91a)
 
+<br><br> 
+
+
 ## **프로젝트 개요**
-> 프로젝트: 리뉴얼 프로젝트
+> **프로젝트** : 리뉴얼 프로젝트
 >
-> 기획 및 제작: 조현경
+> **기획 및 제작** : 조현경
 > 
-> 분류: 개인 프로젝트
+> **분류** : 개인 프로젝트
 > 
-> 주요 기능: 반응형 웹, open graph, custom Swiper
+> **주요 기능** : 반응형 웹, open graph, custom Swiper
 >
-> 사용 기술: Html 5, Css 3, Javascript, Gsap, Scss, Swiper, figma 등  
+> **사용 기술** : Html 5, Css 3, Javascript, Gsap, Scss, Swiper, figma 등  
+
+<br><br> 
 
 
-## 프로젝트의 목적
-- 기존 사이트와 달리 SONY와 어울리는 동적 효과와 함께 비주얼 사이트를 만들고자 함.
+## 프로젝트의 정보
+- 기존 사이트와 차별화된 동적 효과와 비주얼 요소를 활용하여 SONY 브랜드에 어울리는 혁신적이면서 감각적인 UI/UX를 구현하는 것에 목적을 둔 비주얼 사이트 개인 프로젝트입니다.
 
-  
-## USE SKILL
+<br><br> 
+
+
+## 🚀 **사용 기술 (Tech Stack)** 
 <img src="https://img.shields.io/badge/html5-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white" />  <img src="https://img.shields.io/badge/css3-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white" />  <img src="https://img.shields.io/badge/javascript-%23F7DF1E.svg?&style=for-the-badge&logo=javascript&logoColor=black" />  <img src="https://img.shields.io/badge/sass-%23CC6699.svg?&style=for-the-badge&logo=sass&logoColor=white" />  <img src="https://img.shields.io/badge/swiper-6332F6?style=for-the-badge&logo=swiper&logoColor=white"/>  <img src="https://img.shields.io/badge/figma-000000?style=for-the-badge&logo=figma&logoColor=white"/>
 
-----------
-
-## 프로젝트 소개
+<br><br> 
 
 
+## 기능 구현
+1. 반응형 웹 구현
+- 3개의 endpoint를 두고 반응형을 구현함
+- 네비게이션 메뉴의 경우 pc(1024px)을 기준으로 그 이상일 경우 상단바, 이하일 경우 햄버거메뉴로 변경
 
-## 프로젝트 구조
 
-```bash
-📂 src/
-├── 📂 pages/                       # 페이지 HTML 파일들
-│   └── index.html                  # 메인 페이지 HTML 파일
-│   └── sub_02.html                  # 서브 페이지 HTML 파일
-├── 📂 resources/                   # 리소스 폴더
-│   ├── 📂 css/                     # 전역 CSS 파일들
-│   ├── 📂 images/                  # images 파일들
-│   ├── 📂 js/                      # JavaScript 파일들
-│   │   ├── 📂 component/           # 컴포넌트 관련 JS 파일 (특정한 기능을 수행하는 독립적인 UI요소)
-│   │   │   └── ui-script.js        # 컴포넌트 스크립트 (버튼, 모달창, 탭 등)
-│   │   ├── 📂 pattern/             # 패턴 관련 JS 파일 (반복적이거나 재사용 가능한 기능적 패턴)
-│   │   │   └── ui-pattern-script.js # UI 패턴 스크립트 (스크롤 이벤트, 슬라이드 등)
-│   ├── 📂 scss/                    # SCSS 파일들
-│   │   ├── 📂 component/           # 컴포넌트 관련 SCSS 파일
-│   │   │   ├── 📂 mixins/              # 믹스인 파일들
-│   │   │   │   ├── _breakpoints.scss    # 브레이크포인트 믹스인
-│   │   │   │   ├── _utils.scss         # 유틸리티 믹스인
-│   │   │   ├── _include.scss       # 인클루드 스타일
-│   │   │   ├── _reset.scss         # 리셋 스타일
-│   │   │   └── _variables.scss     # 변수 정의
-│   │   ├── 📂 pattern/             # 패턴 관련 SCSS 파일
-│   │   │   ├── _p_include.scss     # 인클루드 스타일
-│   │   │   ├── _p_common.scss      # 공통 패턴 스타일
-│   │   │   ├── _p_content.scss     # 컨텐츠 관련 패턴 스타일
-│   │   │   └── _p_layout.scss      # 레이아웃 패턴 스타일
-│   │   └── styles.scss             # 전체 스타일 파일
-```
+2. 오픈 그래프 사용
 
-## 뷰포트(Viewport) 렌더링 방식 설정
+3. Swiper 커스텀
 
-웹페이지가 화면(Viewport)에 표현되는 방식을 설정합니다.<br>
-모바일 환경에서 적용됩니다.
+4. 
+5.
+- 
 
-```html
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-```
 
-- `width=device-width`: 화면의 가로 너비를 각 디바이스(Device)의 가로 너비와 동일하게 적용
-- `initial-scale=1.0`: 화면의 초기 화면 배율(확대 정도)을 설정
-- `user-scalable=no`: 사용자가 디바이스 화면을 확대(`yes`)/축소(`no`)할 수 있는지 설정
-- `maximum-scale=1`: 사용자가 화면을 확대할 수 있는 최댓값
-- `minimum-scale=1`: 사용자가 화면을 축소할 수 있는 최솟값
+
 
 ## 오픈 그래프(The Open Graph protocol)
 
