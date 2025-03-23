@@ -116,7 +116,7 @@
 
 ## **🧑‍💻 Contact me**
 <br><br> 
- <a href="mailto:hyeon2762@naver.com"> <img src="https://img.shields.io/badge/Naver-03C75A?style=for-the-badge&logo=Naver&logoColor=white&link="> </a>
- <a href="mailto:hyeon2762@gmail.com"> <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:"> </a>
- <a href="https://www.instagram.com/hyeonky?igsh=MWY5Y3B4MTRyNTVjbQ=="> <img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=Instagram&logoColor=white&link="> </a>
+ <a href="mailto:hyeon2762@naver.com"> <img src="https://img.shields.io/badge/Naver-03C75A?style=for-the-badge&logo=Naver&logoColor=white&link="></a>
+ <a href="mailto:hyeon2762@gmail.com"> <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:"></a>
+ <a href="https://www.instagram.com/hyeonky?igsh=MWY5Y3B4MTRyNTVjbQ=="> <img src="https://img.shields.io/badge/Instagram-000000?style=for-the-badge&logo=Instagram&logoColor=white&link="></a>
 
