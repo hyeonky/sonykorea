@@ -1,8 +1,8 @@
 ![header](https://capsule-render.vercel.app/api?type=venom&color=0033cc&height=300&section=header&text=SONYKOREA%4&fontSize=80)
 
 # **SONY KOREA 리뉴얼 프로젝트 (SONY KOREA Redesign Project)**
-- 개인 프로젝트로 진행한 SONY KOREA의 첫 번째 리뉴얼 프로젝트입니다
-- This is the first redesign project for SONY KOREA, conducted as a personal project
+- 개인 프로젝트로 진행한 SONY KOREA의 첫 번째 리뉴얼 프로젝트입니다.
+- This is the first redesign project for SONY KOREA, conducted as a personal project.
 
 <br><br> 
 
@@ -32,7 +32,7 @@
 
 ## 프로젝트의 정보 (Project Information)
 - 기존 사이트와 차별화된 동적 효과와 비주얼 요소를 활용하여 SONY 브랜드에 어울리는 혁신적이면서 감각적인 UI/UX를 구현하는 것에 목적을 둔 비주얼 사이트 개인 프로젝트입니다.
-- This is a visual site personal project aimed at creating an innovative and stylish UI/UX that aligns with SONY's brand, using dynamic effects and visual elements that differentiate it from the original site
+- This is a visual site personal project aimed at creating an innovative and stylish UI/UX that aligns with SONY's brand, using dynamic effects and visual elements that differentiate it from the original site.
 
 <br><br> 
 
@@ -51,9 +51,9 @@
 
 <br>
 
-- A responsive web design created based on KRDS's breakpoints
-- The header is designed as a hamburger menu starting from the main screen, so it doesn't take up unnecessary space on the display screen
-- A logo bar design is implemented on the rightmost part of the desktop section, which scrolls along with the page
+- A responsive web design created based on KRDS's breakpoints.
+- The header is designed as a hamburger menu starting from the main screen, so it doesn't take up unnecessary space on the display screen.
+- A logo bar design is implemented on the rightmost part of the desktop section, which scrolls along with the page.
     
 <br><br>
 ![sony_responsive](https://github.com/user-attachments/assets/ce6f0bae-fd31-4a8b-90ec-f2e2cdc9b533)
@@ -66,7 +66,7 @@
 
 ### **2. 오픈 그래프 사용(Open Graph)**
 - 웹페이지가 SNS로 공유될 때 우선적으로 활용되는 정보를 지정
-- Specifies the information to be used when the webpage is shared on social media
+- Specifies the information to be used when the webpage is shared on social media.
   
 <br>
 
@@ -107,7 +107,7 @@
 
 ### **4. Custom Swiper & GSAP**
 - 내비게이션 변형 및 스와이터 기능 커스텀
-- Custom navigation transformations and swiper functionality
+- Custom navigation transformations and swiper functionality.
 
 <br>
 
@@ -120,7 +120,7 @@
 <br><br> 
 
 - GSAP을 사용한 가로 스크롤 구현
-- Horizontal scrolling implemented using GSAP
+- Horizontal scrolling implemented using GSAP.
   
 <br>
 
