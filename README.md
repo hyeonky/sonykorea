@@ -91,8 +91,10 @@
 
 
 ### **4. Custom Swiper & GSAP**
-- 내비게이션 변형 및 스와이터 기능 커스텀
-<br><br> 
+- **내비게이션 변형 및 스와이터 기능 커스텀**
+
+<br>
+
 ![sony_latest_swiper](https://github.com/user-attachments/assets/56b76f78-a2c6-4934-8dbf-2f461b40368b)
 
 <br><br> 
@@ -101,9 +103,9 @@
 
 <br><br> 
 
-- GSAP을 사용한 가로 스크롤 구현
+- **GSAP을 사용한 가로 스크롤 구현**
   
-<br><br> 
+<br>
 
 ![sony_gsap](https://github.com/user-attachments/assets/ec2cf378-fd13-4647-9887-27e286c86d3c)
 
@@ -114,11 +116,7 @@
 
 ## 🧑‍💻 Contact me
 <br> 
-    <div style="text-align: left;"> <a href=> <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=Instagram&logoColor=white&link="> </a>
+    <a href=> <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=Instagram&logoColor=white&link="> </a>
          <a href=> <img src="https://img.shields.io/badge/Naver-03C75A?style=for-the-badge&logo=Naver&logoColor=white&link="> </a>
          <a href=mailto:> <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:"> </a>
-          </div>  <br> 
-    <div style="text-align: left;"> <a href="https://hits.seeyoufarm.com"> <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhyeonky%2F&count_bg=%23000000&title_bg=%23000000&icon=github.svg&icon_color=%23FFFFFF&title=GitHub&edge_flat=false"/></a>
-       </div> 
-    </div>
-    
+
