@@ -187,12 +187,12 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
     background-color: $primary;
     // border: 0.1rem solid rgb(255, 255, 255, 0.5);
     border-radius: 50%;
-    transform: translate(-15%, 0%);
+    transform: translate(-15%, -20%);
     a {
       display: flex;
       justify-content: center;
@@ -213,14 +213,16 @@
       }
     }
     @include mobileMore {
+      width: 10rem;
+      height: 10rem;
       top: 53%;
       right: 0;
-      transform: translate(-65%, 40%);
+      transform: translate(-65%, 100%);
     }
     @include tabletMore {
       top: 55%;
       right: 0;
-      transform: translate(-185%, 60%);
+      transform: translate(-185%, 110%);
     }
   }
 }

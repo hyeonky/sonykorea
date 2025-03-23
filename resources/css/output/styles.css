@@ -1306,11 +1306,11 @@ legend {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 10rem;
-  height: 10rem;
+  width: 9rem;
+  height: 9rem;
   background-color: #0033cc;
   border-radius: 50%;
-  transform: translate(-15%, 0%);
+  transform: translate(-15%, -20%);
 }
 .intro .btn_view a {
   display: flex;
@@ -1333,16 +1333,18 @@ legend {
 }
 @media (min-width: 600px) {
   .intro .btn_view {
+    width: 10rem;
+    height: 10rem;
     top: 53%;
     right: 0;
-    transform: translate(-65%, 40%);
+    transform: translate(-65%, 100%);
   }
 }
 @media (min-width: 1024px) {
   .intro .btn_view {
     top: 55%;
     right: 0;
-    transform: translate(-185%, 60%);
+    transform: translate(-185%, 110%);
   }
 }
 
