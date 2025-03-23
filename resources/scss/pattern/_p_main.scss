@@ -217,12 +217,12 @@
       height: 10rem;
       top: 53%;
       right: 0;
-      transform: translate(-65%, 100%);
+      transform: translate(-65%, 50%);
     }
     @include tabletMore {
       top: 55%;
       right: 0;
-      transform: translate(-185%, 110%);
+      transform: translate(-185%, 60%);
     }
   }
 }
@@ -705,6 +705,8 @@
         width: 100%;
         img {
           width: 100%;
+          max-width: 510px;
+          height: 100%;
         }
       }
     }
@@ -714,6 +716,8 @@
         width: 100%;
         img {
           width: 100%;
+          max-width: 599px;
+          height: 100%;
         }
       }
     }

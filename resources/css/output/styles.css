@@ -1342,14 +1342,14 @@ legend {
     height: 10rem;
     top: 53%;
     right: 0;
-    transform: translate(-65%, 100%);
+    transform: translate(-65%, 50%);
   }
 }
 @media (min-width: 1024px) {
   .intro .btn_view {
     top: 55%;
     right: 0;
-    transform: translate(-185%, 110%);
+    transform: translate(-185%, 60%);
   }
 }
 
@@ -1890,6 +1890,8 @@ legend {
   }
   .sec-hot .hot-lst__gallery .swiper-slide img {
     width: 100%;
+    max-width: 510px;
+    height: 100%;
   }
 }
 @media (min-width: 1024px) {
@@ -1901,6 +1903,8 @@ legend {
   }
   .sec-hot .hot-lst__gallery .swiper-slide img {
     width: 100%;
+    max-width: 599px;
+    height: 100%;
   }
 }
 .sec-hot .hot-lst__text {
