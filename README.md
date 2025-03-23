@@ -48,8 +48,13 @@
 
 <br><br> 
 
-### **2. 오픈 그래프 사용**
+### **2. 오픈 그래프 사용(Open Graph)**
 - 웹페이지가 SNS로 공유될 때 우선적으로 활용되는 정보를 지정
+<br>
+
+<img src="https://github.com/user-attachments/assets/1ec00414-908c-440a-89fa-1cf3d66bc892" alt="" style="width: 40%; height: auto;">
+
+<br>  
 
 ```html
     <meta property="og:type" content="website" />
@@ -62,6 +67,11 @@
 
 ### **3. 파비콘(Favicon)**
 
+<br>
+
+<img src="https://github.com/user-attachments/assets/89cb0bfe-d099-4fd6-b87a-f96637ed16a4" alt="" style="width: 30%; height: auto;">
+
+<br>  
 
 ```html
   <link rel="shortcut icon" href="https://raw.githubusercontent.com/hyeonky/sonykorea/refs/heads/main/resources/images/pattern/common/sony-favicon.ico" />
@@ -71,12 +81,19 @@
 <br><br> 
 ### **4. Custom Swiper & GSAP**
 - 내비게이션 변형 및 스와이터 기능 커스텀
+<br><br> 
 ![sony_latest_swiper](https://github.com/user-attachments/assets/56b76f78-a2c6-4934-8dbf-2f461b40368b)
+
+<br><br> 
 
 ![sony_hot_swiper](https://github.com/user-attachments/assets/00dcf3d8-1881-4a77-bad5-976826263350)
 
-  
+<br><br> 
+
 - GSAP을 사용한 가로 스크롤 구현
+  
+<br><br> 
+
 ![sony_gsap](https://github.com/user-attachments/assets/ec2cf378-fd13-4647-9887-27e286c86d3c)
 
 
