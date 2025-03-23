@@ -42,8 +42,9 @@
 - KRDS의 breakpoints를 기준으로 반응형 웹을 제작
 - 헤더를 메인 화면에서부터 햄버거 메뉴로 사용하여, 디스플레이 화면에서 불필요하게 공간을 차지하지 않도록 제작
 - desktop부분에서는 오른쪽 가장 자리에 로고 띠 디자인 구현(스크롤 시 같이 내려감)
-<br><br> 
-![video](https://raw.githubusercontent.com/hyeonky/sonykorea/a15774ca87e574121103bd8b44b43d120d9b8c62/resources/images/pattern/viedo/sonykorea-%EB%B0%98%EC%9D%91%ED%98%95.gif)
+<br><br>
+![sony_responsive](https://github.com/user-attachments/assets/ce6f0bae-fd31-4a8b-90ec-f2e2cdc9b533)
+
 
 <br><br> 
 
@@ -68,8 +69,15 @@
 
 
 <br><br> 
-### **4. Swiper 커스텀**
+### **4. Custom Swiper & GSAP**
+- 내비게이션 변형 및 스와이터 기능 커스텀
+![sony_latest_swiper](https://github.com/user-attachments/assets/56b76f78-a2c6-4934-8dbf-2f461b40368b)
 
+![sony_hot_swiper](https://github.com/user-attachments/assets/00dcf3d8-1881-4a77-bad5-976826263350)
+
+  
+- GSAP을 사용한 가로 스크롤 구현
+![sony_gsap](https://github.com/user-attachments/assets/ec2cf378-fd13-4647-9887-27e286c86d3c)
 
 
 <br><br> 
