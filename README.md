@@ -47,6 +47,9 @@
 
 
 <br><br> 
+-----------------------
+
+<br><br> 
 
 ### **2. 오픈 그래프 사용(Open Graph)**
 - 웹페이지가 SNS로 공유될 때 우선적으로 활용되는 정보를 지정
@@ -63,6 +66,10 @@
     <meta property="og:image" content="https://github.com/hyeonky/sonykorea/blob/main/resources/images/pattern/common/thumbnail.png?raw=true" />
 ```
 
+
+<br><br> 
+-----------------------
+
 <br><br> 
 
 ### **3. 파비콘(Favicon)**
@@ -77,8 +84,12 @@
   <link rel="shortcut icon" href="https://raw.githubusercontent.com/hyeonky/sonykorea/refs/heads/main/resources/images/pattern/common/sony-favicon.ico" />
 ```
 
+<br><br> 
+-----------------------
 
 <br><br> 
+
+
 ### **4. Custom Swiper & GSAP**
 - 내비게이션 변형 및 스와이터 기능 커스텀
 <br><br> 
