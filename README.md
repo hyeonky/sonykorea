@@ -11,6 +11,10 @@
 
 <br><br> 
 
+## 🔗 링크 (Link)
+> https://hyeonky.github.io/sonykorea/pages/
+
+<br><br> 
 
 ## **프로젝트 개요 (Project Overview)**
 > **프로젝트(Project)** : 리뉴얼 프로젝트(Redesign Project)
