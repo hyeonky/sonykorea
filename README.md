@@ -38,20 +38,20 @@
 
 
 ## 기능 구현
-1. 반응형 웹 구현
+1. **반응형 웹 구현**
 - KRDS의 breakpoints를 기준으로 반응형 웹을 제작
 - 헤더를 메인 화면에서부터 햄버거 메뉴로 사용하여, 디스플레이 화면에서 불필요하게 공간을 차지하지 않도록 제작
 - desktop부분에서는 오른쪽 가장 자리에 로고 띠 디자인 구현(스크롤 시 같이 내려감)
+<br><br> 
+![video](https://raw.githubusercontent.com/hyeonky/sonykorea/a15774ca87e574121103bd8b44b43d120d9b8c62/resources/images/pattern/viedo/sonykorea-%EB%B0%98%EC%9D%91%ED%98%95.gif)
 
-2. 오픈 그래프 사용
+
+2. **오픈 그래프 사용**
 
    
 
-4. Swiper 커스텀
+4. **Swiper 커스텀**
 
-5. 
-6.
-- 
 
 
 
@@ -110,7 +110,13 @@ https://www.naver.com/favicon.ico?1
 
 
 
-
-
-# -krds-html-scss-js
-# -themplates-html-scss-js
+## 🧑‍💻 Contact me
+<br> 
+    <div style="text-align: left;"> <a href=> <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=Instagram&logoColor=white&link="> </a>
+         <a href=> <img src="https://img.shields.io/badge/Naver-03C75A?style=for-the-badge&logo=Naver&logoColor=white&link="> </a>
+         <a href=mailto:> <img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:"> </a>
+          </div>  <br> 
+    <div style="text-align: left;"> <a href="https://hits.seeyoufarm.com"> <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fhyeonky%2F&count_bg=%23000000&title_bg=%23000000&icon=github.svg&icon_color=%23FFFFFF&title=GitHub&edge_flat=false"/></a>
+       </div> 
+    </div>
+    
