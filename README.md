@@ -1,8 +1,8 @@
 ![header](https://capsule-render.vercel.app/api?type=venom&color=0033cc&height=300&section=header&text=SONYKOREA%4&fontSize=80)
 
 # **SONY KOREA 리뉴얼 프로젝트 (SONY KOREA Redesign Project)**
-- 개인 프로젝트로 진행한 SONY KOREA의 첫 번째 리뉴얼 프로젝트입니다.
-- This is the first redesign project for SONY KOREA, conducted as a personal project.
+- 개인 작업으로 진행한 첫 번째 리뉴얼 프로젝트 SONY KOREA입니다.
+- This is the first redesign project of SONY KOREA, which I worked on as a personal project.
 
 <br><br> 
 
